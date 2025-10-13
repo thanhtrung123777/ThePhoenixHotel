@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black
+}
+
+/* Header */
+.header {
+    background-color: #383838;
+    width: 100%;
+    height: 152px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    flex: 1
+}
+
+.header-left img {
+    width: 100px;
+    height: 80px;
+    margin-left: 20px;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    flex: 1;
+    flex-direction: column;
+    color: white;
+    margin-left: 50px;
+
+}
+
+.header-center h1 {
+    margin: 0;
+    padding: 10px;
+    font-family: 'Montez';
+    font-size: 60px
+}
+
+.header-center h2 {
+    margin-top: -25px;
+    font-family: 'Inria Serif';
+    font-weight: 100;
+    font-size: 36px
+}
+
+.header-right {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+    gap:30px;
+}
+
+.header-right input {
+    color: white;
+    padding: 10px;
+    width: 150px;
+}
+
+.header-right a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Sticky Header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #b4b4b499;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    font-family: 'Inria Serif';
+    backdrop-filter: blur(5px);
+}
+
+.sticky-header ul li {
+    color: white;
+    display: inline-block;
+    list-style: none;
+    margin: 10px 40px;
+    font-size: 25px;
+}
+
+/* Body */
+.video {
+    width: 100%;
+    height: 775px;
+    position: relative;
+}
+
+.video video {
+    width: 100%;
+    height: auto;
+
+}
+
+.video p {
+    position: absolute;
+    bottom: 50%;
+    left: 30px;
+    font-family: 'Jeju Myeongjo';
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.video span {
+    font-family: 'Italianno';
+    font-size: 110px
+}
+
+/* intro */
+.intro {
+    width: 100%;
+    height: auto;
+    background: #333333;
+
+}
+
+.intro-1 {
+    font-family: 'Inknut Antiqua';
+    text-align: center;
+    margin: 0;
+    padding: 40px 15px 0;
+
+}
+
+.intro-2 {
+    font-family: 'Inknut Antiqua';
+    text-align: center;
+    font-size: 32px;
+    padding: 0;
+    margin-top: -20px;
+}
+
+.intro-3 {
+    font-family: 'Inknut Antiqua';
+    text-align: center;
+    font-size: 15px;
+    margin: -20px auto 0;
+    width: 90%;
+    padding: 0;
+}
+
+/* Pics */
+.pics {
+    margin: 0 auto;
+    width: 100%;
+    background: #333333;
+}
+
+.first-view {
+    width: 90%;
+    display: flex;
+    gap: 40px;
+    padding: 40px 0;
+    margin: 0 auto;
+
+}
+
+.first-view p {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    font-family: 'Judson';
+}
+
+.accommodation {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+}
+
+.accommodation h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.accommodation p {
+    text-align: justify;
+    font-size: 27px;
+    width: 47%;
+    margin: 0;
+    padding: 0;
+}
+.room{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+.room ul{
+    margin:0;
+    padding:50px;
+    list-style:none;
+    display:flex;
+    gap:40px;
+}
+.room ul li{
+    font-family:'Judson';
+    font-size:25px;
+   
+}
