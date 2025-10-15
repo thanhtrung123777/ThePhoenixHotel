@@ -195,7 +195,7 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    font-family:'Judson';
+    font-family: 'Judson';
 }
 
 .accommodation p {
@@ -205,7 +205,7 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    font-family:'Judson';
+    font-family: 'Judson';
 }
 
 .room {
@@ -227,57 +227,140 @@ body {
     font-size: 25px;
     color: white;
 }
-.show-pics{
+
+.show-pics {
     width: 100%;
-    
+
 }
-.show-pics img{
-    display:block;
-    margin:0 auto;
-    width:1023px;
-    height:618px;
+
+.show-pics img {
+    display: block;
+    margin: 0 auto;
+    width: 1023px;
+    height: 618px;
 }
-.introduce-room{
-    display:flex;
-    color:white;
+
+.introduce-room {
+    display: flex;
+    color: white;
     margin: 20px auto;
-    width:90%;
+    width: 90%;
     justify-content: space-between;
-    
+
 }
 
-.introduce-room h2{
-    font-family:'Judson';
-    font-size:28px
-}
-
-.introduce-room p{
-    text-align:justify;
-    font-size:25px;
-    width: 450px;
-    color:gray;
-    margin-right:230px;
-    font-family:'Judson';
-}
-.booking{
+.introduce-room h2 {
     font-family: 'Judson';
-    display:flex;
-    justify-content:space-between;
-    background:#CCCCCC;
-    height:250px
-}
-.booking h2{
-    margin-left:67px;
-    font-size:28px;
+    font-size: 28px
 }
 
-.booking p{
-    font-size:25px;
+.introduce-room p {
+    text-align: justify;
+    font-size: 25px;
+    width: 450px;
+    color: gray;
+    margin-right: 230px;
+    font-family: 'Judson';
+}
+
+.booking {
+    font-family: 'Judson';
+    display: flex;
+    justify-content: space-between;
+    background: #CCCCCC;
+    padding-bottom: 5%;
+    margin: 0 auto;
+
+}
+
+.booking h2 {
+    margin-left: 67px;
+    font-size: 28px;
+}
+
+.booking p {
+    font-size: 25px;
     margin-right: 300px;
     font-weight: 400;
 }
-.booking a{
-    font-size:20px;
-    color:black;
+
+.booking a {
+    font-size: 20px;
+    color: black;
 }
+
+.footer {
+    background: #333333;
+    color: white;
+}
+
+.footer1 {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inknut Antiqua';
+}
+
+.f1_1 {
+    font-family: 'Inika';
+    margin-left: 5%;
+    flex: 1;
+    margin-top: 1%;
+}
+
+.f1_2 {
+    flex: 1;
+    margin-left: -5%;
+}
+
+.f1_2 p {
+    font-size: 120%;
+}
+
+.f1_3 {
+    flex: 1;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.f1_4 {
+    flex: 1;
+
+}
+
+.f1_4 p {
+    font-family: 'Inika';
+    font-size: 120%;
+}
+
+.footer2{
+    background: #EFE6DD;
+    color: black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.f2_1{
+    flex:1;
+    
+}
+.f2_1 img{
+    width:40%;
+    height:40%;
+    margin-left:2% 
+}
+.f2_2{
+    flex:1;
+    font-weight: bold;
+    font-size:120%;
+    font-family: 'Inria Serif';
+    margin-left:-18%;
+}
+.f2_3{
+    flex:1;
+    font-weight: bold;
+    font-size:120%;
+    font-family: 'Inria Serif';
+}
+
+
 
