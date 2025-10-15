@@ -361,6 +361,11 @@ body {
     font-size:120%;
     font-family: 'Inria Serif';
 }
+.test{
+    width: 100%;
+    background-color:blue;
+    height:50px;
+}
 
 
 
