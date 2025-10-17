@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black
+}
+
+/* Header */
+.header {
+    background-color: #383838;
+    width: 100%;
+    height: 152px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    flex: 1
+}
+
+.header-left img {
+    width: 100px;
+    height: 80px;
+    margin-left: 20px;
+}
+
+.header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    flex: 1;
+    color: white;
+    margin-left: 70px;
+
+}
+
+.header-center h1 {
+    margin: 0;
+    padding: 10px;
+    font-family: 'Montez';
+    font-size: 60px
+}
+
+.header-center h2 {
+    margin-top: -25px;
+    font-family: 'Inria Serif';
+    font-weight: 100;
+    font-size: 36px
+}
+
+.header-right {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+    gap: 30px;
+}
+
+.header-right input {
+    color: white;
+    padding: 10px;
+    width: 150px;
+}
+
+.header-right a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Sticky Header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #b4b4b499;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    font-family: 'Inria Serif';
+    backdrop-filter: blur(5px);
+}
+
+.sticky-header ul li {
+    color: white;
+    display: inline-block;
+    list-style: none;
+    margin: 10px 40px;
+    font-size: 25px;
+}
+/* footer */
+.footer {
+    background: #333333;
+    color: white;
+}
+
+.footer1 {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inknut Antiqua';
+}
+
+.f1_1 {
+    font-family: 'Inika';
+    margin-left: 5%;
+    flex: 1;
+    margin-top: 1%;
+}
+
+.f1_2 {
+    flex: 1;
+    margin-left: -5%;
+}
+
+.f1_2 p {
+    font-size: 120%;
+}
+
+.f1_3 {
+    flex: 1;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.f1_4 {
+    flex: 1;
+
+}
+
+.f1_4 p {
+    font-family: 'Inika';
+    font-size: 120%;
+}
+
+.footer2{
+    background: #EFE6DD;
+    color: black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.f2_1{
+    flex:1;
+    
+}
+.f2_1 img{
+    width:40%;
+    height:40%;
+    margin-left:2% 
+}
+.f2_2{
+    flex:1;
+    font-weight: bold;
+    font-size:120%;
+    font-family: 'Inria Serif';
+    margin-left:-18%;
+}
+.f2_3{
+    flex:1;
+    font-weight: bold;
+    font-size:120%;
+    font-family: 'Inria Serif';
+}
