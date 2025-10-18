@@ -87,11 +87,14 @@ body {
 }
 
 .sticky-header ul li {
-    color: white;
     display: inline-block;
     list-style: none;
     margin: 10px 40px;
     font-size: 25px;
+}
+.sticky-header ul li a{
+    color:white;
+    text-decoration: none;
 }
 /* footer */
 .footer {
@@ -155,10 +158,17 @@ body {
 }
 .f2_2{
     flex:1;
+    margin-left:-18%;
+    display:flex;
+    flex-direction: column;
+}
+.f2_2 a{
+    text-decoration: none;
+    color:black;
     font-weight: bold;
     font-size:120%;
     font-family: 'Inria Serif';
-    margin-left:-18%;
+    margin-top:4%;
 }
 .f2_3{
     flex:1;
