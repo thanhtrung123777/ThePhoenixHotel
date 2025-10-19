@@ -96,6 +96,32 @@ body {
     color:white;
     text-decoration: none;
 }
+.img {
+    width: 100%;
+    height: 775px;
+    position: relative;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+
+}
+
+.img p {
+    position: absolute;
+    bottom: 50%;
+    left: 30px;
+    font-family: 'Jeju Myeongjo';
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.img span {
+    font-family: 'Italianno';
+    font-size: 110px
+}
 /* footer */
 .footer {
     background: #333333;
