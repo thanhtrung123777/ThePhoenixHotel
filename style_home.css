@@ -109,11 +109,12 @@ body {
     width: 100%;
     height: auto;
 
+    
 }
 
 .video p {
     position: absolute;
-    bottom: 50%;
+    bottom: 35%;
     left: 30px;
     font-family: 'Jeju Myeongjo';
     color: white;
