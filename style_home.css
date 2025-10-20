@@ -373,6 +373,10 @@ body {
     font-size:120%;
     font-family: 'Inria Serif';
 }
+.test{
+    background-color: rgb(84, 154, 130);
+    width: 100%;
+}
 
 
 
