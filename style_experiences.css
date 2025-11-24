@@ -70,6 +70,7 @@ body {
     color: white;
     margin-right: 5px;
 }
+
 .header-right i {
     color: white;
     font-size: 20px;
@@ -98,10 +99,12 @@ body {
     margin: 10px 40px;
     font-size: 25px;
 }
-.sticky-header ul li a{
-    color:white;
+
+.sticky-header ul li a {
+    color: white;
     text-decoration: none;
 }
+
 .img {
     width: 100%;
     position: relative;
@@ -123,8 +126,8 @@ body {
 }
 
 .img span {
-    font-family: 'Italianno';
-    font-size: 110px
+    font-family: 'Instrument Sans';
+    font-size: 24px;
 }
 
 /* Body */
@@ -147,12 +150,14 @@ body {
     color: white;
     font-size: 40px;
     padding: 10px;
-    font-weight:bold;
+    font-weight: bold;
 }
-.break{
-    font-weight:100;
-    font-size:24px;
+
+.break {
+    font-weight: 100;
+    font-size: 24px;
 }
+
 /* intro */
 .intro {
     width: 100%;
@@ -174,25 +179,47 @@ body {
 .intro-2 {
     font-family: 'Inknut Antiqua';
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
     margin: -20px auto 0;
-    width: 90%;
+    width: 60%;
     padding: 0;
     color: white;
 
+
 }
+
 /* 3_pics */
-.pics{
-    display:flex;
+.pics {
+    display: flex;
     justify-content: space-between;
-    background:#333333;
-    color:white;
+    background: #333333;
+    color: white;
     font-family: 'Inter';
-    margin:5% 2%
+    padding: 5% 2%
 }
-.pics p{
-    width:90%;
-    font-size:120%;
-    text-align:justify;
+
+.pics p {
+    width: 90%;
+    font-size: 120%;
+    text-align: justify;
+}
+
+.pic1 {
+    flex: 1;
+}
+
+.pic2 {
+    flex: 1;
+}
+
+.pic3 {
+    flex: 1;
+}
+
+.pics a {
+    text-decoration: none;
+    background: #BBBBBB;
+    color: #FFFFFF;
+    padding: 2% 5%;
 }
 
