@@ -223,3 +223,30 @@ body {
     padding: 2% 5%;
 }
 
+.lounge{
+    background:#26241F;
+    height:1000px;
+    font-family:'Judson';
+    color:white;
+}
+.lounge .topic{
+    text-align: center;
+    
+    padding-top:5%
+}
+.lounge hr{
+    width:15%
+}
+
+.lounge .anh{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 5%  
+}
+.anh1{
+    width:45%;
+}
+.anh2{
+    width:45%;
+}
+
