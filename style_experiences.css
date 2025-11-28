@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black
+    background-color: white
 }
 
 /* Header */
@@ -105,27 +105,28 @@ body {
     text-decoration: none;
 }
 
-.img {
+.video {
     width: 100%;
+    height: 755px;
     position: relative;
 }
 
-.img img {
+.video video {
     width: 100%;
     height: auto;
-
 }
 
-.img p {
+.video p {
     position: absolute;
-    bottom: 50%;
+    bottom: 35%;
     left: 30px;
     font-family: 'Jeju Myeongjo';
     color: white;
     font-size: 48px;
+    padding: 10px;
 }
 
-.img span {
+.video span {
     font-family: 'Instrument Sans';
     font-size: 24px;
 }
