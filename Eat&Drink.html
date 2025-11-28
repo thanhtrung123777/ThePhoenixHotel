@@ -81,17 +81,24 @@
         </p>
       </div>
       <div class="thanh">
-        <p>Find and book a table</p>
-        <ul>
-          <li>
-            <i class="fa-regular fa-calendar-days"></i
-            ><a href="">Sat, Oct 11</a>
-          </li>
-          <li><i class="fa-regular fa-clock"></i><a href="">19:00</a></li>
-          <li><i class="fa-solid fa-person"></i><a href="">2</a></li>
-          <li class="search"><a href="">Search</a></li>
-        </ul>
-      </div>
+  <p>Find and book <br>a table</p>
+  <ul>
+    <li>
+      <i class="fa-regular fa-calendar-days"></i><input style="border: none;" type="date" id="datePicker" />
+    </li>
+    <li>
+        <i class="fa-regular fa-clock"></i><input style="border: none;" type="time" id="timePicker" />
+    </li>
+    <li>
+        <i class="fa-solid fa-person"></i><input style="border: none;" type="number" id="numberPicker" />
+    </li>
+    <li class="search">
+      <i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" id="searchPicker" placeholder="Search...">
+    </li>
+  </ul>
+</div>
+<div id="result"></div>
       <div class="gth">
         <div class="gth1">
           <div class="gth11">
@@ -142,83 +149,51 @@
         </div>
       </div>
       <div class="container">
-        <div class="chon">
-          <div class="c1">
-            <p>Type of establishment</p>
-            <ul>
-              <li>
-                <i class="fa-regular fa-square"></i><a href="">Restaurant</a>
-              </li>
-              <li>
-                <i class="fa-regular fa-square"></i><a href="">Garden coffee</a>
-              </li>
-              <li>
-                <i class="fa-regular fa-square"></i><a href="">Bar and pub</a>
-              </li>
-            </ul>
-          </div>
-          <div class="c2">
-            <p>Type of meal</p>
-            <ul>
-              <li>
-                <i class="fa-regular fa-square"></i><a href="">Breakfast</a>
-              </li>
-              <li><i class="fa-regular fa-square"></i><a href="">Lunch</a></li>
-              <li><i class="fa-regular fa-square"></i><a href="">Dinner</a></li>
-              <li>
-                <i class="fa-regular fa-square"></i
-                ><a href="">Late-night meal</a>
-              </li>
-            </ul>
-          </div>
-          <div class="c3">
-            <p>Dish</p>
-            <ul>
-              <li>
-                <i class="fa-regular fa-square"></i
-                ><a href="">Buffet breakfast</a>
-              </li>
-              <li>
-                <i class="fa-regular fa-square"></i
-                ><a href="">Vietnamese food</a>
-              </li>
-              <li>
-                <i class="fa-regular fa-square"></i><a href="">Beverage</a>
-              </li>
-              <li><i class="fa-regular fa-square"></i><a href="">Soup</a></li>
-            </ul>
-          </div>
-          <div class="c4">
-            <p>Price</p>
-            <ul>
-              <li><i class="fa-regular fa-square"></i><a href="">Cheap</a></li>
-              <li>
-                <i class="fa-regular fa-square"></i><a href="">Moderate</a>
-              </li>
-              <li>
-                <i class="fa-regular fa-square"></i><a href="">Expensive</a>
-              </li>
-            </ul>
-          </div>
-          <div class="c5">
-            <p>Amenities</p>
-            <ul>
-              <li>
-                <i class="fa-regular fa-square"></i><a href="">Seating</a>
-              </li>
-              <li>
-                <i class="fa-regular fa-square"></i><a href="">Wifi free</a>
-              </li>
-              <li>
-                <i class="fa-regular fa-square"></i><a href="">For children</a>
-              </li>
-              <li>
-                <i class="fa-regular fa-square"></i
-                ><a href="">Outdoor seating</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <div class="chon">
+    <div class="c1">
+    <p>Type of establishment</p>
+    <ul>
+      <li><label><input type="checkbox" name="establishment" value="Restaurant"><span></span>Restaurant</label></li>
+      <li><label><input type="checkbox" name="establishment" value="Garden coffee"><span></span>Garden coffee</label></li>
+      <li><label><input type="checkbox" name="establishment" value="Bar and pub"><span></span>Bar and pub</label></li>
+    </ul>
+  </div>
+  <div class="c2">
+    <p>Type of meal</p>
+    <ul>
+      <li><label><input type="checkbox" name="meal" value="Breakfast"><span></span>Breakfast</label></li>
+      <li><label><input type="checkbox" name="meal" value="Lunch"><span></span>Lunch</label></li>
+      <li><label><input type="checkbox" name="meal" value="Dinner"><span></span>Dinner</label></li>
+      <li><label><input type="checkbox" name="meal" value="Late-night meal"><span></span>Late-night meal</label></li>
+    </ul>
+  </div>
+  <div class="c3">
+    <p>Dish</p>
+    <ul>
+      <li><label><input type="checkbox" name="dish" value="Buffet breakfast"><span></span>Buffet breakfast</label></li>
+      <li><label><input type="checkbox" name="dish" value="Vietnamese food"><span></span>Vietnamese food</label></li>
+      <li><label><input type="checkbox" name="dish" value="Beverage"><span></span>Beverage</label></li>
+      <li><label><input type="checkbox" name="dish" value="Soup"><span></span>Soup</label></li>
+    </ul>
+  </div>
+  <div class="c4">
+    <p>Price</p>
+    <ul>
+      <li><label><input type="checkbox" name="price" value="Cheap"><span></span>Cheap</label></li>
+      <li><label><input type="checkbox" name="price" value="Moderate"><span></span>Moderate</label></li>
+      <li><label><input type="checkbox" name="price" value="Expensive"><span></span>Expensive</label></li>
+    </ul>
+  </div>
+  <div class="c5">
+    <p>Amenities</p>
+    <ul>
+      <li><label><input type="checkbox" name="amenities" value="Seating"><span></span>Seating</label></li>
+      <li><label><input type="checkbox" name="amenities" value="Wifi free"><span></span>Wifi free</label></li>
+      <li><label><input type="checkbox" name="amenities" value="For children"><span></span>For children</label></li>
+      <li><label><input type="checkbox" name="amenities" value="Outdoor seating"><span></span>Outdoor seating</label></li>
+    </ul>
+  </div>
+  </div>
         <div class="hien">
           <div class="h1">
             <img
