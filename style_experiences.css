@@ -259,9 +259,10 @@ body {
 /* lounge */
 .lounge{
     background:#26241F;
-    height:1000px;
+    min-height:800px;
     font-family:'Judson';
     color:white;
+    margin:3% auto
 }
 .lounge .topic{
     text-align: center;
@@ -363,3 +364,25 @@ body {
     font-family: 'Inria Serif';
 }
 
+/* chuyển ảnh */
+.anh img{
+    transition: all 1.5s ease;
+    width: 1000px;
+    height: 500px; 
+}
+
+.anh img.center {
+    width: 1000px;
+    height: 588px;
+    transform: translateX(0)
+}
+
+.anh img.left2{
+    transform: translateX(-200px);
+}
+.anh img.left3{
+    transform: translateX(-640px)
+}
+.anh img.right2{
+    transform: translateX(200px)
+}
