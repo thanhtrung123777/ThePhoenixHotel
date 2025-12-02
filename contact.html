@@ -44,31 +44,56 @@
 <div>
 <!-- Header -->
 <div class="header">
-    <div class="header-left">
-    <img src="fluent-emoji-high-contrast_phoenix-bird.png" alt="The Phoenix" />
-    </div>
-    <!-- ////////////// -->
-    <div class="header-center">
+  <div class="header-left">
+    <img src="phoenix.png" alt="The Phoenix" />
+  </div>
+
+  <div class="header-center">
     <h1>The Phoenix</h1>
     <h2><i>I T A L Y</i></h2>
-    </div>
-    <!-- ///////////////////// -->
-    <div class="header-right">
+  </div>
+
+  <div class="header-right">
     <i class="fa-solid fa-magnifying-glass"></i><a href="">Search</a>
     <i class="fa-regular fa-calendar-days"></i><a href="">My Booking</a>
+<!-- Hamburger menu cho mobile -->
+    <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i>
     </div>
-    <!-- //////////////////////// -->
+  </div>
 </div>
+
 <!-- Sticky Header -->
-<div class="sticky-header">
-    <ul>
+<div class="sticky-header" id="desktopMenu">
+  <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="experiences.html">Experiences</a></li>
     <li><a href="room_price.html">Room&Price</a></li>
-    <li><a href="index.html">Eat & Drink</a></li>
+    <li><a href="Eat&Drink.html">Eat & Drink</a></li>
     <li><a href="contact.html">Contact</a></li>
-    </ul>
+  </ul>
 </div>
+
+<!-- Sticky Menu Mobile -->
+<div class="sticky-header" id="mobileMenu">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="experiences.html">Experiences</a></li>
+    <li><a href="room_price.html">Room&Price</a></li>
+    <li><a href="Eat&Drink.html">Eat & Drink</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", () => 
+{
+  mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
+});
+</script>
+
 <!-- body -->
 <div class="contact-body">
     <div class="about">
@@ -100,12 +125,15 @@
     <div class="ctus">
         <p class="ct9">Contact us</p>
         <p class="fmore">— FOR MORE INFORMATION</p>
-        <div class="arrow" style="margin-left: 50%;"></div>
+        <div class="arrow-circle" id="scroll">
+            <p class="arrow">↓</p>
+        </div>
     </div>
     <div class="urin4">
-        <div class="imgi4">
-            <img src="https://w-hotels.marriott.com/wp-content/uploads/2025/08/Punta-Cana-hero-m.jpg" />
+        <div class="imgi4-wrap">
+            <img src="https://w-hotels.marriott.com/wp-content/uploads/2025/08/Punta-Cana-hero-m.jpg" alt="">
         </div>
+
         <div class="inputhere">
             <p class="ur9"><span class="y">Y</span>our information</span></p>
             <div class="in4">
@@ -119,11 +147,12 @@
                     <p class="phone">Phone Number:<span class="i3">*</span></p>
                     <input type="text" required placeholder="Phone Number" />
                     <p class="msg">Leave your message here:</p>
-                    <input type="text" placeholder="message" />
+                    <input type="text" placeholder="Message" />
                 </div>
-                <div class="submit">
-                    <button type="submit">SUBMIT</button>
-                </div>
+            </div>
+            <div class="submit">
+                <button type="submit" id="submitBtn">SUBMIT</button>
+                <p id="msg"></p>
             </div>
         </div>
     </div>
@@ -218,3 +247,41 @@
 </body>
 </html>
 <script>
+document.getElementById("scroll").addEventListener("click", function () 
+{
+    document.querySelector(".urin4").scrollIntoView
+    ({ behavior: "smooth"});
+});
+
+document.getElementById("submitBtn").addEventListener("click", function (e) 
+{
+    e.preventDefault();
+
+    let inputs = document.querySelectorAll(".i4mt input[required]");
+    let msg = document.getElementById("msg");
+    let valid = true;
+
+    inputs.forEach(input => 
+    {
+        if (input.value.trim() === "")
+        {
+            valid = false;
+            input.style.borderBottom = "2px solid red";
+        }
+        else
+            input.style.borderBottom = "1px solid #000";
+    });
+    if (!valid) 
+    {
+        msg.innerText = "Please fill all required fields!";
+        msg.style.color = "red";
+    }
+    else 
+    {
+        msg.innerText = "Thanks for choosing us! We will contact you as soon as possible.";
+        msg.style.color = "#383838";
+    }
+});
+</script>
+
+
