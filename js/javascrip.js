@@ -1,42 +1,52 @@
-// search.js
-const items = [
-  "Breakfast buffet",
-  "Sea food",
-  "Vietnamese food",
-  "International cuisine",
-  "Beverage",
-  "Dessert",
-  "Soup"
-];
 
+//search
 const searchBtn = document.getElementById("searchBtn");
 const searchInput = document.getElementById("searchPicker");
-const resultDiv = document.getElementById("result");
 
 function searchItems() {
   const keyword = searchInput.value.trim().toLowerCase();
+  const allH = document.querySelectorAll(".hien > div");
+
   if (!keyword) {
-    resultDiv.innerHTML = "<p>Hãy nhập từ khóa để tìm!</p>";
+    allH.forEach(div => div.style.display = "");
     return;
   }
 
-  const results = items.filter(item => item.toLowerCase().includes(keyword));
-
-  if (results.length > 0) {
-    resultDiv.innerHTML = "<ul>" + results.map(r => "<li>" + r + "</li>").join("") + "</ul>";
-  } else {
-    resultDiv.innerHTML = "<p>Không tìm thấy kết quả nào!</p>";
-  }
+  allH.forEach(div => {
+    const text = div.querySelector("div[class^='nd']").innerText.toLowerCase();
+    if (text.includes(keyword)) {
+      div.style.display = "flex";
+    } else {
+      div.style.display = "none";
+    }
+  });
 }
 
 searchBtn.addEventListener("click", searchItems);
 searchInput.addEventListener("keypress", function(e) {
-  if (e.key === "Enter") {
-    searchItems();
-  }
+  if (e.key === "Enter") searchItems();
 });
-//....
 
+//....slideshow..
+
+document.querySelectorAll('.slider, .slider2, .slider3, .slider4, .slider5, .slider6, .slider7').forEach(slider => {
+    const slides = slider.querySelectorAll('img');
+    let currentIndex = 0;
+
+    const showSlide = (index) => {
+        slides.forEach((img, i) => img.classList.toggle('active', i === index));
+    }
+
+    slider.querySelector('.next').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    });
+
+    slider.querySelector('.prev').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+    });
+});
 
 // .........
 const checkboxes = document.querySelectorAll('.chon input[type="checkbox"]');
