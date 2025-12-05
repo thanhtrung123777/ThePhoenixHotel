@@ -1,21 +1,14 @@
-const anh1 = document.querySelector(".lockin .anh .left");
-// ảnh giữa
-const anh2 = document.querySelector(".lockin .anh .center");   
-const anh3 = document.querySelector(".lockin .anh .right");
-const anhContain = document.querySelector(".anh");
+const buttons = document.querySelectorAll(".button button");
+const btn1 = buttons[0];  //nút trái
+const btn2 = buttons[1];  //nút phải
 
-anh3.addEventListener("click", () =>{
-    anh1.className = "left2";
-    anh2.className = "left3";
-    anh3.className = "center";
-    anh3.src = "swimming-pool.png";
+const trans = document.querySelectorAll(".anhchuyen img");
+const pic1 = trans[0];
+const pic2 = trans[1];  //ảnh giữa
+const pic3 = trans[2];
 
-    const anh4 = document.createElement("img");
-    anh4.src = "holiday-view-2339900_1280 1.png";
-    anh4.className = "right2";
-    
+btn2.addEventListener("click", function(){
 
-    anhContain.appendChild(anh4);
 })
 
 
