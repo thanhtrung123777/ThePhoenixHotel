@@ -243,34 +243,38 @@ body {
     color:white;
     font-size:120%;
 }
-.lockin .button{
-    position:absolute;
-    display:flex;
-    justify-content: space-between;
-    /* background:red; */
-    width:100%;
 
-}
-.lockin .button button{
-    border-radius: 50%;
-    padding:1% 25px;
-    margin:70px;
-    margin-top:250px
-}
-.lockin .chuyenanh .anhchuyen{
-    width:100%;
-    /* background:blue; */
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    gap:30px;
-    margin-top:5%;
-}
-.lockin .chuyenanh{
+
+/* ảnh */
+.slide-show{
+    width:1000px;
+    margin: 0 auto;
+    overflow:hidden;
     position:relative;
-    
-
 }
+
+.list-imgs{
+    display:flex;
+    
+}
+.btn{
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    color:silver;
+    font-size:40px;
+    margin:auto 10px;
+    cursor:pointer;
+}
+
+.btn-left{
+    left : 0;
+}
+.btn-right{
+    right: 0;
+}
+
+
 
 
 

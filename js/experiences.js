@@ -1,14 +1,34 @@
-const buttons = document.querySelectorAll(".button button");
-const btn1 = buttons[0];  //nút trái
-const btn2 = buttons[1];  //nút phải
+const listImgs = document.querySelector('.list-imgs')
+const imgs = document.querySelectorAll('.list-imgs img')
+const length = imgs.length
 
-const trans = document.querySelectorAll(".anhchuyen img");
-const pic1 = trans[0];
-const pic2 = trans[1];  //ảnh giữa
-const pic3 = trans[2];
+let i = 0
+const right = document.querySelector('.btn-right')
+right.addEventListener('click', function () {
+    if (i == length -1 ) {
+        i = 0
+        let width = imgs[0].offsetWidth
+        listImgs.style.transform = `translateX(0px)`
+    }
+    else {
+        i++
+        let width = imgs[0].offsetWidth
+        listImgs.style.transform = `translateX(${width * -1 * i}px)`
+    }
+})
 
-btn2.addEventListener("click", function(){
-
+const left = document.querySelector('.btn-left')
+left.addEventListener('click', function() {
+     if (i == 0 ) {
+        i = length - 1
+        let width = imgs[0].offsetWidth
+        listImgs.style.transform = `translateX(${width * -1 * i}px)`
+    }
+    else {
+        i--
+        let width = imgs[0].offsetWidth
+        listImgs.style.transform = `translateX(${width * -1 * i}px)`
+    }
 })
 
 
