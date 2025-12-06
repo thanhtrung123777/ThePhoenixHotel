@@ -435,7 +435,6 @@ body {
     background-color: #666;
     color: white;
     border: none;
-    width: 30%;
     padding: 10px 30px 10px 25px;
     font-size: 18px;
     font-weight: bold;
@@ -478,21 +477,14 @@ body {
 
 @media (max-width: 1000px) 
 {
-    .imgct
-    {
-        display: none;
-    }
+    .imgct { display: none; }
     .ur9
     {
         padding-top: 0px;
         margin-bottom: 0px;
         padding-bottom: 111px;
     }
-    #submitBtn 
-    {   
-        width: 40%;
-        padding: 12px;
-    }
+    #submitBtn { width: 40%; }
 }
 
 /* footer */
