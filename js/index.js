@@ -15,7 +15,6 @@ right.addEventListener('click', function () {
         let width = imgs[0].offsetWidth
         listImgs.style.transform = `translateX(${width * -1 * i}px)`
     }
-
 })
 
 const left = document.querySelector('.btn-left')
@@ -23,7 +22,7 @@ left.addEventListener('click', function () {
     if (i == 0) {
         i = length - 1
         let width = imgs[0].offsetWidth
-        listImgs.style.transform = `translateX(${width * -1 * i})`
+        listImgs.style.transform = `translateX(${width * -1 * i}px)`
     }
     else {
         i--
