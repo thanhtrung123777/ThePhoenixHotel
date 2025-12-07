@@ -70,6 +70,7 @@ body {
     color: white;
     margin-right: 5px;
 }
+
 .header-right i {
     color: white;
     font-size: 20px;
@@ -98,10 +99,12 @@ body {
     margin: 10px 40px;
     font-size: 25px;
 }
-.sticky-header ul li a{
-    color:white;
+
+.sticky-header ul li a {
+    color: white;
     text-decoration: none;
 }
+
 .img {
     width: 100%;
     position: relative;
@@ -130,7 +133,7 @@ body {
 /* Body */
 .video {
     width: 100%;
-    height: 975px;
+    height: auto;
     position: relative;
 }
 
@@ -142,7 +145,8 @@ body {
 
 .video p {
     position: absolute;
-    bottom: 35%;
+    top: 50%;
+    transform: translateY(-50%);
     left: 30px;
     font-family: 'Jeju Myeongjo';
     color: white;
@@ -160,7 +164,7 @@ body {
     width: 100%;
     height: auto;
     background: #333333;
-
+    margin-top: -10px
 }
 
 .intro-1 {
@@ -296,6 +300,46 @@ body {
     font-family: 'Judson';
 }
 
+
+/* slideshow */
+.slide-show {
+    background: #333333;
+    overflow: hidden;
+    width: 1200px;
+    margin: 50px auto;
+    position: relative
+}
+
+.list-imgs {
+    display: flex;
+    transition: 0.5s
+}
+
+.list-imgs img {
+    width: 1200px;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: white;
+    margin: auto 20px;
+    cursor: pointer
+}
+
+.btn-right {
+    right: 0
+}
+
+.btn-left {
+    left: 0
+}
+
+/* booking */
 .booking {
     font-family: 'Judson';
     display: flex;
@@ -321,6 +365,7 @@ body {
     font-size: 20px;
     color: black;
 }
+
 /* footer */
 .footer {
     background: #333333;
@@ -365,47 +410,49 @@ body {
     font-size: 120%;
 }
 
-.footer2{
+.footer2 {
     background: #EFE6DD;
     color: black;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.f2_1{
-    flex:1;
-    
+
+.f2_1 {
+    flex: 1;
+
 }
-.f2_1 img{
-    width:40%;
-    height:40%;
-    margin-left:2% 
+
+.f2_1 img {
+    width: 40%;
+    height: 40%;
+    margin-left: 2%
 }
-.f2_2{
-    flex:1;
-    margin-left:-18%;
-    display:flex;
+
+.f2_2 {
+    flex: 1;
+    margin-left: -18%;
+    display: flex;
     flex-direction: column;
 }
-.f2_2 a{
+
+.f2_2 a {
     text-decoration: none;
-    color:black;
+    color: black;
     font-weight: bold;
-    font-size:120%;
+    font-size: 120%;
     font-family: 'Inria Serif';
-    margin-top:4%;
+    margin-top: 4%;
 }
-.f2_3{
-    flex:1;
+
+.f2_3 {
+    flex: 1;
     font-weight: bold;
-    font-size:120%;
+    font-size: 120%;
     font-family: 'Inria Serif';
 }
-.test{
+
+.test {
     background-color: rgb(84, 154, 130);
     width: 100%;
 }
-
-
-
-
