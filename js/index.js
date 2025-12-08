@@ -9,11 +9,15 @@ right.addEventListener('click', function () {
         i = 0
         let width = imgs[0].offsetWidth
         listImgs.style.transform = `translateX(0px)`
+        document.querySelector('.active').classList.remove('active')
+        document.querySelector('.item-' + i).classList.add('active')
     }
     else {
         i++
         let width = imgs[0].offsetWidth
         listImgs.style.transform = `translateX(${width * -1 * i}px)`
+        document.querySelector('.active').classList.remove('active')
+        document.querySelector('.item-' + i).classList.add('active')
     }
 })
 
@@ -23,11 +27,15 @@ left.addEventListener('click', function () {
         i = length - 1
         let width = imgs[0].offsetWidth
         listImgs.style.transform = `translateX(${width * -1 * i}px)`
+        document.querySelector('.active').classList.remove('active')
+        document.querySelector('.item-' + i).classList.add('active')
     }
     else {
         i--
         let width = imgs[0].offsetWidth
         listImgs.style.transform = `translateX(${width * -1 * i}px)`
+        document.querySelector('.active').classList.remove('active')
+        document.querySelector('.item-' + i).classList.add('active')
     }
-
 })
+

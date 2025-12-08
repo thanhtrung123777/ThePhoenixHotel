@@ -339,6 +339,23 @@ body {
     left: 0
 }
 
+.circle {
+    display: flex;
+    max-width: 10px;
+    margin: 10px auto;
+    justify-content: center;
+}
+.active{
+    background:white;
+}
+
+.item {
+    border: 2px solid white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%
+}
+
 /* booking */
 .booking {
     font-family: 'Judson';

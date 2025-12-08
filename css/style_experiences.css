@@ -230,7 +230,7 @@ body {
 /* lockin */
 .lockin {
     background: #26241F;
-    height: 1100px;
+    height: 1000px;
     font-family: 'Judson';
     color: white;
 }
@@ -256,7 +256,7 @@ body {
 /* ảnh */
 .slide-show {
     width: 1000px;
-    margin: 0 auto;
+    margin: 50px auto;
     overflow:hidden;
     position: relative;
 }
