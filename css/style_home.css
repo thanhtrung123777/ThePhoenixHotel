@@ -247,27 +247,26 @@ body {
 
 .room {
     width: 100%;
-    display: flex;
-    justify-content: center;
+  
 }
 
-.room ul {
+.room .topic {
+    color:white;
     margin: 0;
     padding: 50px;
     list-style: none;
     display: flex;
+    justify-content: center;
     gap: 40px;
+    cursor:pointer;
+    font-size:20px
 }
 
-.room ul li {
-    font-family: 'Judson';
-    font-size: 25px;
-    color: white;
-}
+
 
 .show-pics {
     width: 100%;
-
+    
 }
 
 .show-pics img {
@@ -275,6 +274,7 @@ body {
     margin: 0 auto;
     width: 1023px;
     height: 618px;
+
 }
 
 .introduce-room {
@@ -298,6 +298,11 @@ body {
     color: gray;
     margin-right: 230px;
     font-family: 'Judson';
+}
+.hr{
+    border-bottom: 2px solid white; 
+    padding-bottom: 5px;
+    
 }
 
 
