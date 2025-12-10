@@ -1,5 +1,4 @@
-
-//search
+// SEARCH
 const searchBtn = document.getElementById("searchBtn");
 const searchInput = document.getElementById("searchPicker");
 
@@ -8,52 +7,85 @@ function searchItems() {
   const allH = document.querySelectorAll(".hien > div");
 
   if (!keyword) {
-    allH.forEach(div => div.style.display = "");
+    allH.forEach(div => div.style.display = "flex");
     return;
   }
 
   allH.forEach(div => {
-    const text = div.querySelector("div[class^='nd']").innerText.toLowerCase();
-    if (text.includes(keyword)) {
-      div.style.display = "flex";
-    } else {
-      div.style.display = "none";
-    }
+    const text = div.querySelector("h2").innerText.toLowerCase();
+    div.style.display = text.includes(keyword) ? "flex" : "none";
   });
 }
 
 searchBtn.addEventListener("click", searchItems);
-searchInput.addEventListener("keypress", function(e) {
+searchInput.addEventListener("keypress", e => {
   if (e.key === "Enter") searchItems();
 });
 
-//....slideshow..
 
-document.querySelectorAll('.slider, .slider2, .slider3, .slider4, .slider5, .slider6, .slider7').forEach(slider => {
-    const slides = slider.querySelectorAll('img');
-    let currentIndex = 0;
+// SLIDESHOW
+document.querySelectorAll('.slider, .slider2, .slider3, .slider4, .slider5, .slider6, .slider7')
+.forEach(slider => {
 
-    const showSlide = (index) => {
-        slides.forEach((img, i) => img.classList.toggle('active', i === index));
-    }
+  const slides = slider.querySelectorAll('img');
+  const nextBtn = slider.querySelector('.next');
+  const prevBtn = slider.querySelector('.prev');
+  let index = 0;
 
-    slider.querySelector('.next').addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
-    });
+  function show(i) {
+    slides.forEach((s, n) => s.classList.toggle('active', n === i));
+  }
 
-    slider.querySelector('.prev').addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        showSlide(currentIndex);
-    });
+  nextBtn.onclick = () => {
+    index = (index + 1) % slides.length;
+    show(index);
+  };
+
+  prevBtn.onclick = () => {
+    index = (index - 1 + slides.length) % slides.length;
+    show(index);
+  };
 });
 
-// .........
-const checkboxes = document.querySelectorAll('.chon input[type="checkbox"]');
 
-checkboxes.forEach(cb => {
-  cb.addEventListener('change', () => {
-    console.log(cb.name, cb.value, cb.checked); 
+// BOOKING 
+document.querySelectorAll(".book").forEach(btn => {
+  btn.addEventListener("click", () => {
+    alert("Bạn đã book thành công!");
   });
 });
-// .........
+
+
+// FILTER
+const filters = document.querySelectorAll('.container input[type="checkbox"]');
+const items = document.querySelectorAll('.hien > div');
+
+filters.forEach(filter => {
+  filter.addEventListener('change', applyFilters);
+});
+
+function applyFilters() {
+  const selected = {
+    establishment: getCheckedValues('establishment'),
+    meal: getCheckedValues('meal'),
+    dish: getCheckedValues('dish'),
+    price: getCheckedValues('price'),
+    amenities: getCheckedValues('amenities')
+  };
+
+  items.forEach(item => {
+    let show = true;
+    for (let key in selected) {
+      if (selected[key].length > 0) {
+        const val = item.dataset[key];
+        if (!selected[key].includes(val)) show = false;
+      }
+    }
+    item.style.display = show ? "flex" : "none";
+  });
+}
+
+function getCheckedValues(name) {
+  return [...document.querySelectorAll(`input[name="${name}"]:checked`)]
+    .map(i => i.value);
+}
