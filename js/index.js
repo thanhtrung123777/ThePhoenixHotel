@@ -60,7 +60,7 @@ btns[1].addEventListener('click', function () {
 })
 btns[2].addEventListener('click', function () {
     img.src = 'img/Capella-Bangkok-Villa-01a 1.png'
-    topic.textContent = 'VILLA'
+    topic.textContent = 'BIỆT THỰ'
     para.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.'
     document.querySelector('.hr').classList.remove('hr')
     document.querySelector('.btn3').classList.add('hr')

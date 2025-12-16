@@ -51,6 +51,7 @@ body {
 }
 
 .header-right {
+    /* background:red; */
     display: flex;
     flex: 1;
     align-items: center;
@@ -69,6 +70,7 @@ body {
     text-decoration: none;
     color: white;
     margin-right: 5px;
+    font-family:'Alegreya';
 }
 
 .header-right i {
@@ -89,8 +91,9 @@ body {
     align-items: center;
     width: 100%;
     height: 60px;
-    font-family: 'Inria Serif';
+    font-family: 'Open Sans';
     backdrop-filter: blur(5px);
+    font-weight:800;
 }
 
 .sticky-header ul li {
@@ -148,15 +151,17 @@ body {
     top: 50%;
     transform: translateY(-50%);
     left: 30px;
-    font-family: 'Jeju Myeongjo';
+    font-family: 'Montserrat';
     color: white;
     font-size: 40px;
     padding: 10px;
+    font-weight:700;
 }
 
-.video span {
+.video .p1 {
     font-family: 'Italianno';
-    font-size: 110px
+    font-size: 110px;
+    margin-left:400px
 }
 
 /* intro */
@@ -168,7 +173,7 @@ body {
 }
 
 .intro-1 {
-    font-family: 'Inknut Antiqua';
+    font-family: 'Open Sans';
     text-align: center;
     margin: 0;
     padding: 40px 15px 0;
@@ -186,13 +191,15 @@ body {
 }
 
 .intro-3 {
-    font-family: 'Inknut Antiqua';
+    font-family: 'Montserrat';
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
     margin: -20px auto 0;
     width: 90%;
     padding: 0;
     color: white;
+    font-weight:400;
+    line-height: 30px;
 
 }
 
@@ -212,12 +219,14 @@ body {
 }
 
 .first-view p {
-    font-size: 32px;
+    font-size: 25px;
     margin: 0;
     padding: 0;
     text-align: justify;
-    font-family: 'Judson';
+    font-family: 'Montserrat';
     color: white;
+    max-width:550px;
+    line-height: 45px;
 }
 
 .accommodation {
@@ -232,17 +241,17 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    font-family: 'Judson';
+    font-family: 'Open Sans';
 }
 
 .accommodation p {
     text-align: justify;
     font-size: 27px;
-    width: 47%;
+    width: 50%;
     margin: 0;
     padding: 0;
     color: white;
-    font-family: 'Judson';
+    font-family: 'Montserrat';
 }
 
 .room {
@@ -259,7 +268,9 @@ body {
     justify-content: center;
     gap: 40px;
     cursor:pointer;
-    font-size:20px
+    font-size:20px;
+    font-family:'Open Sans';
+    font-weight:700;
 }
 
 
@@ -287,7 +298,7 @@ body {
 }
 
 .introduce-room h2 {
-    font-family: 'Judson';
+    font-family: 'Open Sans';
     font-size: 28px
 }
 
@@ -363,7 +374,7 @@ body {
 
 /* booking */
 .booking {
-    font-family: 'Judson';
+    font-family: 'Open Sans';
     display: flex;
     justify-content: space-between;
     background: #CCCCCC;
@@ -386,6 +397,10 @@ body {
 .booking a {
     font-size: 20px;
     color: black;
+    font-weight:600;
+}
+.book-now{
+    font-family: 'Montserrat'
 }
 
 /* footer */
@@ -397,11 +412,11 @@ body {
 .footer1 {
     display: flex;
     justify-content: space-between;
-    font-family: 'Inknut Antiqua';
+    
 }
 
 .f1_1 {
-    font-family: 'Inika';
+    font-family: 'Open Sans';
     margin-left: 5%;
     flex: 1;
     margin-top: 1%;
@@ -414,21 +429,28 @@ body {
 
 .f1_2 p {
     font-size: 120%;
+    font-family: 'Open Sans';
+}
+.f1_2 h2{
+    font-family:'Inknut Antiqua'
 }
 
 .f1_3 {
     flex: 1;
     margin-left: 10%;
     margin-right: 5%;
+    font-family:'Open Sans';
+    margin-top:10px
 }
 
 .f1_4 {
     flex: 1;
-
+    font-family: 'Open Sans';
+    margin-top:10px
 }
 
 .f1_4 p {
-    font-family: 'Inika';
+    
     font-size: 120%;
 }
 
@@ -456,6 +478,7 @@ body {
     margin-left: -18%;
     display: flex;
     flex-direction: column;
+    font-family: 'Open Sans';
 }
 
 .f2_2 a {
@@ -463,7 +486,7 @@ body {
     color: black;
     font-weight: bold;
     font-size: 120%;
-    font-family: 'Inria Serif';
+    
     margin-top: 4%;
 }
 
@@ -471,10 +494,6 @@ body {
     flex: 1;
     font-weight: bold;
     font-size: 120%;
-    font-family: 'Inria Serif';
+    font-family: 'Open Sans';
 }
 
-.test {
-    background-color: rgb(84, 154, 130);
-    width: 100%;
-}
