@@ -89,3 +89,55 @@ function getCheckedValues(name) {
   return [...document.querySelectorAll(`input[name="${name}"]:checked`)]
     .map(i => i.value);
 }
+// GẬP / MỞ
+
+document.querySelectorAll(".chon > div > p").forEach(title => {
+  title.addEventListener("click", () => {
+    title.classList.toggle("active");
+
+    title.parentElement
+      .querySelectorAll("ul")
+      .forEach(ul => ul.classList.toggle("hide"));
+  });
+});
+
+
+
+// XEM THÊM
+document.querySelectorAll(".show-more").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const moreList = btn.previousElementSibling;
+
+    if (!moreList || !moreList.classList.contains("more")) return;
+
+    const isOpen = moreList.style.display === "block";
+
+    moreList.style.display = isOpen ? "none" : "block";
+    btn.classList.toggle("active");
+
+    btn.querySelector("span").innerText = isOpen ? "Xem thêm" : "Thu gọn";
+  });
+});
+
+
+
+//xem tất cả
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+
+
+document.querySelectorAll(".show-all").forEach(btn => {
+  btn.addEventListener("click", () => {
+    modal.style.display = "block";
+    overlay.style.display = "block";
+  });
+});
+
+document.querySelector(".close").onclick = closeModal;
+overlay.onclick = closeModal;
+
+function closeModal() {
+  modal.style.display = "none";
+  overlay.style.display = "none";
+}
+
