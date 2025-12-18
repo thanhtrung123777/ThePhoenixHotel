@@ -82,15 +82,16 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #b4b4b499;
+    background: #b4b4b499;
     display: flex;
     justify-content: center;
     gap: 70px;
     align-items: center;
     width: 100%;
     height: 60px;
-    font-family: 'Inria Serif';
+    font-family: 'Open Sans';
     backdrop-filter: blur(5px);
+    font-weight: 800;
 }
 
 .sticky-header ul li {
@@ -119,18 +120,20 @@ body {
 
 .video p {
     position: absolute;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
     left: 30px;
-    font-family: 'Jeju Myeongjo';
+    font-family: 'Open Sans';
     color: white;
     font-size: 48px;
     padding: 10px;
+    font-weight: 700;
 }
 
 .video span {
-    font-family: 'Instrument Sans';
+    font-family: 'Montserrat';
     font-size: 24px;
+    font-weight: 400;
 }
 
 /* Body */
@@ -166,29 +169,29 @@ body {
     width: 100%;
     height: auto;
     background: #333333;
-    margin-top:-60px
-
+    margin-top: -60px
 }
 
 
 
 .intro-1 {
-    font-family: 'Inknut Antiqua';
+    font-family: 'Open Sans';
     text-align: center;
     font-size: 32px;
     padding-top: 3%;
     color: white;
+    font-weight: 700
 }
 
 .intro-2 {
-    font-family: 'Inknut Antiqua';
+    font-family: 'Montserrat';
     text-align: center;
-    font-size: 18px;
+    font-size: 25px;
     margin: -20px auto 0;
-    width: 60%;
+    width: 65%;
     padding: 0;
     color: white;
-
+    font-weight: 400;
 
 }
 
@@ -198,15 +201,23 @@ body {
     justify-content: space-between;
     background: #333333;
     color: white;
-    font-family: 'Inter';
     padding: 5% 2%
 }
 
 .pics p {
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+.pics h2 {
+    font-family: 'Open Sans'
+}
+
+/* .pic1 p {
     width: 90%;
     font-size: 120%;
     text-align: justify;
-}
+} */
 
 .pic1 {
     flex: 1;
@@ -225,19 +236,31 @@ body {
     background: #BBBBBB;
     color: #FFFFFF;
     padding: 2% 5%;
+    font-family: 'Inter';
+    font-weight: 800;
 }
 
 /* lockin */
 .lockin {
     background: #26241F;
-    height: 1000px;
-    font-family: 'Judson';
+    height: 1100px;
     color: white;
 }
 
 .lockin .topic {
     text-align: center;
     padding-top: 5%;
+
+}
+
+.topic h1 {
+    font-family: 'Open Sans';
+}
+
+.topic h3 {
+    font-family: 'Montserrat';
+    width: 80%;
+    margin: 20px auto;
 }
 
 .lockin hr {
@@ -249,7 +272,9 @@ body {
     padding: 2% 5%;
     text-decoration: none;
     color: white;
-    font-size: 120%;
+    font-size: 170%;
+    font-family: 'Alegreya';
+    font-weight: 700;
 }
 
 
@@ -257,7 +282,7 @@ body {
 .slide-show {
     width: 1000px;
     margin: 50px auto;
-    overflow:hidden;
+    overflow: hidden;
     position: relative;
 }
 
@@ -288,7 +313,6 @@ body {
 .lounge {
     background: #26241F;
     min-height: 800px;
-    font-family: 'Judson';
     color: white;
     margin: 3% auto
 }
@@ -296,6 +320,13 @@ body {
 .lounge .topic {
     text-align: center;
     padding-top: 5%
+}
+
+.louge h1 {
+    font-family: 'Open Sans';
+}
+.lounge h3{
+    font-family: 'Montserrat';
 }
 
 .lounge hr {
@@ -307,7 +338,12 @@ body {
     justify-content: space-between;
     padding: 0 5%
 }
-
+.anh h1{
+    font-family:'Open Sans';
+}
+.anh p{
+    font-family:'Montserrat'
+}
 .anh1 {
     width: 45%;
 }
@@ -325,11 +361,11 @@ body {
 .footer1 {
     display: flex;
     justify-content: space-between;
-    font-family: 'Inknut Antiqua';
+    
 }
 
 .f1_1 {
-    font-family: 'Inika';
+    font-family: 'Open Sans';
     margin-left: 5%;
     flex: 1;
     margin-top: 1%;
@@ -342,21 +378,28 @@ body {
 
 .f1_2 p {
     font-size: 120%;
+    font-family: 'Open Sans';
+}
+.f1_2 h2{
+    font-family:'Inknut Antiqua'
 }
 
 .f1_3 {
     flex: 1;
     margin-left: 10%;
     margin-right: 5%;
+    font-family:'Open Sans';
+    margin-top:10px
 }
 
 .f1_4 {
     flex: 1;
-
+    font-family: 'Open Sans';
+    margin-top:10px
 }
 
 .f1_4 p {
-    font-family: 'Inika';
+    
     font-size: 120%;
 }
 
@@ -384,6 +427,7 @@ body {
     margin-left: -18%;
     display: flex;
     flex-direction: column;
+    font-family: 'Open Sans';
 }
 
 .f2_2 a {
@@ -391,15 +435,12 @@ body {
     color: black;
     font-weight: bold;
     font-size: 120%;
-    font-family: 'Inria Serif';
     margin-top: 4%;
 }
 
 .f2_3 {
     flex: 1;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 120%;
-    font-family: 'Inria Serif';
+    font-family: 'Open Sans';
 }
-
-/* chuyển ảnh */

@@ -486,13 +486,12 @@ body {
     color: black;
     font-weight: bold;
     font-size: 120%;
-    
     margin-top: 4%;
 }
 
 .f2_3 {
     flex: 1;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 120%;
     font-family: 'Open Sans';
 }
