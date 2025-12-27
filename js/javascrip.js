@@ -141,3 +141,44 @@ function closeModal() {
   overlay.style.display = "none";
 }
 
+//active cho menu
+const page = location.pathname.split("/").pop() || "home.html";
+  document.querySelectorAll(".sticky-header a").forEach(a => {
+    if (a.getAttribute("href") === page) {
+      a.classList.add("active");
+    }
+  });
+/* mở / đóng booking */
+const openBtn = document.getElementById("openBooking");
+const closeBtn = document.getElementById("closeBooking");
+const bookingBox = document.getElementById("bookingBox");
+
+openBtn.onclick = () => bookingBox.style.display = "flex";
+closeBtn.onclick = () => bookingBox.style.display = "none";
+
+/* spinner ▲ ▼ */
+document.querySelectorAll('.spinner').forEach(spinner => {
+    const count = spinner.querySelector('.count');
+    const up = spinner.querySelector('.up');
+    const down = spinner.querySelector('.down');
+
+    up.onclick = () => {
+        count.textContent = Number(count.textContent) + 1;
+    };
+
+    down.onclick = () => {
+        if (Number(count.textContent) > 0) {
+            count.textContent = Number(count.textContent) - 1;
+        }
+    };
+});
+const form = document.getElementById("bookingForm");
+
+form.onsubmit = function(e) {
+    e.preventDefault(); 
+
+    alert("Đã gửi thông tin đặt phòng!");
+
+    bookingBox.style.display = "none";
+};
+
