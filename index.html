@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ThePhoenix</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -14,44 +15,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
-
-
     <link rel="stylesheet" href="css/style_home.css" />
-    <script src="js/index.js" defer></script>
 </head>
-
 <body>
     <!-- Header -->
     <div class="header">
         <div class="header-left">
             <img src="img/fluent-emoji-high-contrast_phoenix-bird.png" alt="The Phoenix" />
-        </div>
-        <!-- ////////////// -->
-        <div class="header-center">
             <h1>The Phoenix</h1>
-            <h2><i>H O T E L</i></h2>
+        </div>
+        <div class="header-center">
+            <input type="search" id="searchPicker"  placeholder="Tìm Kiếm">
         </div>
         <!-- ///////////////////// -->
-        <div class="header-right">
-            <i class="fa-solid fa-magnifying-glass"></i><a href="">Tìm Kiếm</a>
+        <div class="header-right" id="openBooking">
             <i class="fa-regular fa-calendar-days"></i><a href="">Lịch Đặt</a>
         </div>
         <!-- //////////////////////// -->
     </div>
-    <!-- Sticky Header -->
+        <!-- Sticky Header -->
     <div class="sticky-header">
-        <ul>
-            <li><a href="index.html">Trang Chủ</a></li>
-            <li><a href="experiences.html">Dịch Vụ</a></li>
-            <li><a href="room_price.html">Phòng Nghỉ</a></li>
-            <li><a href="Eat&Drink.html">Ăn Uống</a></li>
-            <li><a href="contact.html">Liên Hệ</a></li>
-        </ul>
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="experiences.html">Dịch Vụ</a></li>
+                <li><a href="room_price.html">Phòng Nghỉ</a></li>
+                <li><a href="Eat&Drink.html">Ăn Uống</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+            </ul>
     </div>
+    
     <!----------------------------------------------------------- Body ---------------------------------------------------->
     <!-- Video -->
     <div class="video">
-        <video src="img/3015493-hd_1920_1080_24fps.mp4" autoplay muted loop playsinline></video>
+        <video src="img/211152_small.mp4" autoplay muted loop playsinline></video>
         <p>Tận hưởng khoảnh khắc</p>
         <p class="p1">Cuộc Sống</p>
     </div>
@@ -61,103 +57,131 @@
         <p class="intro-1">Ho Chi Minh, Viet Nam</p>
         <p class="intro-2">The Phoenix</p>
         <p class="intro-3">
-            Khách sạn của chúng tôi tọa lạc tại vị trí trung tâm thành phố Hồ Chí Minh thuận tiện, mang đến không gian
-            nghỉ dưỡng sang trọng và hiện đại. Với hệ thống phòng được thiết kế tinh tế, dịch vụ chuyên nghiệp và đội
-            ngũ nhân viên nhiệt tình, chúng tôi cam kết mang lại cho quý khách trải nghiệm thoải mái và đáng nhớ. Tại
-            đây, du khách có thể tận hưởng ẩm thực đa dạng, các tiện ích thư giãn cao cấp cùng nhiều hoạt động hấp dẫn,
-            đáp ứng mọi nhu cầu trong suốt thời gian nghỉ dưỡng.
+            Khách sạn tọa lạc tại trung tâm Thành phố Hồ Chí Minh, mang đến không gian nghỉ dưỡng sang trọng, hiện đại cùng dịch vụ chuyên nghiệp. Hệ thống phòng tiện nghi, ẩm thực đa dạng và các tiện ích cao cấp hứa hẹn đem lại trải nghiệm thoải mái và đáng nhớ cho mọi du khách.
         </p>
     </div>
 
-    <!-- Pics -->
-    <div class="pics">
-        <div class="first-view">
-            <div>
-                <img src="img/Frame 55.png" />
+    <!-------phòng------------->
+    <div class= "phong">
+        <div class="anh">
+            <div class="anh_nho1">
+                <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/637462492.jpg?k=647b9050f05faa1eb6009bb9bff76eebdd621542e9989ad7c1f4e32b9540121f&o="/>
             </div>
-
-            <div>
-                <p>
-                    Chỗ ở tại khách sạn của chúng tôi được thiết kế tinh tế, hiện đại và đầy đủ tiện nghi, mang đến
-                    không gian nghỉ ngơi thoải mái cho mọi du khách. Các phòng đều được trang bị nội thất cao cấp, cửa
-                    sổ rộng thoáng sáng và dịch vụ vệ sinh hằng ngày. Dù bạn đi công tác hay du lịch, nơi đây sẽ là lựa
-                    chọn lý tưởng để thư giãn và tận hưởng kỳ nghỉ trọn vẹn.
-                </p>
+            <div class="anh_to">
+                <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/444529940.jpg?k=e33db13f87e08a9caeb72b82484ae4455e2542746202acf24dad53daaa6e9529&o=" />
             </div>
-        </div>
-
-        <div class="accommodation">
-            <h1>Không gian nghỉ dưỡng</h1>
-            <p>
-                Không gian nghỉ dưỡng của chúng tôi tái định nghĩa chuẩn mực của sự sang trọng, mang đến những căn phòng
-                và suite lộng lẫy được tô điểm bằng vẻ tinh tế vượt thời gian. Mỗi chi tiết đều được chăm chút tỉ mỉ,
-                nhằm đáp ứng và nâng niu mọi mong muốn của những vị khách sành điệu và đẳng cấp.
-            </p>
-        </div>
-
-        <div class="room">
-            <div class="topic">
-                <div class="btn1 hr">PHÒNG</div>
-                <div class="btn2">SUITES</div>
-                <div class="btn3">BIỆT THỰ</div>
+            <div class="anh_nho2">
+                <img src="https://besenledlight.com/wp-content/uploads/2024/11/hotel-room-lighting-1.webp" />
             </div>
-
-            <div class="show-pics">
-                <img src="img/Capell-Bangkok-Riverfront-011.png" />
-                <div class="introduce-room">
-                    <h2>PHÒNG</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                        ad minim veniam, quis nostrud exercitation ullamco.
-                    </p>
-                </div>
+            <div class="anh_nho3">
+                <img src="https://besenledlight.com/wp-content/uploads/2024/11/hotel-room-artificial-lighting.webp"/>
             </div>
-
-        </div>
-
-
-        <!-- chuyển ảnh -->
-        <div class="slide-show">
-            <div class="list-imgs">
-                <img src="img/pexels-elina-sazonova-1838554.jpg" alt="">
-                <img src="img/pexels-willpicturethis-1954524.jpg" alt="">
-                <img src="img/pexels-tima-miroshnichenko-6187839.jpg" alt="">
-                <img src="img/pexels-naimbic-2291599.jpg" alt="">
-                <img src="img/pexels-pixabay-210265.jpg" alt="">
-            </div>
-
-            <div class="btns">
-                <div class="btn-left btn"> ❮ </div>
-                <div class="btn-right btn"> ❯ </div>
-            </div>
-
-            <div class="circle">
-                <div class="item item-0 active"></div>
-                <div class="item item-1"></div>
-                <div class="item item-2"></div>
-                <div class="item item-3"></div>
-                <div class="item item-4"></div>
-
+            <div class="anh_nho4">
+                <img src="https://giadinh.mediacdn.vn/296230595582509056/2023/4/20/vi-sao-phai-bat-den-nha-ve-sinh-trong-phong-khach-san-le-tan-tiet-lo-su-that-bat-ngo-2-1672545731-200-width1500height1000-1681961637993-16819616383371219028179.jpeg"/>
             </div>
         </div>
-        <!---------------------- Booking ------------------>
-        <div class="booking">
-            <div>
-                <h2>ĐẶT PHÒNG</h2>
-                <h2 style="margin-top: -25px">NGAY HÔM NAY</h2>
+        <div class="tieude_phong">
+            <div class="intro_rom">
+                <h2>Phòng nghỉ</h2>
+                <p>Hệ thống phòng nghỉ được thiết kế hiện đại, tiện nghi đầy đủ, không gian thoải mái và yên tĩnh, mang đến cảm giác thư giãn và dễ chịu cho mọi kỳ nghỉ.</p>
             </div>
-            <div class="book-now">
-                <p>Hãy tạo kỳ nghỉ thảnh thơi của bạn cùng chúng tôi.</p>
-                <p style="margin-top: -25px">Liên hệ đội ngũ The Phoenix để đặt chỗ ngay hôm nay</p>
-                <a href="">Đặt Ngay</a>
+            <div class="more">
+                <a href="room_price.html">Xem Thêm</a>
             </div>
         </div>
     </div>
+    <!-----đánh giá------------->
+    <div class="rating-wrap">
+        <div class="rating-left">
+            <div class="score">4.7/<span>5</span></div>
+            <div class="text">
+            <h3>Xuất sắc</h3>
+            <p>33.751 đánh giá</p>
+            </div>
+        </div>
+
+        <div class="ke"></div>
+
+        <div class="rating-right">
+            <div class="site">
+            <span>Google</span>
+            <strong>4.7/</strong>5
+            </div>
+            <div class="site">
+            <span>TripAdvisor</span>
+            <strong>4.6/</strong>5
+            </div>
+            <div class="site">
+            <span>Booking.com</span>
+            <strong>9.3/</strong>10
+            </div>
+            <div class="site">
+            <span>Expedia</span>
+            <strong>9.6/</strong>10
+            </div>
+            <div class="site">
+            <span>Trip.com</span>
+            <strong>9.3/</strong>10
+            </div>
+        </div>
     </div>
-
-
-
+    <!-----nhà hàng-------------->
+    <div class="restaurant">
+        <div class="tieude_nh">
+            <div class="intro_nh">
+                <h2>Nhà hàng</h2>
+                <p>Nhà hàng phục vụ ẩm thực Á – Âu đa dạng trong không gian sang trọng, mang đến trải nghiệm ẩm thực tinh tế cho du khách.</p>
+            </div>
+            <div class="more_nh">
+                <a href="Eat&Drink.html">Xem Thêm</a>
+            </div>
+        </div>
+        <div class="restaurant_img">
+            <div class="anh_to_nh">
+                <img src="https://photo.znews.vn/w860/Uploaded/zngure/2019_08_16/sora__non_blooming.jpg"/>
+            </div>
+            <div class="nho1_nh">
+                <img src="https://img.pikbest.com/origin/09/22/10/18JpIkbEsTuYw.jpg!w700wp"/>
+            </div>
+            <div class="nho2_nh">
+                <img src="https://danangfantasticity.com/wp-content/uploads/2025/03/bua-toi-lang-man-ben-bo-bien-trai-nghiem-nen-co-cua-cap-doi-01.jpg"/>
+            </div>
+        </div>
+    </div>
+    <!-----dịch vụ------------->
+    <div class ="dich_vu">
+        <div class="tieude_dv">
+            <h2>Dịch vụ nổi bật</h2>
+            <p>Khách sạn cung cấp hệ thống tiện ích cao cấp gồm spa, hồ bơi, phòng gym, sân golf, khu chăm sóc trẻ em, khu mua sắm và phòng họp hiện đại, mang đến trải nghiệm nghỉ dưỡng, giải trí và làm việc trọn vẹn cho mọi khách hàng.</p>
+        </div>
+        <div class="slider_dv">
+            <div class ="anh_dv">
+                <img src="https://havanahotel.vn/storage/news/spa-01.jpg" alt="spa"/>
+                <img src="https://catmoc.cmg.vn/wp-content/uploads/2025/03/hoc-boi-256-780x420-1.jpg" />
+                <img src="https://ptfitness.vn/wp-content/uploads/2022/09/phong-gym-khach-san-resort-da-nang.jpg"/>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Golfer_swing.jpg"/>
+                <img src="https://ibid.vn/wp-content/uploads/2020/08/child-care-us.jpg" />
+                <img src="https://housedesign.vn/wp-content/uploads/2020/03/thiet-ke-noi-that-shop-thoi-trang.jpg" />
+                <img src="https://cdn.sanity.io/images/uqxwe2qj/production/aa64141e7345a49097059ed8df68be12c7b219d1-7732x4879.jpg"/>
+                
+            </div>
+            <div class="nav_dv">
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+        </div>
+        <div class="more_dv">
+            <a href="experiences.html">Xem Thêm</a>
+        </div>
+    </div>
+    <!------------------>
+    <div class="dat_phong">
+        <h2>Đặt phòng <br>ngay hôm nay</h2>
+        <div class="chu">
+            <p>Tận hưởng kỳ nghỉ thư thái cùng The Phoenix <br>Liên hệ đặt chỗ ngay hôm nay</p>
+            <a href="room_price.html">Đặt Phòng</a>
+        </div>
+    </div>
     <!-- Footer -->
     <div class="footer">
         <div class="footer1">
@@ -210,6 +234,63 @@
             </div>
         </div>
     </div>
+    <!--------------------->
+
+
+<!-- BOOKING POPUP -->
+<div class="booking-overlay" id="bookingBox">
+    <div class="booking">
+        <h3>Đặt phòng</h3>
+
+        <div class="booking-row">
+            <label>Ngày vào</label>
+            <input type="date">
+        </div>
+
+        <div class="booking-row">
+            <label>Ngày ra</label>
+            <input type="date">
+        </div>
+
+        <div class="booking-row">
+            <label>Giờ</label>
+            <input type="time">
+        </div>
+
+        <!-- Người lớn -->
+        <div class="booking-row counter">
+            <label>Người lớn</label>
+            <div class="spinner">
+                <span class="count">1</span>
+                <div class="arrows">
+                    <i class="up">▲</i>
+                    <i class="down">▼</i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trẻ em -->
+        <div class="booking-row counter">
+            <label>Trẻ em</label>
+            <div class="spinner">
+                <span class="count">0</span>
+                <div class="arrows">
+                    <i class="up">▲</i>
+                    <i class="down">▼</i>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking-actions">
+            <form id="bookingForm">
+                <button class="submit" class="submit">Xác nhận</button>
+            </form>
+            <button class="close" id="closeBooking">Đóng</button>
+        </div>
+    </div>
+</div>
+
+    <script src="js/index.js"></script>
 </body>
 
 </html>

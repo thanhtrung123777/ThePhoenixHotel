@@ -1,67 +1,82 @@
-const listImgs = document.querySelector('.list-imgs')
-const imgs = document.querySelectorAll('.list-imgs img')
-const length = imgs.length
-
-let i = 0
-const right = document.querySelector('.btn-right')
-right.addEventListener('click', function () {
-    if (i == length - 1) {
-        i = 0
-        let width = imgs[0].offsetWidth
-        listImgs.style.transform = `translateX(0px)`
-        document.querySelector('.active').classList.remove('active')
-        document.querySelector('.item-' + i).classList.add('active')
+//active cho menu
+const page = location.pathname.split("/").pop() || "home.html";
+  document.querySelectorAll(".sticky-header a").forEach(a => {
+    if (a.getAttribute("href") === page) {
+      a.classList.add("active");
     }
-    else {
-        i++
-        let width = imgs[0].offsetWidth
-        listImgs.style.transform = `translateX(${width * -1 * i}px)`
-        document.querySelector('.active').classList.remove('active')
-        document.querySelector('.item-' + i).classList.add('active')
-    }
-})
+  });
+//đánh giá
+const ratings = {
+    google: 4.7,
+    tripadvisor: 4.6,
+    booking: 9.3 / 2,
+    expedia: 9.6 / 2,
+    trip: 9.3 / 2
+  };
 
-const left = document.querySelector('.btn-left')
-left.addEventListener('click', function () {
-    if (i == 0) {
-        i = length - 1
-        let width = imgs[0].offsetWidth
-        listImgs.style.transform = `translateX(${width * -1 * i}px)`
-        document.querySelector('.active').classList.remove('active')
-        document.querySelector('.item-' + i).classList.add('active')
-    }
-    else {
-        i--
-        let width = imgs[0].offsetWidth
-        listImgs.style.transform = `translateX(${width * -1 * i}px)`
-        document.querySelector('.active').classList.remove('active')
-        document.querySelector('.item-' + i).classList.add('active')
-    }
-})
+  const values = Object.values(ratings);
+  const avg = (values.reduce((a, b) => a + b, 0) / values.length).toFixed(1);
 
+  document.querySelector(".score").innerHTML = avg + "<span>/5</span>";
+//slider dịch vụ
+const track = document.querySelector('.anh_dv');
+const imgs = document.querySelectorAll('.anh_dv img');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
 
-const btns = document.querySelectorAll('.topic div')
-let img = document.querySelector('.show-pics img')
-let topic = document.querySelector('.introduce-room h2')
-let para = document.querySelector('.introduce-room p')
-btns[0].addEventListener('click', function () {
-    img.src = 'img/Capell-Bangkok-Riverfront-011.png'
-    topic.textContent = 'ROOM'
-    para.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.'
-    document.querySelector('.hr').classList.remove('hr')
-    document.querySelector('.btn1').classList.add('hr')
-})
-btns[1].addEventListener('click', function () {
-    img.src = 'img/Capella-Bangkok-Courtyard-Suite-g01 1.png'
-    topic.textContent = 'SUITES'
-    para.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.'
-    document.querySelector('.hr').classList.remove('hr')
-    document.querySelector('.btn2').classList.add('hr')
-})
-btns[2].addEventListener('click', function () {
-    img.src = 'img/Capella-Bangkok-Villa-01a 1.png'
-    topic.textContent = 'BIỆT THỰ'
-    para.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.'
-    document.querySelector('.hr').classList.remove('hr')
-    document.querySelector('.btn3').classList.add('hr')
-})
+let index = 0;
+const visible = 3;
+const step = 480; // 400 + gap 80
+const max = imgs.length - visible;
+
+next.onclick = () => {
+    if (index < max) {
+        index++;
+        move();
+    }
+};
+
+prev.onclick = () => {
+    if (index > 0) {
+        index--;
+        move();
+    }
+};
+
+function move() {
+    track.style.transform = `translateX(-${index * step}px)`;
+}
+
+/* mở / đóng booking */
+const openBtn = document.getElementById("openBooking");
+const closeBtn = document.getElementById("closeBooking");
+const bookingBox = document.getElementById("bookingBox");
+
+openBtn.onclick = () => bookingBox.style.display = "flex";
+closeBtn.onclick = () => bookingBox.style.display = "none";
+
+/* spinner ▲ ▼ */
+document.querySelectorAll('.spinner').forEach(spinner => {
+    const count = spinner.querySelector('.count');
+    const up = spinner.querySelector('.up');
+    const down = spinner.querySelector('.down');
+
+    up.onclick = () => {
+        count.textContent = Number(count.textContent) + 1;
+    };
+
+    down.onclick = () => {
+        if (Number(count.textContent) > 0) {
+            count.textContent = Number(count.textContent) - 1;
+        }
+    };
+});
+const form = document.getElementById("bookingForm");
+
+form.onsubmit = function(e) {
+    e.preventDefault(); 
+
+    alert("Đã gửi thông tin đặt phòng!");
+
+    bookingBox.style.display = "none";
+};
