@@ -67,9 +67,9 @@ body {
 @media (max-width: 789px) {
     .header-left h1 {
         font-family: 'Montez';
-        font-size: 23px;
+        font-size: 20px;
         margin-top: 18px;
-        width: 100px;
+        width:120px;
         /* background:red; */
     }
 }
@@ -94,7 +94,7 @@ body {
         padding: 10px;
         width: 120px;
         height: 20px;
-        margin-top: 8px;
+        margin-top: 14px;
         color: #1c483b;
         font-size: 24px;
         font-family: 'Alegreya';
@@ -123,6 +123,7 @@ body {
     background: none;
     color: white;
     border: none;
+    font-size:20px;
 }
 
 @media (max-width: 789px) {
@@ -133,7 +134,7 @@ body {
         margin-right: 5px;
         gap: 5px;
         margin-top: 5px;
-        margin-left: 40px;
+        margin-left: 10px;
 
     }
 }
