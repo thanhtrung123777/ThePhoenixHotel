@@ -39,7 +39,7 @@ body {
     .header-left {
         display: flex;
         flex: 1;
-        gap:10px
+        gap: 5px
     }
 }
 
@@ -69,7 +69,7 @@ body {
         font-family: 'Montez';
         font-size: 20px;
         margin-top: 18px;
-        width:120px;
+        width: 120px;
         /* background:red; */
     }
 }
@@ -86,7 +86,7 @@ body {
     color: #1c483b;
     font-size: 24px;
     font-family: 'Alegreya';
-    
+
 }
 
 @media (max-width: 789px) {
@@ -99,7 +99,7 @@ body {
         font-size: 24px;
         font-family: 'Alegreya';
         border-radius: 10px;
-        margin-left:0px;
+        margin-left: 0px;
     }
 
     #mobile {
@@ -123,17 +123,18 @@ body {
     background: none;
     color: white;
     border: none;
-    font-size:20px;
+    font-size: 20px;
+    padding: 0
 }
 
 @media (max-width: 789px) {
     .header-right {
-        background:red;
+        /* background:red; */
         display: flex;
         flex: 1;
         margin-right: 5px;
         gap: 5px;
-        margin-top: 5px;
+        margin-top: -5px;
         margin-left: 10px;
 
     }
@@ -192,28 +193,33 @@ body {
 }
 
 @media (max-width:789px) {
+
     .sticky-header {
         display: none;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
+
+    }
+
+    .sticky-header.active {
+        display: flex;
+        position: absolute;
+        top: 80px;
         background-color: #1c483b;
         justify-content: center;
         gap: 70px;
         align-items: center;
         width: 100%;
-        height: 80px;
+        height: 150px;
         font-family: 'Alegreya';
         backdrop-filter: blur(5px);
         font-size: 28px;
-    }
-
-    .sticky-header.active {
-        display: flex;
+        z-index: 1000;
     }
 
     .burger {
         display: block;
+        position:relative;
+       
+        z-index: 9999;
     }
 
 }
