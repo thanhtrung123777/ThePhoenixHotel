@@ -94,12 +94,12 @@ body {
         padding: 10px;
         width: 120px;
         height: 20px;
-        margin-top: 14px;
+        margin-top: 20px;
         color: #1c483b;
         font-size: 24px;
         font-family: 'Alegreya';
         border-radius: 10px;
-        margin-left:20px;
+        margin-left:0px;
     }
 
     #mobile {
@@ -128,7 +128,7 @@ body {
 
 @media (max-width: 789px) {
     .header-right {
-        /* background:red; */
+        background:red;
         display: flex;
         flex: 1;
         margin-right: 5px;
