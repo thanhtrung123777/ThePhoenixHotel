@@ -183,15 +183,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
-//ACTIVE CHO MENU
-const page = location.pathname.split("/").pop() || "home.html";
-  document.querySelectorAll(".sticky-header a").forEach(a => {
-    if (a.getAttribute("href") === page) {
-      a.classList.add("active");
-    }
-  });
-
 // ĐONG MỞ FORM ĐẶT PHÒNG
 const openBtn = document.getElementById("openBooking");
 const closeBtn = document.getElementById("closeBooking");

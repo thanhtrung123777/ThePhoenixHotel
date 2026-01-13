@@ -1,11 +1,4 @@
-//active cho menu
-const page = location.pathname.split("/").pop() || "home.html";
-  document.querySelectorAll(".sticky-header a").forEach(a => {
-    if (a.getAttribute("href") === page) {
-      a.classList.add("active");
-    }
-  });
-//đánh giá
+//ĐÁNH GIÁ
 const ratings = {
     google: 4.7,
     tripadvisor: 4.6,
@@ -18,7 +11,8 @@ const ratings = {
   const avg = (values.reduce((a, b) => a + b, 0) / values.length).toFixed(1);
 
   document.querySelector(".score").innerHTML = avg + "<span>/5</span>";
-//slider dịch vụ
+
+//SLIDE DỊCH VỤ
 const track = document.querySelector('.anh_dv');
 const imgs = document.querySelectorAll('.anh_dv img');
 const next = document.querySelector('.next');
@@ -26,7 +20,7 @@ const prev = document.querySelector('.prev');
 
 let index = 0;
 const visible = 3;
-const step = 480; // 400 + gap 80
+const step = 480; 
 const max = imgs.length - visible;
 
 next.onclick = () => {
@@ -47,15 +41,13 @@ function move() {
     track.style.transform = `translateX(-${index * step}px)`;
 }
 
-/* mở / đóng booking */
+// ĐONG MỞ FORM ĐẶT PHÒNG
 const openBtn = document.getElementById("openBooking");
 const closeBtn = document.getElementById("closeBooking");
 const bookingBox = document.getElementById("bookingBox");
 
 openBtn.onclick = () => bookingBox.style.display = "flex";
 closeBtn.onclick = () => bookingBox.style.display = "none";
-
-/* spinner ▲ ▼ */
 document.querySelectorAll('.spinner').forEach(spinner => {
     const count = spinner.querySelector('.count');
     const up = spinner.querySelector('.up');
@@ -80,3 +72,15 @@ form.onsubmit = function(e) {
 
     bookingBox.style.display = "none";
 };
+
+//  MENU MOBILE
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('.sticky-header');
+const booking = document.getElementById('openBooking');
+burger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.toggle('active'); 
+});
+booking.addEventListener('click', () => {
+    console.log("Mở phần lịch đặt thôi");
+});
