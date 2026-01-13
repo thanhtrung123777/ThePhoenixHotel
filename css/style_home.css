@@ -41,7 +41,7 @@ body {
     justify-content: center;
 }
 .header-center input {
-    padding: 10px;
+   padding: 10px;
     width: 593px;
     height: 49px;
     margin-top: 30px;
@@ -49,8 +49,11 @@ body {
     font-size: 24px;
     font-family: 'Alegreya';
 }
+.header-center.active input {
+    width: 593px;
+    opacity: 1;
+}
 .header-right {
-    /* background:red; */
     display: flex;
     flex: 1;
     align-items: center;
@@ -77,8 +80,7 @@ body {
     font-size: 30px;
     margin-right: 5px;
 }
-
-/* Sticky Header */
+/*.............................menu...........................*/
 .sticky-header {
     position: sticky;
     top: 0;
@@ -100,40 +102,47 @@ body {
     list-style: none;
     margin: 10px 40px;
     font-size: 25px;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
 .sticky-header ul li a {
     color: #f7efe7;
     text-decoration: none;
 }
-.sticky-header ul li a.active {
-    text-decoration: underline;
-}
-.img {
-    width: 100%;
-    position: relative;
+
+#stmobile {
+    display: none;
 }
 
-.img img {
-    width: 100%;
-    height: auto;
-
+.sticky-header ul li:hover
+{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
-.img p {
+.sticky-header ul li a::after
+{
+    content: '';
     position: absolute;
-    bottom: 50%;
-    left: 30px;
-    font-family: 'Jeju Myeongjo';
-    color: #f7efe7;
-    font-size: 48px;
+    width: 50%;
+    height: 1px;
+    bottom: -2px;
+    left: 25%;
+    background-color: #f7efe7;
+    transform: scaleX(0); 
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
 }
 
-.img span {
-    font-family: 'Italianno';
-    font-size: 110px
+.sticky-header ul:hover li a.ok::after { 
+  transform: scaleX(0); 
 }
-
+.sticky-header ul li a.ok::after, 
+.sticky-header ul li a:hover::after, 
+.sticky-header ul li a.ok:hover::after { 
+  transform: scaleX(1); 
+}
 /* overlay */
 .booking-overlay {
     position: fixed;
@@ -685,4 +694,129 @@ body {
     font-size: 120%;
     font-family: 'Open Sans';
 }
+@media only screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
 
+  }
+  .header-left,
+  .header-center,
+  .header-right  {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-top: -30px;
+  }
+  .header-left img{
+    width: 33px;
+    height: 33px;
+    position: static;
+
+  }
+  .header-left h1 {
+    font-size: 26px;
+    margin: 0;
+    line-height: 1;  
+    position: static;
+    margin-left: -30px;
+  }
+  .header-center input {
+    width: 170px;
+    height: 20px;
+    font-size: 12px;
+    margin-left: -320px;
+    margin-top: -5px;
+    
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    margin-top: -30px;
+    width: auto;
+    }
+  .header-right i{
+    font-size: 17px;
+    margin-left: -50px;
+  }
+  .header-right a{
+    display: none;
+  }
+  /*.............................menu.................*/
+  .sticky-header {
+    display: none;
+  }
+  .sticky-header ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-left: -30px
+  }
+  .sticky-header ul li {
+        display: block;
+        list-style: none;
+        margin: 10px auto;
+        font-size: 15px;
+        font-weight: 800
+    }
+  .sticky-header ul li a {
+        color: #1c483b;
+        text-decoration: none;
+    }
+  .sticky-header.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        background-color: #d9d9d9;
+        justify-content: flex-start;
+        gap: 0px;
+        align-items: flex-start;
+        width: 100%;
+        height: 220px;
+        font-family: 'Alegreya';
+        opacity: 0.9;
+        backdrop-filter: blur(5px);
+        font-size: 12px;
+    }
+  .burger {
+        display: block;
+        position: relative;
+        z-index: 9999;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color:#f7efe7;
+    }
+/*.............................footer.................*/
+ 
+    .footer1 { 
+      width: 95%;
+      margin: 0 auto;
+      display: flex;
+    }
+    .footer2 { 
+      padding: 10px 10px;
+    }
+    .f1_2,.f1_3,.f1_4,.footer2, .footer1 p, .footer2 p, .footer2 a { 
+      font-size: 70%;
+    }
+    .f1_1, .f1_2, .f1_3, .f1_4
+    {
+        margin: 10px 1px;
+        flex: none;
+        justify-content: center;
+    }
+    .f1_1 {
+      font-size: 80%;
+    }
+    .f1_2 {
+      margin-top: -1px;
+    }
+}
