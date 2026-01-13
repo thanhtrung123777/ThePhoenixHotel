@@ -84,3 +84,21 @@ burger.addEventListener('click', (e) => {
 booking.addEventListener('click', () => {
     console.log("Mở phần lịch đặt thôi");
 });
+// SEARCH
+let input = document.querySelector("#searchPicker");
+let main = document.querySelector(".main");
+let items = main.children;
+
+input.addEventListener("input", () => {
+  let keyword = input.value.toLowerCase().trim();
+
+  Array.from(items).forEach(item => {
+    let text = item.innerText.toLowerCase();
+
+    if (text.includes(keyword)) {
+      item.style.display = "";
+    } else {
+      item.style.display = "none";
+    }
+  });
+});
