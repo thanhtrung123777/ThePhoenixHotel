@@ -225,7 +225,9 @@ body {
 .close {
     background: #ccc;
 }
-
+.burger {
+    display: none;
+}
 /* Body */
 .video {
     width: 100%;
