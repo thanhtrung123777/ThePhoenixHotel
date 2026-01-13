@@ -227,9 +227,7 @@ body {
 .close {
     background: #ccc;
 }
-.burger {
-    display: none;
-}
+
 /*............................. MAIN CONTENT............................. */
 .main {
 width: 100%;
