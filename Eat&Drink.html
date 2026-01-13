@@ -30,6 +30,8 @@
         <!-- ///////////////////// -->
         <div class="header-right" id="openBooking">
             <i class="fa-regular fa-calendar-days"></i><a href="">Lịch Đặt</a>
+            <a href=""><i class="fa-regular fa-calendar-days"></i></a>
+            <button class="burger">☰</button>
         </div>
         <!-- //////////////////////// -->
     </div>
@@ -39,10 +41,20 @@
                 <li><a href="index.html">Trang Chủ</a></li>
                 <li><a href="experiences.html">Dịch Vụ</a></li>
                 <li><a href="room_price.html">Phòng Nghỉ</a></li>
-                <li><a href="Eat&Drink.html">Ăn Uống</a></li>
+                <li><a href="Eat&Drink.html" class = "ok">Ăn Uống</a></li>
                 <li><a href="contact.html">Liên Hệ</a></li>
             </ul>
     </div>
+    <!-- mobile -->
+    <div class="sticky-header" id="stmobile">
+        <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="experiences.html">Dịch Vụ</a></li>
+            <li><a href="room_price.html">Phòng Nghỉ</a></li>
+            <li><a href="Eat&Drink.html" class = "ok">Ăn Uống</a></li>
+            <li><a href="contact.html">Liên Hệ</a></li>
+        </ul>
+    </div> 
     <!--body-->
     <div class="main">
       <div class="text1">
@@ -51,24 +63,22 @@
         </p>
       </div>
       <div class="thanh">
-  <p>Tìm và đặt bàn</p>
-  <ul>
-    <li>
-      <i class="fa-regular fa-calendar-days"></i><input style="border: none;" type="date" id="datePicker" />
-    </li>
-    <li>
-        <i class="fa-regular fa-clock"></i><input style="border: none;" type="time" id="timePicker" />
-    </li>
-    <li>
-        <i class="fa-solid fa-person"></i><input style="border: none;" type="number" id="numberPicker" />
-    </li>
-    <li class="search">
-      <i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
-      <input type="search" id="searchPicker" placeholder="Search...">
-    </li>
-  </ul>
-</div>
-<div id="result">
+        <p>Tìm và đặt bàn</p>
+        <ul>
+          <li>
+            <i class="fa-regular fa-calendar-days"></i><input style="border: none;" type="date" id="datePicker" />
+          </li>
+          <li>
+              <i class="fa-regular fa-clock"></i><input style="border: none;" type="time" id="timePicker" />
+          </li>
+          <li>
+              <i class="fa-solid fa-person"></i><input style="border: none;" type="number" id="numberPicker" />
+          </li>
+          <li class="filter-toggle">
+            <i class="fa-solid fa-filter"></i>
+          </li>
+        </ul>
+      </div>
       <div class="gth">
         <div class="gthieu">
           <div class="gth1">
@@ -118,274 +128,191 @@
           </div>
         </div>
       </div>
-      
-  <div class="wrapper">
-    <div class="container">
-      <div class="chon">
-        <div class="c">
-          <p>Loại hình doanh nghiệp</p>
-          <ul>
-            <li><label><input type="checkbox" name="establishment" value="Restaurant"><span></span>Nhà hàng</label></li>
-            <li><label><input type="checkbox" name="establishment" value="Garden coffee"><span></span>Cà phê vườn</label></li>
-            <li><label><input type="checkbox" name="establishment" value="Bar and pub"><span></span>Bar và pub</label></li>
-          </ul>
-          <ul class="more">
-            <li><label><input type="checkbox"> Hải sản</label></li>
-            <li><label><input type="checkbox"> Pizza</label></li>
-            <li><label><input type="checkbox"> Đồ ăn nhanh</label></li>
-          </ul>
-          <div class="show-more">
-            <span>Xem thêm</span>
-            <i class="arrow">⌃</i>
+      <!-- hiển thị nhà hàng -->
+      <div class="hien">
+        <section class="hi1"
+              data-establishment="Nhà hàng Nhật Bản|Nhà hàng buffet"
+              data-meal="Bữa trưa|Bữa tối"
+              data-dish="Bữa sáng buffet|Đồ ăn Việt Nam|Phở|Bún|Cháo|Bánh mì|Trứng ốp la|Xúc xích|Salad|Trái cây|Hải sản tươi sống|Cua hoàng đế|Sashimi|Cua xanh|Ốc sữa|Tôm hấp|Mực nướng"
+              data-price="Cao"
+              data-amenities="Wifi miễn phí|Có chỗ ngồi|Máy lạnh">
+          <div class="khoi_doc"></div>
+          <div class="khoi_ngang"></div>
+          <h2>ĐẶT TIỆC</h2>
+          <div class="cards">
+            <div class="h card-left">
+
+              <div class="slider">
+                <div class="slides" >
+                  <img src="https://cdn.tgdd.vn/Files/2022/05/11/1431718/goi-y-thuc-don-buffet-sang-danh-cho-nha-hang-khach-san-day-dinh-duong-202205111013124372.jpg " class="active">
+                  <img src="https://static.vinwonders.com/production/pho-bo-ha-noi.jpeg">
+                  <img src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_1280.jpg">
+                  <img src="https://lh4.googleusercontent.com/proxy/R0WGxuvp58eRL-l-VBYAErYVh1ExyIPvo5yIRyhKPET5-g4E8gAmxZKtAYtjhyjmh0RL3TkLCFk7OoYgWsLiwObwwMdeYwyoILC5ZWpFo39th7AK">
+                  <img src="https://nld.mediacdn.vn/2018/12/12/photo-1-15445793234831616935619.jpg">
+                </div>
+                <button class="btn prev">❮</button>
+                <button class="btn next">❯</button>
+              </div>
+              <div class="nd">
+                <h2>Buffet sáng</h2>
+                <p>Đồ ăn nhanh, phở, hamhurger,...</p>
+                <p class="rating">Đánh giá: 5.0 <i class="fa-solid fa-star"></i></p>
+                
+              </div> 
+            </div>
+            <div class="h card-right">
+
+              <div class="slider">
+                <div class="slides" >
+                  <img src="https://onggiau.com.vn/wp-content/uploads/2024/07/1_cua-hoang-de_-800-2.jpg" class="active"/>
+                  <img src="https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2021/9/7/hai-sam1-16309840596211610323711.jpg"/>
+                  <img src="https://banhaisangiasi.com/wp-content/uploads/2024/04/Thiet-ke-chua-co-ten-4-4.png"/>
+                  <img src="https://cdn.tgdd.vn/2021/05/CookProduct/montomhumngon-1200x676.jpg"/>
+                </div>
+                <button class="btn prev">❮</button>
+                <button class="btn next">❯</button>
+              </div>
+              <div class="nd">
+                <h2>Hải sản</h2>
+                <p>
+                  Hải sản tươi sống, cua hoàng đế, sashimi, cua xanh, ốc sữa,...
+                </p>
+                <p class="rating">Đánh giá: 5.0 <i class="fa-solid fa-star"></i></p>
+          
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="c">
-          <p>Loại bữa ăn</p>
-          <ul>
-            <li><label><input type="checkbox" name="meal" value="Breakfast"><span></span>Bữa sáng</label></li>
-            <li><label><input type="checkbox" name="meal" value="Lunch"><span></span>Bữa trưa</label></li>
-            <li><label><input type="checkbox" name="meal" value="Dinner"><span></span>Bữa tối</label></li>
-            <li><label><input type="checkbox" name="meal" value="Late-night meal"><span></span>Bữa đêm</label></li>
-          </ul>
-          <ul class="more">
-            <li><label><input type="checkbox"> Hải sản</label></li>
-            <li><label><input type="checkbox"> Pizza</label></li>
-            <li><label><input type="checkbox"> Đồ ăn nhanh</label></li>
-          </ul>
-          <div class="show-more">
-            <span>Xem thêm</span>
-            <i class="arrow">⌃</i>
+        </section>
+        <section class="hi2"       
+              data-establishment="Cà phê vườn|Nhà hàng nướng BBQ"
+              data-meal="Bữa trưa|Bữa tối|Bữa đêm"
+              data-dish="Đồ ăn Việt Nam|Cá kho tộ caramel|Tôm kho mặn ngọt|Thịt kho trứng|Canh chua|Gỏi cuốn|Taco|Mì Ý|Spaghetti|Cà ri|Pizza|Hamburger|Bánh bao"
+              data-price="Trung bình"
+              data-amenities="Wifi miễn phí|Chỗ ngồi ngoài trời">
+
+          <div class="khoi_doc"></div>
+          <div class="khoi_ngang"></div>
+          <h2>HẸN HÒ</h2>
+          <div class="cards">
+            <div class="h card-left">
+
+            <div class="slider">
+              <div class="slides" >
+                <img src="https://media-cdn-v2.laodong.vn/storage/newsportal/2024/5/1/1334483/Ghe-69.jpg" class="active"/>       
+                <img src="https://i-giadinh.vnecdn.net/2022/08/27/Thanh-pham-2-2-7762-1661595348.jpg"/>      
+                <img src="https://danviet.ex-cdn.com/files/f1/296231569849192448/2021/6/22/bdimkitchen-1624265016976-1624324614473-1624324615163357692634.jpg"/>       
+                <img src="https://cdnphoto.dantri.com.vn/lNbIsfnQ6O8WhQCwd6k2f3nAkCo=/thumb_w/1155/2021/12/18/comlamtaynguyen7-1639845775533.jpg"/>      
+                <img src="https://cdn11.dienmaycholon.vn/filewebdmclnew/public/userupload/files/kien-thuc/cach-lam-ga-dap-dat-set/cach-lam-ga-dap-dat-set-9.jpg"/>
+              </div>
+              <button class="btn prev">❮</button>
+              <button class="btn next">❯</button>
+            </div>
+            <div class="nd">
+              <h2>Đồ ăn Việt Nam</h2>
+              <p>
+                Cá kho tộ caramel, tôm kho mặn ngọt, …
+              </p>
+              <p class="rating">Đánh giá: 5.0 <i class="fa-solid fa-star"></i></p>
+             
+            </div>
+            </div>
+            <div class="h card-right">
+
+            <div class="slider">
+              <div class="slides" >
+                <img src="https://cdn.tomimarkets.com/tomiv3/uploads/qua_tet_dui_heo_hun_khoi_Tomimarkets_c0667eaa68.jpg" class="active"/>      
+                <img src="https://www.onceuponachef.com/images/2023/08/Beef-Tacos.jpg"/>
+                <img src="https://www.allrecipes.com/thmb/ZhDrBmciWzegNpBWB-5LXEvULao=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Easyspaghettiwithtomatosauce_11715_DDMFS_4x3_2424-8d7bf30b2622465f9dd78a2c6277eeb8.jpg"/>
+                <img src="https://cdn.stoneline.de/media/9e/4f/91/1727685808/kare-raisu.jpeg?ts=1727685808"/>
+                <img src="https://static01.nyt.com/images/2025/01/29/multimedia/27Dumpling-week-chocolate-cwvl/27Dumpling-week-chocolate-cwvl-master768.jpg"/>
+              </div>
+              <button class="btn prev">❮</button>
+              <button class="btn next">❯</button>
+            </div>
+            <div class="nd">
+              <h2>Đồ ăn quốc tế</h2>
+              <p>Taco, mì Ý (spaghetti), mì Ý, cà ri, bánh bao, …</p>
+              <p class="rating">Đánh giá: 5.0 <i class="fa-solid fa-star"></i></p>
+             
+            </div>
           </div>
-        </div>
-        <div class="c">
-          <p>Món ăn</p>
-          <ul>
-            <li><label><input type="checkbox" name="dish" value="Buffet breakfast"><span></span>Bữa sáng buffet</label></li>
-            <li><label><input type="checkbox" name="dish" value="Vietnamese food"><span></span>Đồ ăn Việt Nam</label></li>
-            <li><label><input type="checkbox" name="dish" value="Beverage"><span></span>Đồ uống</label></li>
-            <li><label><input type="checkbox" name="dish" value="Soup"><span></span>súp</label></li>
-          </ul>
-          <div class="show-all">hiển thị tất cả</div>
-        </div>
-        <div class="c">
-          <p>Giá</p>
-          <ul>
-            <li><label><input type="checkbox" name="price" value="Cheap"><span></span>Thấp</label></li>
-            <li><label><input type="checkbox" name="price" value="Moderate"><span></span>Trung bình</label></li>
-            <li><label><input type="checkbox" name="price" value="Expensive"><span></span>Cao</label></li>
-          </ul>
-          <ul class="more">
-            <li><label><input type="checkbox">Đặt tiệc</label></li>
-          </ul>
-          <div class="show-more">
-            <span>Xem thêm</span>
-            <i class="arrow">⌃</i>
           </div>
-        </div>
-        <div class="c">
-          <p>Tiện nghi</p>
-          <ul>
-            <li><label><input type="checkbox" name="amenities" value="Seating"><span></span>chỗ ngồi</label></li>
-            <li><label><input type="checkbox" name="amenities" value="Wifi free"><span></span>Wifi miễn phí</label></li>
-            <li><label><input type="checkbox" name="amenities" value="For children"><span></span>Cho trẻ em</label></li>
-            <li><label><input type="checkbox" name="amenities" value="Outdoor seating"><span></span>Chỗ ngồi ngoài trời</label></li>
-          </ul>
-          <ul class="more">
-            <li><label><input type="checkbox"> Hải sản</label></li>
-            <li><label><input type="checkbox"> Pizza</label></li>
-            <li><label><input type="checkbox"> Đồ ăn nhanh</label></li>
-          </ul>
-          <div class="show-more">
-            <span>Xem thêm</span>
-            <i class="arrow">⌃</i>
+        </section>
+        <section class="hi3"
+                data-establishment="Bar và pub"
+                data-meal="Bữa tối"
+                data-dish="Đồ uống|Nước ép trái cây|Rượu vang|Bia|Trà sữa|Cà phê|Tráng miệng|Bánh ngọt|Pudding|Kem|Thạch|Donut|Bánh quy|Salad trái cây"
+                data-price="Rẻ"
+                data-amenities="Cho trẻ em|Bãi đỗ xe">
+          <div class="khoi_doc"></div>
+          <div class="khoi_ngang"></div>
+          <h2>GIA ĐÌNH</h2>
+          <div class="cards">
+            <div class="h card-left">
+
+            <div class="slider">
+              <div class="slides" >
+                <img src="https://vinhtienwinery.com/uploads/source/blog/top-10-chai-ruou-vang-chat-ngon.jpg" class="active"/>
+                <img src="https://cdn.shopify.com/s/files/1/0252/0904/5067/files/Fruit_Juice_1_600x600.jpg?v=1721712734"/>
+                <img src="https://www.foodandwine.com/thmb/hpKAfwW_K1M27HeqZCFa92h0mzo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Malt-Liquor-vs-Beer-FT-BLOG0824-480af20918cb4fc5b7afdc35e3f1b3fc.jpg"/>
+                <img src="https://www.sunglowkitchen.com/wp-content/uploads/2024/02/hot-boba-bubble-milk-tea-9.jpg"/>
+                <img src="https://images2.thanhnien.vn/528068263637045248/2025/11/29/ca-phe-den-1764392857829839457659.jpg"/>
+              </div>
+              <button class="btn prev">❮</button>
+              <button class="btn next">❯</button>
+            </div>
+            <div class="nd">
+              <h2>Đồ uống</h2>
+              <p>Nước ép trái cây, rượu vang, bia, trà sữa, cà phê…</p>
+              <p class="rating">Đánh giá: 5.0 <i class="fa-solid fa-star"></i></p>
+              
+            </div>
           </div>
+          <div class="h card-right">
+
+            <div class="slider">
+              <div class="slides" >
+                <img src="https://bna.1cdn.vn/2016/07/17/uploaded-dataimages-201607-original-_resize_images1622613_hoa_qua.jpg" class="active"/>       
+                <img src="https://daylambanh.edu.vn/wp-content/uploads/2019/06/banh-pudding-la-gi.jpg"/>
+                <img src="https://www.southernliving.com/thmb/0HMNy4YTdCy7AD2YX88QDT5knYw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/27852_StrawLemDesserts_FEATURE_52-19f36d9e0d3e416a8ad094bc8d8d1269.jpg"/>       
+                <img src="https://www.shutterstock.com/image-photo/glazed-decorated-donuts-box-showcasing-600nw-2505435403.jpg"/>        
+                <img src="https://www.easyanddelish.com/wp-content/uploads/2012/05/Brazilian-fruit-salad-recipe-with-fresh-tropical-fruits-image-2.jpg"/>
+              </div>
+              <button class="btn prev">❮</button>
+              <button class="btn next">❯</button>
+            </div>
+            <div class="nd">
+              <h2>Tráng miệng</h2>
+              <p>
+                Bánh ngọt, pudding, kem, thạch, bánh donut, bánh quy, salad trái cây,…
+              </p>
+              <p class="rating">Đánh giá: 5.0 <i class="fa-solid fa-star"></i></p>
+              
+            </div>
+          </div>
+          </div>
+        </section>
+      </div>
+    <div class="chef">
+      <div class="chef1">
+        <img src="https://img.freepik.com/hinh-chup-mien-phi/dau-bep-nau-an-trong-bep-khi-mac-trang-phuc-chuyen-nghiep_23-2151208316.jpg?semt=ais_hybrid&w=740&q=80" />
+      </div>
+      <div class="chef2">
+        <h3>Dấu ấn của đầu bếp</h3>
+        <div class="chef21">
+          <p>Thực hiện bởi đội ngũ đầu bếp chuyên nghiệp</p>
+        </div>
+        <div class="chef21">
+          <p>Kỹ thuật chế biến chuẩn – trình bày tinh tế</p>
+        </div>
+        <div class="chef21">
+          <p>Gia vị cân chỉnh chuẩn khẩu vị</p>
+        </div>
+        <div class="chef21">
+          <p>Mỗi món ăn là một tác phẩm</p>
         </div>
       </div>
     </div>
-      <div class="hien">
-        <div class="h"
-          data-establishment="Restaurant"
-          data-meal="Breakfast"
-          data-dish="Buffet"
-          data-price="Moderate"
-          data-amenities="Seating">
-
-          <div class="slider">
-            <div class="slides" >
-              <img src="https://cdn.tgdd.vn/Files/2022/05/11/1431718/goi-y-thuc-don-buffet-sang-danh-cho-nha-hang-khach-san-day-dinh-duong-202205111013124372.jpg " class="active">
-              <img src="https://static.vinwonders.com/production/pho-bo-ha-noi.jpeg">
-              <img src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_1280.jpg">
-              <img src="https://lh4.googleusercontent.com/proxy/R0WGxuvp58eRL-l-VBYAErYVh1ExyIPvo5yIRyhKPET5-g4E8gAmxZKtAYtjhyjmh0RL3TkLCFk7OoYgWsLiwObwwMdeYwyoILC5ZWpFo39th7AK">
-              <img src="https://nld.mediacdn.vn/2018/12/12/photo-1-15445793234831616935619.jpg">
-            </div>
-            <button class="btn prev">❮</button>
-            <button class="btn next">❯</button>
-          </div>
-          <div class="nd">
-            <h2>1. Buffet sáng</h2>
-            <p>Đồ ăn nhanh, phở, hamhurger,...</p>
-            <p class="rating">Đánh giá: 5.0 <i class="fa-solid fa-star"></i></p>
-            <button class="book">Booking</button>
-          </div> 
-        </div>
-        <div class="h"
-          data-establishment="Restaurant"
-          data-meal="Lunch"
-          data-dish="Spaghetti"
-          data-price="Moderate"
-          data-amenities="Delivery">
-
-          <div class="slider">
-            <div class="slides" >
-              <img src="https://onggiau.com.vn/wp-content/uploads/2024/07/1_cua-hoang-de_-800-2.jpg" class="active"/>
-              <img src="https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2021/9/7/hai-sam1-16309840596211610323711.jpg"/>
-              <img src="https://banhaisangiasi.com/wp-content/uploads/2024/04/Thiet-ke-chua-co-ten-4-4.png"/>
-              <img src="https://cdn.tgdd.vn/2021/05/CookProduct/montomhumngon-1200x676.jpg"/>
-            </div>
-            <button class="btn prev">❮</button>
-            <button class="btn next">❯</button>
-          </div>
-          <div class="nd">
-            <h2>2. Hải sản</h2>
-            <p>
-              Hải sản tươi sống, cua hoàng đế, sashimi, cua xanh, ốc sữa,...
-            </p>
-            <p class="rating">Đánh giá: 5.0 <i class="fa-solid fa-star"></i></p>
-            <button class="book">Booking</button>
-          </div>
-        </div>
-        <div class="h"
-              data-establishment="Restaurant"
-              data-meal="Dinner"
-              data-dish="Sushi"
-              data-price="Expensive"
-              data-amenities="Seating">
-
-          <div class="slider">
-            <div class="slides" >
-              <img src="https://media-cdn-v2.laodong.vn/storage/newsportal/2024/5/1/1334483/Ghe-69.jpg" class="active"/>       
-              <img src="https://i-giadinh.vnecdn.net/2022/08/27/Thanh-pham-2-2-7762-1661595348.jpg"/>      
-              <img src="https://danviet.ex-cdn.com/files/f1/296231569849192448/2021/6/22/bdimkitchen-1624265016976-1624324614473-1624324615163357692634.jpg"/>       
-              <img src="https://cdnphoto.dantri.com.vn/lNbIsfnQ6O8WhQCwd6k2f3nAkCo=/thumb_w/1155/2021/12/18/comlamtaynguyen7-1639845775533.jpg"/>      
-              <img src="https://cdn11.dienmaycholon.vn/filewebdmclnew/public/userupload/files/kien-thuc/cach-lam-ga-dap-dat-set/cach-lam-ga-dap-dat-set-9.jpg"/>
-            </div>
-            <button class="btn prev">❮</button>
-            <button class="btn next">❯</button>
-          </div>
-          <div class="nd">
-            <h2>3. Đồ ăn Việt Nam</h2>
-            <p>
-              Cá kho tộ caramel, tôm kho mặn ngọt, …
-            </p>
-            <p class="rating">Đánh giá: 5.0 <i class="fa-solid fa-star"></i></p>
-            <button class="book">Booking</button>
-          </div>
-        </div>
-        <div class="h"
-            data-establishment="FastFood"
-            data-meal="Snack"
-            data-dish="Burger"
-            data-price="Cheap"
-            data-amenities="Parking">
-
-          <div class="slider">
-            <div class="slides" >
-              <img src="https://cdn.tomimarkets.com/tomiv3/uploads/qua_tet_dui_heo_hun_khoi_Tomimarkets_c0667eaa68.jpg" class="active"/>      
-              <img src="https://www.onceuponachef.com/images/2023/08/Beef-Tacos.jpg"/>
-              <img src="https://www.allrecipes.com/thmb/ZhDrBmciWzegNpBWB-5LXEvULao=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Easyspaghettiwithtomatosauce_11715_DDMFS_4x3_2424-8d7bf30b2622465f9dd78a2c6277eeb8.jpg"/>
-              <img src="https://cdn.stoneline.de/media/9e/4f/91/1727685808/kare-raisu.jpeg?ts=1727685808"/>
-              <img src="https://static01.nyt.com/images/2025/01/29/multimedia/27Dumpling-week-chocolate-cwvl/27Dumpling-week-chocolate-cwvl-master768.jpg"/>
-            </div>
-            <button class="btn prev">❮</button>
-            <button class="btn next">❯</button>
-          </div>
-          <div class="nd">
-            <h2>4. Đồ ăn quốc tế</h2>
-            <p>Taco, mì Ý (spaghetti), mì Ý, cà ri, bánh bao, …</p>
-            <p class="rating">Đánh giá: 5.0 <i class="fa-solid fa-star"></i></p>
-            <button class="book">Booking</button>
-          </div>
-        </div>
-        <div class="h"
-            data-establishment="Restaurant"
-            data-meal="Dinner"
-            data-dish="Pizza"
-            data-price="Moderate"
-            data-amenities="Delivery">
-
-          <div class="slider">
-            <div class="slides" >
-              <img src="https://vinhtienwinery.com/uploads/source/blog/top-10-chai-ruou-vang-chat-ngon.jpg" class="active"/>
-              <img src="https://cdn.shopify.com/s/files/1/0252/0904/5067/files/Fruit_Juice_1_600x600.jpg?v=1721712734"/>
-              <img src="https://www.foodandwine.com/thmb/hpKAfwW_K1M27HeqZCFa92h0mzo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Malt-Liquor-vs-Beer-FT-BLOG0824-480af20918cb4fc5b7afdc35e3f1b3fc.jpg"/>
-              <img src="https://www.sunglowkitchen.com/wp-content/uploads/2024/02/hot-boba-bubble-milk-tea-9.jpg"/>
-              <img src="https://images2.thanhnien.vn/528068263637045248/2025/11/29/ca-phe-den-1764392857829839457659.jpg"/>
-            </div>
-            <button class="btn prev">❮</button>
-            <button class="btn next">❯</button>
-          </div>
-          <div class="nd">
-            <h2>5. Đồ uống</h2>
-            <p>Fruit juice, wine, beer, milk tea, coffee...</p>
-            <p class="rating">Đánh giá: 5.0 <i class="fa-solid fa-star"></i></p>
-            <button class="book">Booking</button>
-          </div>
-        </div>
-        <div class="h"
-              data-establishment="Luxury"
-              data-meal="Dinner"
-              data-dish="Steak"
-              data-price="Expensive"
-              data-amenities="Seating">
-
-          <div class="slider">
-            <div class="slides" >
-              <img src="https://bna.1cdn.vn/2016/07/17/uploaded-dataimages-201607-original-_resize_images1622613_hoa_qua.jpg" class="active"/>       
-              <img src="https://daylambanh.edu.vn/wp-content/uploads/2019/06/banh-pudding-la-gi.jpg"/>
-              <img src="https://www.southernliving.com/thmb/0HMNy4YTdCy7AD2YX88QDT5knYw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/27852_StrawLemDesserts_FEATURE_52-19f36d9e0d3e416a8ad094bc8d8d1269.jpg"/>       
-              <img src="https://www.shutterstock.com/image-photo/glazed-decorated-donuts-box-showcasing-600nw-2505435403.jpg"/>        
-              <img src="https://www.easyanddelish.com/wp-content/uploads/2012/05/Brazilian-fruit-salad-recipe-with-fresh-tropical-fruits-image-2.jpg"/>
-            </div>
-            <button class="btn prev">❮</button>
-            <button class="btn next">❯</button>
-          </div>
-          <div class="nd">
-            <h2>6. Tráng miệng</h2>
-            <p>
-              Cake, pudding, ice cream, jelly, donut, cookie, fruit salad,....
-            </p>
-            <p class="rating">Đánh giá: 5.0 <i class="fa-solid fa-star"></i></p>
-            <button class="book">Booking</button>
-          </div>
-        </div>
-        <div class="h"
-            data-establishment="Restaurant"
-            data-meal="Breakfast"
-            data-dish="Soup"
-            data-price="Cheap"
-            data-amenities="Delivery">
-
-          <div class="slider">
-            <div class="slides" >
-              <img src="https://onggiau.com.vn/wp-content/uploads/2024/06/Anh-VBW-11-1.png" class="active"/>       
-              <img src="https://www.allrecipes.com/thmb/EGp48npVJqDku38H1CFWwgwfAmM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/57661-tomato-bisque-iii-VAT-007-4x3-44151fe6eccf42e2b7fecb632f3ff198.jpg"/>       
-              <img src="https://www.thespruceeats.com/thmb/TDCLjlCo1PQAFd179h-fWrL_Q1Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-466583781-5875d51a5f9b584db3dc25cf.jpg"/>       
-              <img src="https://www.seriouseats.com/thmb/2nouHHsjM0bN1vwXMOZGUkLFsJ8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2017__12__20171115-chicken-soup-vicky-wasik-11-80db1a04d84a43a089e0559efdddd517.jpg"/>      
-              <img src="https://thecookingfoodie.com/wp-content/uploads/2025/09/Pumpkin-soup-with-coconut-milk.jpg"/>
-            </div>
-            <button class="btn prev">❮</button>
-            <button class="btn next">❯</button>
-          </div>
-          <div class="nd">
-            <h2>7. Soup</h2>
-            <p>Tomato soup, chicken soup, mushroom soup, pumpkin soup,...</p>
-            <p class="rating">rating: 5.0 <i class="fa-solid fa-star"></i></p>
-            <button class="book">Booking</button>
-          </div>
-        </div>
-      </div>
-  
-  </div>
 </div>
 
     <!-- //////////////////////// -->
@@ -464,8 +391,8 @@
         </div>
       </div>
     </div>
-    <div class="overlay" id="overlay"></div>
-<!---xem thêm-->
+<!-------xem tất cả----------->
+<div class="overlay" id="overlay"></div>
 <div class="modal" id="filterModal">
   <div class="modal-header">
     <h2>Món ăn</h2>
@@ -475,24 +402,47 @@
   <input type="text" class="search_b" placeholder="Tìm kiếm">
 
   <div class="modal-content">
-    <label><input type="checkbox"> Kiểu Việt</label>
-    <label><input type="checkbox"> Cà phê</label>
-    <label><input type="checkbox"> Kiểu Á</label>
-    <label><input type="checkbox"> Hải sản</label>
-    <label><input type="checkbox"> Pizza</label>
-    <label><input type="checkbox"> Đồ ăn nhanh</label>
-    <label><input type="checkbox"> Kiểu Hàn Quốc</label>
-    <label><input type="checkbox"> Thức ăn đường phố</label>
-    <label><input type="checkbox"> Quầy bar</label>
-    <label><input type="checkbox"> Món kết hợp</label>
-  </div>
+  <label><input type="checkbox" name="dish" value="Đồ ăn nhanh"> Đồ ăn nhanh</label>
+  <label><input type="checkbox" name="dish" value="Hamburger"> Hamburger</label>
+  <label><input type="checkbox" name="dish" value="Khoai tây chiên"> Khoai tây chiên</label>
+  <label><input type="checkbox" name="dish" value="Pizza"> Pizza</label>
+  <label><input type="checkbox" name="dish" value="Hot dog"> Hot dog</label>
+  <label><input type="checkbox" name="dish" value="Phở"> Phở</label>
+  <label><input type="checkbox" name="dish" value="Cá kho tộ"> Cá kho tộ caramel</label>
+  <label><input type="checkbox" name="dish" value="Tôm kho mặn ngọt"> Tôm kho mặn ngọt</label>
+  <label><input type="checkbox" name="dish" value="Cơm truyền thống"> Cơm truyền thống Việt Nam</label>
+  <label><input type="checkbox" name="dish" value="Hải sản tươi sống"> Hải sản tươi sống</label>
+  <label><input type="checkbox" name="dish" value="Cua hoàng đế"> Cua hoàng đế</label>
+  <label><input type="checkbox" name="dish" value="Sashimi"> Sashimi</label>
+  <label><input type="checkbox" name="dish" value="Cua xanh"> Cua xanh</label>
+  <label><input type="checkbox" name="dish" value="Ốc sữa"> Ốc sữa</label>
+  <label><input type="checkbox" name="dish" value="Taco"> Taco</label>
+  <label><input type="checkbox" name="dish" value="Mì Ý"> Mì Ý (Spaghetti)</label>
+  <label><input type="checkbox" name="dish" value="Cà ri"> Cà ri</label>
+  <label><input type="checkbox" name="dish" value="Bánh bao"> Bánh bao</label>
+  <label><input type="checkbox" name="dish" value="Nước ép trái cây"> Nước ép trái cây</label>
+  <label><input type="checkbox" name="dish" value="Rượu vang"> Rượu vang</label>
+  <label><input type="checkbox" name="dish" value="Bia"> Bia</label>
+  <label><input type="checkbox" name="dish" value="Trà sữa"> Trà sữa</label>
+  <label><input type="checkbox" name="dish" value="Cà phê"> Cà phê</label>
+  <label><input type="checkbox" name="dish" value="Cocktail"> Cocktail</label>
+  <label><input type="checkbox" name="dish" value="Bánh ngọt"> Bánh ngọt</label>
+  <label><input type="checkbox" name="dish" value="Pudding"> Pudding</label>
+  <label><input type="checkbox" name="dish" value="Kem"> Kem</label>
+  <label><input type="checkbox" name="dish" value="Thạch"> Thạch</label>
+  <label><input type="checkbox" name="dish" value="Donut"> Bánh donut</label>
+  <label><input type="checkbox" name="dish" value="Bánh quy"> Bánh quy</label>
+  <label><input type="checkbox" name="dish" value="Salad trái cây"> Salad trái cây</label>
+
+</div>
+
 
   <div class="modal-footer">
     <button class="reset">Đặt lại</button>
     <button class="apply">Áp dụng</button>
   </div>
 </div>
-<!-- BOOKING POPUP -->
+<!-- Bảng đặt phòng -->
 <div class="booking-overlay" id="bookingBox">
     <div class="booking">
         <h3>Đặt phòng</h3>
@@ -538,12 +488,83 @@
 
         <div class="booking-actions">
             <form id="bookingForm">
-                <button class="submit" class="submit">Xác nhận</button>
+                <button class="submit">Xác nhận</button>
             </form>
             <button class="close" id="closeBooking">Đóng</button>
         </div>
     </div>
 </div>
+<!-- Lọc -->
+  <div class="container">
+    <div class="chon">
+      <div class="c">
+        <p>Loại hình doanh nghiệp</p>
+        <ul>
+          <li><label><input type="checkbox" name="establishment" value="Nhà hàng Nhật Bản"><span></span>Nhà hàng Nhật Bản</label></li>
+          <li><label><input type="checkbox" name="establishment" value="Cà phê vườn"><span></span>Cà phê vườn</label></li>
+          <li><label><input type="checkbox" name="establishment" value="Bar và pub"><span></span>Bar và pub</label></li>
+        </ul>
+        <ul class="more">
+          <li><label><input type="checkbox" name="establishment" value="Khu ẩm thực"> Khu ẩm thực</label></li>
+          <li><label><input type="checkbox" name="establishment" value="Nhà hàng nướng BBQ"> Nhà hàng nướng BBQ</label></li>
+          <li><label><input type="checkbox" name="establishment" value="Nhà hàng buffet"> Nhà hàng buffet</label></li>
+        </ul>
+        <div class="show-more">
+          <span>Xem thêm</span>
+        </div>
+      </div>
+      <div class="c">
+        <p>Loại bữa ăn</p>
+         <ul>
+          <li><label><input type="checkbox" name="meal" value="Bữa sáng"><span></span>Bữa sáng</label></li>
+          <li><label><input type="checkbox" name="meal" value="Bữa trưa"><span></span>Bữa trưa</label></li>
+          <li><label><input type="checkbox" name="meal" value="Bữa tối"><span></span>Bữa tối</label></li>
+          
+        </ul>
+        <ul class="more">
+          <li><label><input type="checkbox" name="meal" value="Bữa đêm"><span></span>Bữa đêm</label></li>
+        </ul>
+        <div class="show-more">
+          <span>Xem thêm</span>
+        </div>
+      </div>
+      <div class="c">
+        <p>Món ăn</p>
+        <ul>
+          <li><label><input type="checkbox" name="dish" value="Bữa sáng buffet"><span></span>Bữa sáng buffet</label></li>
+          <li><label><input type="checkbox" name="dish" value="Đồ ăn Việt Nam"><span></span>Đồ ăn Việt Nam</label></li>
+          <li><label><input type="checkbox" name="dish" value="Đồ uống"><span></span>Đồ uống</label></li>
+          <li><label><input type="checkbox" name="dish" value="Súp"><span></span>Súp</label></li>
+        </ul>
+        <div class="show-all">hiển thị tất cả</div>
+      </div>
+      <div class="c">
+        <p>Giá</p>
+        <ul>
+          <li><label><input type="checkbox" name="price" value="Rẻ"><span></span>Thấp</label></li>
+          <li><label><input type="checkbox" name="price" value="Trung bình"><span></span>Trung bình</label></li>
+          <li><label><input type="checkbox" name="price" value="Cao"><span></span>Cao</label></li>
+        </ul>
+      </div>
+      <div class="c">
+        <p>Tiện nghi</p>
+        <ul>
+          <li><label><input type="checkbox" name="amenities" value="Có chỗ ngồi"><span></span>Có chỗ ngồi</label></li>
+          <li><label><input type="checkbox" name="amenities" value="Wifi Miễn phí"><span></span>Wifi miễn phí</label></li>
+          <li><label><input type="checkbox" name="amenities" value="Cho trẻ em"><span></span>Cho trẻ em</label></li>
+          <li><label><input type="checkbox" name="amenities" value="Chỗ ngồi ngoài trời"><span></span>Chỗ ngồi ngoài trời</label></li>
+        </ul>
+        <ul class="more">
+          <li><label><input type="checkbox" name="amenities" value="Bãi Đỗ xe"> Bãi đỗ xe</label></li>
+          <li><label><input type="checkbox" name="amenities" value="Máy lạnh"> Máy lạnh</label></li>
+          <li><label><input type="checkbox" name="amenities" value="Phòng riêng"> Phòng riêng</label></li>
+        </ul>
+        <div class="show-more">
+          <span>Xem thêm</span>
+        </div>
+      </div>
+    </div>
+  </div>
 <script src="js/javascrip.js"></script>
 </body>
 </html>

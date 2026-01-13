@@ -1,10 +1,11 @@
+
 body {
     margin: 0;
     padding: 0;
     background-color: black
 }
 
-/* Header */
+/*........................................... Header............................... */
 .header {
     background-color: #1c483b;
     width: 100%;
@@ -41,7 +42,7 @@ body {
     justify-content: center;
 }
 .header-center input {
-    padding: 10px;
+   padding: 10px;
     width: 593px;
     height: 49px;
     margin-top: 30px;
@@ -49,8 +50,11 @@ body {
     font-size: 24px;
     font-family: 'Alegreya';
 }
+.header-center.active input {
+    width: 593px;
+    opacity: 1;
+}
 .header-right {
-    /* background:red; */
     display: flex;
     flex: 1;
     align-items: center;
@@ -77,8 +81,7 @@ body {
     font-size: 30px;
     margin-right: 5px;
 }
-
-/* Sticky Header */
+/*.............................menu...........................*/
 .sticky-header {
     position: sticky;
     top: 0;
@@ -100,41 +103,49 @@ body {
     list-style: none;
     margin: 10px 40px;
     font-size: 25px;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
 .sticky-header ul li a {
     color: #f7efe7;
     text-decoration: none;
 }
-.sticky-header ul li a.active {
-    text-decoration: underline;
-}
-.img {
-    width: 100%;
-    position: relative;
+
+#stmobile {
+    display: none;
 }
 
-.img img {
-    width: 100%;
-    height: auto;
-
+.sticky-header ul li:hover
+{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
-.img p {
+.sticky-header ul li a::after
+{
+    content: '';
     position: absolute;
-    bottom: 50%;
-    left: 30px;
-    font-family: 'Jeju Myeongjo';
-    color: #f7efe7;
-    font-size: 48px;
+    width: 50%;
+    height: 1px;
+    bottom: -2px;
+    left: 25%;
+    background-color: #f7efe7;
+    transform: scaleX(0); 
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
 }
 
-.img span {
-    font-family: 'Italianno';
-    font-size: 110px
+.sticky-header ul:hover li a.ok::after { 
+  transform: scaleX(0); 
+}
+.sticky-header ul li a.ok::after, 
+.sticky-header ul li a:hover::after, 
+.sticky-header ul li a.ok:hover::after { 
+  transform: scaleX(1); 
 }
 
-/* bảng đătj phòng */
+/* .....................bảng đặt phòng........................... */
 .booking-overlay {
     position: fixed;
     inset: 0;
@@ -144,6 +155,7 @@ body {
     justify-content: center;
     z-index: 999;
     font-size: 20px;
+    color: #1c483b;
 }
 
 .booking {
@@ -172,10 +184,12 @@ body {
 .booking-row input {
     width: 180px;
     padding: 6px;
+    color: #1c483b
 }
 .booking-row input[type="date"],
 .booking-row input[type="time"] {
     font-size: 18px;
+    color: #1c483b;
 }
 
 .spinner {
@@ -191,27 +205,6 @@ body {
     flex: 1;
     text-align: center;
     font-weight: bold;
-}
-
-.arrows {
-    display: flex;
-    flex-direction: column;
-    border-left: 1px solid #ccc;
-}
-
-.arrows i {
-    font-style: normal;
-    font-size: 12px;
-    height: 18px;
-    line-height: 18px;
-    text-align: center;
-    cursor: pointer;
-    user-select: none;
-}
-
-.arrows i:hover {
-    background: #1c483b;
-    color: #fff;
 }
 
 .booking-actions {
@@ -234,13 +227,17 @@ body {
 .close {
     background: #ccc;
 }
-
-/* MAIN CONTENT */
+.burger {
+    display: none;
+}
+/*............................. MAIN CONTENT............................. */
 .main {
 width: 100%;
 font-family: Arial,Tahoma,sans-serif;
 background-color: #f7efe7;
 }
+/*...........................chữ giới thiệu chung...........................*/
+
 .text1 {
   font-family: 'Judson';
   text-align: center;
@@ -253,9 +250,9 @@ background-color: #f7efe7;
   align-items: center; 
   background-color: #f7efe7;
 }
-/* đặt bàn*/
+/*...........................thanh tìm và đặt bàn...........................*/
 .thanh {
-width: 100%;
+width: auto;
 height: 113px;
 background-color: #d9d9d9;
 display: flex;
@@ -263,22 +260,26 @@ align-items: center;
 justify-content: flex-start;
 padding-left: 30px;
 margin: 0;
+position: relative;
+z-index: 10;
 }
 .thanh p {
 font-size: 35px;
 color: #1c483b;
 margin: 0;
 text-align: left;
+margin-left: 50px;
 }
 .thanh ul{
 display:flex;
+margin-left: 200px;
 }
 .thanh ul li {
 display: inline-block;
 list-style: none;
 margin: 0 60px;
 font-size: 24px;
-background-color: #f7efe7;
+background-color: #ffff;
 border: 1px solid #1c483b;
 border-radius: 25px;
 display: flex;
@@ -301,18 +302,15 @@ transition: 0.3s;
 padding: 8px 16px;
 }
 .thanh ul li.search{
-background: #f7efe7;
+background: #fff;
 border-color: #1c483b;
+color:#1c483b;
 }
 .thanh ul li.search input {
-  color: #f7efe7;
+  color: #1c483b;
 }
-.thanh ul li.search a{
-color:#f7efe7
-}
-.thanh ul li.search:hover {
-  background-color: #2e7f24;
-}
+
+
 .thanh ul li input[type="time"],
 .thanh ul li input[type="number"]{
   width: 60px;
@@ -324,7 +322,7 @@ color:#f7efe7
 .thanh ul li i {
   color: #1c483b;
 }
-/* giới thiệu */
+/*...........................ảnh giới thiệu...........................*/
 .gth {
 width: 100%;
 height: 600px;
@@ -364,12 +362,13 @@ transform: scale(1.05);
 transition: all 0.3s ease;
 
 }
+/*...........................phần trắng bên dưới ảnh...........................*/
+
 .td{
 background-color: #fff;
 height: 30%;
 color:#1c483b
 }
-/* chữ bên dưới phần giớia thiệu */
 .td h2{
 font-size: 30px;
 text-align: center;
@@ -393,39 +392,112 @@ color:#66A44F;
 margin-top: -20px;
 margin-left: 50px;
 }
-/*đồ ăn*/
-.wrapper{
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  color: #1c483b
-}
+/*...........................lướt...........................*/
 
 .hien {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
   height: auto;
-  padding: 30px 0;
+  background-color: #DEE7DE ;
 }
 
-.hien > div {
-  padding: 5px;
-  border-radius: 10px;
-  display: flex;
-  gap: 10px;
+
+.h {
+  display: grid;
+  grid-template-columns: 260px 1fr;
   align-items: center;
-  height: 250px;
+  max-width: 712px;
 }
 
 
-.h{
-justify-content: center;
-align-items: flex-start;
-position: relative;
-display: flex;
+.khoi_doc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 258px;
+  height: 442px;
+  background: #1c483b;
+  z-index: 1;
+  border-radius: 16px;
 }
+
+.khoi_ngang {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 669px;
+  height: 283px;
+  background: #1c483b;
+  z-index: 1;
+  border-radius: 16px;
+}
+
+
+.hi1, .hi2, .hi3 {
+  position: relative;
+  overflow: hidden;
+  background: #f7efe7;
+  overflow: visible;
+  opacity: 0;
+  transition: all 0.8s ease-out;
+  visibility: hidden;
+  position: sticky;
+  top: 100px;              
+  min-height: 580px; 
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  margin: 0 auto;
+  width: 95%;
+  border-radius: 16px;
+}
+.hi1.active, .hi2.active, .hi3.active {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+.hi1 > h2,
+.hi2 > h2,
+.hi3 > h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 52px;
+  font-weight: 500;
+  letter-spacing: 6px;
+  color: #7a1e36;
+  margin-left: 320px;
+  margin-top: 120px;
+  
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  margin-left: 620px;
+  margin-top: -180px;
+}
+.card-left {
+  margin: 0;
+  transform: translate(-580px, 240px);
+  position: relative;
+  z-index: 4;
+}
+
+.card-right {
+  margin: 0;
+  transform: translate(70px, -150px);
+  position: relative;
+  z-index: 4;
+}
+.h.card-left,
+.h.card-right {
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  background-color: azure;
+  display: inline-flex;
+}
+
+
 .slider
  {
   position: relative;
@@ -449,7 +521,7 @@ display: flex;
 img.active {
   display: block;
 }
-/*..nút..*/
+/*...........................nút sang trái phải...........................*/
 .prev { left: 30px; }
 .next { right: -30px; }
 
@@ -466,24 +538,23 @@ img.active {
   transform: translate(-30px, -50%);
 
 }
-/*...chữ của đồ ăn...*/
+/*...........................chữ của đồ ăn...........................*/
 .nd{
 float:right;
 width: 60%;
 height: 100%;
 align-items: flex-start;
-margin-left: 30px;
 }
 .nd h2{
-  font-size: 22px;
+  font-size: 25px;
+  color: #1c483b;
 }
 .nd p{
 font-size: 22px;
 color: #1c483b;
-}
-.rating{
 margin-top: 50px;
 }
+
 .rating i {
 color: gold;
 margin-left: 3px;
@@ -491,36 +562,46 @@ font-size: 15px;
 vertical-align: middle;
 margin-top: -5px;
 }
-.book {
-  margin-top: 10px;
-  padding: 12px 24px; 
-  background: green;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.book:hover {
-  background: darkgreen;
-  transform: scale(1.05);
-}
-/*..lọc..*/
-.container {
-  padding: 15px;
-  border-radius: 10px;
-  width: 20%;
+
+/*...........................lọc...........................*/
+
+.container .chon {
+  top: 60%;
+  right: 0;
+  position: absolute;
+  width: 300px;
   height: auto;
-  display: flex;
-  flex-direction: column; 
   color:#1c483b;
+  background: rgba(217, 217, 217, 0.75);
+  backdrop-filter: blur(4px); 
+  z-index: 9999;
   font-size: 22px;
-  gap: 35px;
-  margin: 30px 75px;
-  height: auto;
-  background-color: #d9d9d9;
+  overflow-y: auto;
+  display: none;
+  align-items: left;
+  padding: 8px 24px;
+}
+
+.container .chon.active {
+  display: flex;
+}
+
+.filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.fa-solid .fa-filter {
+  font-size: 15px;
 }
 .container > div {
-  gap: 150px;
+  gap: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -535,33 +616,30 @@ margin-top: -5px;
 .container input { 
   width: 20px; 
   height: 20px;
+  background: transparent;
+  border: 1px solid #1c483b;
 }  
 
 .chon ul li{
     list-style: none;
 
 }
-/* Mũi tên */
+/*...........................mũi tên gập...........................*/
 .chon > div > p::after {
   content: "⌃";
   font-size: 18px;
   transition: 0.3s;
 }
 
-/* Gập danh sách */
 .chon ul.hide {
   display: none;
 }
 
-/* Xoay mũi tên khi gập */
 .chon > div > p.active::after {
   transform: rotate(180deg);
 }
 
-.result {
-  display: flex;
-}
-/*...................*/
+/*...........................bảng xem tất cả...........................*/
 
 .overlay {
   position: fixed;
@@ -584,6 +662,7 @@ margin-top: -5px;
   padding: 25px;
   display: none;
   z-index: 1000;
+  color:#1c483b;
 }
 
 .modal-header {
@@ -605,7 +684,7 @@ margin-top: -5px;
   padding: 10px;
   margin: 15px 0;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #d9d9d9;
 }
 
 .modal-content {
@@ -625,8 +704,8 @@ margin-top: -5px;
 }
 
 .apply {
-  background: #003b2f;
-  color: #000;
+  background: #1c483b;
+  color: #fff;
   padding: 10px 20px;
   border-radius: 25px;
   border: none;
@@ -635,10 +714,10 @@ margin-top: -5px;
 .reset {
   background: none;
   border: none;
-  color: #003b2f;
+  color: #1c483b;
   font-weight: bold;
 }
-/*.........*/
+/*...........................xem thêm...........................*/
 
 .chon > div > p::after {
   content: "⌃";
@@ -665,12 +744,11 @@ margin-top: -5px;
   font-weight: 600;
   cursor: pointer;
 }
-/* Ẩn phần xem thêm ban đầu */
+
 .chon ul.more {
   display: none;
 }
 
-/* Nút xem thêm */
 .show-more {
   display: flex;
   align-items: center;
@@ -682,12 +760,10 @@ margin-top: -5px;
   margin-top: 8px;
 }
 
-/* Mũi tên */
 .show-more .arrow {
   transition: transform 0.3s;
 }
 
-/* Khi mở */
 .show-more.active .arrow {
   transform: rotate(180deg);
 }
@@ -699,8 +775,44 @@ margin-top: -5px;
 .show-more span {
   text-decoration: underline;
 }
-
-/* footer */
+/*...........................Dấu ấn đầu bếp...........................*/
+.chef {
+    width: 100%;
+    height: 550px;
+    background-color: #DEE7DE;
+    display: flex;
+    padding: 92px 0;
+}
+.chef1{
+    width: 531px;
+    height: 722px;
+    margin: 0 50px;
+}
+.chef2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 200px;
+    gap: 10px;
+}
+.chef2 h3 {
+    font-family: 'Inter';
+    font-size: 36px;
+    color: #1c483b;
+    margin-bottom: 20px;
+}
+.chef21 {
+    width: 641px;
+    height: 79px;
+    background-color: #d9d9d9;
+}
+.chef21 p {
+    font-family: 'Inter';
+    font-size: 25px;
+    color: #1c483b;
+    text-align: center;
+}
+/*...........................footer...........................*/
 .footer {
     background: #1c483b;
     color: #f7efe7;
@@ -792,4 +904,347 @@ margin-top: -5px;
     font-weight: bold;
     font-size: 120%;
     font-family: 'Open Sans';
+}
+/*...........................responsive...........................*/
+@media only screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+
+  }
+  .header-left,
+  .header-center,
+  .header-right  {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-top: -30px;
+  }
+  .header-left img{
+    width: 33px;
+    height: 33px;
+    position: static;
+
+  }
+  .header-left h1 {
+    font-size: 26px;
+    margin: 0;
+    line-height: 1;  
+    position: static;
+    margin-left: -30px;
+  }
+  .header-center input {
+    width: 170px;
+    height: 20px;
+    font-size: 12px;
+    margin-left: -320px;
+    margin-top: -5px;
+    
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    margin-top: -30px;
+    width: auto;
+    }
+  .header-right i{
+    font-size: 17px;
+    margin-left: -50px;
+  }
+  .header-right a{
+    display: none;
+  }
+  /*.............................menu.................*/
+  .sticky-header {
+    display: none;
+  }
+  .sticky-header ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-left: -30px
+  }
+  .sticky-header ul li {
+        display: block;
+        list-style: none;
+        margin: 10px auto;
+        font-size: 15px;
+        font-weight: 800
+    }
+  .sticky-header ul li a {
+        color: #1c483b;
+        text-decoration: none;
+    }
+  .sticky-header.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        background-color: #d9d9d9;
+        justify-content: flex-start;
+        gap: 0px;
+        align-items: flex-start;
+        width: 100%;
+        height: 220px;
+        font-family: 'Alegreya';
+        opacity: 0.9;
+        backdrop-filter: blur(5px);
+        font-size: 12px;
+    }
+  .burger {
+        display: block;
+        position: relative;
+        z-index: 9999;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color:#f7efe7;
+    }
+  /*.    body     */
+  .text1 {
+    font-size: 18px;
+    padding: 20px 0;
+    height: auto;
+  }
+  /*.............................thanh tìm và đặt bàn.................*/
+  .thanh {
+    display: flex;
+    height: auto;
+    padding: 10px;
+
+  }
+  .thanh p {
+    font-size: 20px;
+    margin-left: 20px;
+    width: auto;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .thanh ul {
+    margin-left: -10px;
+    gap: 4px;
+    display: flex;
+  }
+  .thanh ul li {
+    margin: 0 10px;
+    font-size: 14px;
+    padding: 3px;
+    margin-left: -2px;
+  }
+  .thanh ul li input {
+    font-size: 12px;
+    padding: 3px 5px;
+  }
+  /*.............................ảnh giới thiệu.................*/
+  .gth {
+    display: flex;
+    height: auto;
+    padding: 20px 30px;
+    overflow: hidden;
+    width: 100%; 
+    gap: 30px;
+  }
+  .gthieu {
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
+  }
+  .gth1 {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+  }
+  .gth1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+  .td {
+    display: none;
+  }
+  /*.............................đồ ăn.................*/
+  .hien {
+    width: auto;
+    height: auto;
+  }
+  .hi1, .hi2, .hi3 {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    height: auto; 
+    min-height: 0; 
+    max-height: 270px;
+    top: 20px;
+    margin-top: 10px;
+  }
+  .hi1 > h2,
+  .hi2 > h2,
+  .hi3 > h2 {
+    font-size: 20px;
+    text-align: center;
+    margin: 35px auto;
+    letter-spacing: 2px;
+    
+  }
+  .khoi_doc {
+    width: 120px;
+    height: 80px;
+    border-radius: 0;
+    margin: 60px 20px;
+  }
+  .khoi_ngang {
+    width: 120px;
+    height: 80px;
+    border-radius: 0;
+    margin: 60px 20px;
+  }
+  .cards {
+    margin-left: 0;
+    margin-top: 20px;
+    background-color: transparent;
+  }
+  .card-left {
+    transform: translate(-100px, -10px);
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+
+  }
+  .card-right {
+    transform: translate(100px, -175px); 
+    display: flex;
+    flex-direction: column;
+  }
+.h.card-left,
+.h.card-right {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+  .nd h2{
+    font-size: 16px;
+    text-align: center;
+    
+  }
+  .nd p{
+    display: none;
+  }
+  .slider {
+    width: 160px; 
+    height: 120px;
+    border-radius: 0;
+  }
+  .slides img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .prev, .next {
+    font-size: 24px;
+    padding: 3px 6px;
+  }
+  /*.............................Dấu ấn đầu bếp.................*/
+  .chef {
+    height: auto;
+    padding: 20px 0;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .chef1 {
+    width: 100%;
+    height: auto;
+    margin: 0 30px;
+  }
+  .chef1 img {
+    width: 90%;
+    height: auto;
+  }
+  .chef2 {
+    gap: 10px;
+    width: 60%;
+    margin: 0 auto; 
+  }
+  .chef2 h3 {
+    align-items: center;
+    margin-left: 0;
+  }
+  .chef21 {
+    height: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+  .chef21 p {
+    font-size: 18px;
+  }
+  /*.............................lọc.................*/
+  .container .chon {
+    width: 30%;
+    height: auto;
+    margin-top: -140px;
+  }
+  .c ul {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+  }
+  .c ul li {
+    font-size: 16px;
+  }
+  .container p {
+    font-size: 16px;
+  }
+  .container input { 
+    width: 15px; 
+    height: 15px;
+  }
+  .show-more span {
+    font-size: 12px;
+  }
+  .show-all {
+    font-size: 14px;
+  }
+  /*.............................bảng xem tất cả.................*/
+  .modal {
+    width: 80%;
+    height: auto;
+  }
+  /*.............................footer.................*/
+ 
+    .footer1 { 
+      width: 95%;
+      margin: 0 auto;
+      display: flex;
+    }
+    .footer2 { 
+      padding: 10px 10px;
+    }
+    .f1_2,.f1_3,.f1_4,.footer2, .footer1 p, .footer2 p, .footer2 a { 
+      font-size: 70%;
+    }
+    .f1_1, .f1_2, .f1_3, .f1_4
+    {
+        margin: 10px 1px;
+        flex: none;
+        justify-content: center;
+    }
+    .f1_1 {
+      font-size: 80%;
+    }
+    .f1_2 {
+      margin-top: -1px;
+    }
 }
