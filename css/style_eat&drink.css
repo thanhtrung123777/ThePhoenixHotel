@@ -153,7 +153,7 @@ body {
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 1000;
     font-size: 20px;
     color: #1c483b;
 }
