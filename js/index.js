@@ -102,3 +102,46 @@ input.addEventListener("input", () => {
     }
   });
 });
+
+
+//scroll 4 rating
+const rateTrack = document.querySelector('.site-track');
+const rateItems = document.querySelectorAll('.site');
+const btnNextRate = document.querySelector('.next-rate');
+const btnPrevRate = document.querySelector('.prev-rate');
+
+let rateIndex = 0;
+const totalRates = rateItems.length;
+
+function moveRating() {
+    if (window.innerWidth <= 1000) {
+        rateTrack.style.transform = `translateX(-${rateIndex * 100}%)`;
+    } else {
+       rateTrack.style.transform = `translateX(0)`;
+    }
+}
+
+btnNextRate.onclick = () => {
+    if (rateIndex >= totalRates - 1) {
+        rateIndex = 0;
+    } else {
+        rateIndex++;
+    }
+    moveRating();
+};
+
+btnPrevRate.onclick = () => {
+    if (rateIndex <= 0) {
+        rateIndex = totalRates - 1;
+    } else {
+        rateIndex--;
+    }
+    moveRating();
+};
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 789) {
+        rateIndex = 0;
+    }
+    moveRating();
+});
