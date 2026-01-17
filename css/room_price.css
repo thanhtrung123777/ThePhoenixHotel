@@ -6,180 +6,231 @@ body {
 
 /* Header */
 .header {
-    background: #1C483B;
-    backdrop-filter: blur(8px);
+    background-color: #1c483b;
     width: 100%;
-    height: 100px;
+    height: 125px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: 0.3s ease;
-
-}
-
-.header.scrolled {
-    background: rgba(30, 30, 30, 0.85);
-    height: 90px;
+    color: #f7efe7;
 }
 
 .header-left {
     display: flex;
-    align-items: center;
-    gap: 12px;
     flex: 1;
+    
+}
+
+.header-left img {
+    width: 63px;
+    height: 63px;
+    margin: 50px 55px;
+    
 }
 .header-left h1 {
-    font-family: 'Montez', cursive;
-    font-size: 34px;
-    color: white;
-    margin: 0;
-}
-.header-left img {
-    width: 42px;
-    height: 42px;
+    font-family: 'Montez';
+    font-size: 60px;
+    margin-top: 50px;
+    width: 409px;
 }
 
 .header-center {
-    flex: 2;
     display: flex;
-    justify-content: flex-end; 
-    margin-right: 8px;        
+    flex: 1;
+    align-items: center;
+    justify-content: center;
 }
 .header-center input {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    font-size: 16px;
+   padding: 10px;
+    width: 593px;
+    height: 49px;
+    margin-top: 30px;
+    color: #1c483b;
+    font-size: 24px;
+    font-family: 'Alegreya';
 }
-
-.header-center h1 {
-    margin: 0;
-    padding: 10px;
-    font-family: 'Montez';
-    font-size: 60px;
+.header-center.active input {
+    width: 593px;
+    opacity: 1;
 }
-
-
-.header-center h2 {
-    margin-top: -25px;
-    font-family: 'Montez';
-    font-weight: 100;
-    font-size: 36px
-}
-
 .header-right {
     display: flex;
-    flex: 0.8;                
+    flex: 1;
     align-items: center;
-    justify-content: flex-start;
-    margin-right: 30px;
-    gap: 6px;                  
+    justify-content: flex-end;
+    margin-right: 75px;
+    gap: 5px;
+    margin-top: 30px;
 }
 
-
 .header-right input {
-    color: white;
     padding: 10px;
-    width: 150px;
+    width: 143px;
 }
 
 .header-right a {
     text-decoration: none;
-    color: white;
     margin-right: 5px;
+    font-family:'Alegreya';
+    color: #f7efe7;
+    font-size: 24px;
 }
 
 .header-right i {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
+    font-size: 30px;
+    margin-right: 5px;
 }
-
-/* Sticky Header */
+/*.............................menu...........................*/
 .sticky-header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #1C483B;
-    font-family: 'Inria Serif', serif;
-    height: 45px;
-}
-.sticky-header ul {
+    background-color: #1c483b;
     display: flex;
-    justify-content: space-between; 
+    justify-content: center;
+    gap: 70px;
     align-items: center;
-
     width: 100%;
-    max-width: 1000px;  
-    margin: 0 auto;  
-
-    padding: 0;
-    list-style: none;
+    height: 80px;
+    font-family: 'Alegreya';
+    backdrop-filter: blur(5px);
+    font-size: 28px;
 }
+
 .sticky-header ul li {
+    display: inline-block;
     list-style: none;
+    margin: 10px 40px;
+    font-size: 25px;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
 .sticky-header ul li a {
-    position: relative; 
-    font-family: 'Inria Serif', serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: #e8f4f0;
+    color: #f7efe7;
     text-decoration: none;
-    padding: 6px 0; 
 }
 
-.sticky-header ul li a::after {
+.sticky-header ul li:hover
+{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.sticky-header ul li a::after
+{
     content: '';
     position: absolute;
-    width: 0;
-    height: 2px;
-    background: #e8f4f0;
-    left: 0;
-    bottom: -6px;
-    transition: 0.3s;
-}
-.sticky-header ul li a:hover::after {
-    width: 100%;
-}
-.img {
-    width: 100%;
-    position: relative;
+    width: 50%;
+    height: 1px;
+    bottom: -2px;
+    left: 25%;
+    background-color: #f7efe7;
+    transform: scaleX(0); 
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
 }
 
-.img img {
-    width: 100%;
-    height: auto;
+.sticky-header ul:hover li a.ok::after { 
+  transform: scaleX(0); 
+}
+.sticky-header ul li a.ok::after, 
+.sticky-header ul li a:hover::after, 
+.sticky-header ul li a.ok:hover::after { 
+  transform: scaleX(1); 
 }
 
-.img p {
-    position: absolute;
-    bottom: 50%;
-    left: 30px;
-    font-family: 'Jeju Myeongjo';
-    color: white;
-    font-size: 48px;
+/* .....................bảng đặt phòng........................... */
+.booking-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    font-size: 20px;
+    color: #1c483b;
 }
 
-.img span {
-    font-family: 'Inter';
-    font-size: 110px
+.bookingx {
+    background: #fff;
+    padding: 25px;
+    width: 360px;
+    border-radius: 8px;
 }
 
+.bookingx h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bookingx-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bookingx-row label {
+    font-size: 20px;
+}
+
+.bookingx-row input {
+    width: 180px;
+    padding: 6px;
+    color: #1c483b
+}
+.bookingx-row input[type="date"],
+.bookingx-row input[type="time"] {
+    font-size: 18px;
+    color: #1c483b;
+}
+
+.spinner {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    width: 90px;
+    height: 36px;
+    border-radius: 3px;
+}
+
+.count {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+.bookingx-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.bookingx-actions button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.submit {
+    background: #1c483b;
+    color: #fff;
+}
+
+.close {
+    background: #ccc;
+}
+.burger {
+    display: none;
+}
 /* body */
 .booking {
     width: 100%;
     background-color: #333333;
 }
 
-.booking1 img {
-    height: 850px;
-    width: 100%;
-}
 
 .booking2 {
     width: 100%;
@@ -529,82 +580,143 @@ body {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
+    body {
+    overflow-x: hidden; 
+    position: relative; 
+}
 
-    /* ===== FILTER BOX ===== */
-    .filter-box {
+  header {
+    width: 100%;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    position: sticky;
+    top: 0;
+  }
+  .header-left,
+  .header-center,
+  .header-right  {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+  .header-left img{
+    width: 33px;
+    height: 33px;
+    position: static;
+
+  }
+  .header-left h1 {
+    font-size: 26px;
+    margin: 0;
+    line-height: 1;  
+    position: static;
+    margin-left: -40px;
+  }
+  .header-center input {
+    width: 120px;
+    height: 20px;
+    font-size: 12px;
+    margin-left: -370px;
+    margin-top: -1px;
+    
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    margin-top: -30px;
+    width: auto;
+    margin-left: -60px;
+    gap: 2px;
+    }
+  .header-right i{
+    font-size: 17px;
+    margin-left: -70px;
+  }
+  .header-right a{
+    display: none;
+  }
+  /*.............................menu.................*/
+  .sticky-header {
+    display: none;
+  }
+  .sticky-header ul {
         display: flex;
         flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-    }
-
-    .filter-box select,
-    .filter-box button {
-        width: 100%;
-        height: 44px;
-        font-size: 16px;
-    }
-
-    /* ===== HEADER ===== */
-    .header {
-        height: auto;
-        padding: 12px 16px;
-        flex-wrap: wrap;
-        row-gap: 12px;
-    }
-
-    /* LOGO */
-    .header-left {
-        flex: 1;
-    }
-
-    .header-left h1 {
-        font-size: 26px;
-    }
-
-    /* SEARCH XUỐNG DÒNG */
-    .header-center {
-        order: 3;
-        flex: 100%;
         justify-content: center;
-        margin-right: 0;
-    }
-
-    .header-center input {
-        width: 100%;
-        max-width: 100%;
+        align-items: center;
+        width: auto;
+        margin-left: -30px
+  }
+  .sticky-header ul li {
+        display: block;
+        list-style: none;
+        margin: 10px auto;
         font-size: 15px;
+        font-weight: 800
     }
-
-    /* LỊCH ĐẶT – CHỈ ICON */
-    .header-right {
-        flex: 1;
-        justify-content: flex-end;
-        margin-right: 0;
+  .sticky-header ul li a {
+        color: #1c483b;
+        text-decoration: none;
     }
-
-    .header-right a span {
-        display: none;
-    }
-
-    .header-right i {
-        font-size: 26px;
-    }
-
-    /* ===== STICKY MENU ===== */
-    .sticky-header {
+  .sticky-header.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 90px;
+        background-color: #d9d9d9;
+        justify-content: flex-start;
+        gap: 0px;
+        align-items: center;
+        width: 100%;
         height: auto;
-        padding: 8px 0;
+        font-family: 'Alegreya';
+        opacity: 0.9;
+        backdrop-filter: blur(5px);
+        font-size: 12px; 
+    }
+  .burger {
+        display: block;
+        position: relative;
+        z-index: 10001;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color:#f7efe7;
+        
     }
 
-    .sticky-header ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 18px;
+  /*.............................footer.................*/
+ 
+    
+    .footer1 { 
+      margin-top: -2%;
+      font-size: 70%;
     }
-
-    .sticky-header ul li a {
-        font-size: 18px;
+    .x {
+      display: flex;
+      width: 75%;
+      font-size: 40%;
+      padding: 0 10px;
+      margin: 0 auto;
+      
+      
+    }
+    .footer2 { 
+      padding: 20px;
+    }
+    .f1_2,.footer2, 
+    .footer1 p, 
+    .footer2 p, 
+    .footer2 a { 
+      font-size: 70%;
+    }
+    .f1_1{
+      font-size: 70%;
     }
 }
 
@@ -692,4 +804,8 @@ body {
     font-weight: bold;
     font-size: 120%;
     font-family: 'Inter';
+}
+.x {
+  display: flex;
+  width: 80%;
 }
