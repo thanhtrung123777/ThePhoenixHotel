@@ -207,6 +207,8 @@ body {
 }
 @media (max-width: 768px) {
   .header {
+    position: sticky;
+    top: 0;
     height: 66px;
     padding: 0 12px;
     display: flex;
@@ -305,7 +307,6 @@ body {
   .burger {
         display: block;
         position: relative;
-        z-index: 9999;
         background: none;
         border: none;
         font-size: 24px;
