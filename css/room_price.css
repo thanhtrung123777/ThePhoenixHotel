@@ -1,13 +1,12 @@
 body {
-    padding: 0;
-    margin: 0 auto;
-    background-color: black;
-
+    margin: 0;
+    background-color: #1C483B;
 }
+
 
 /* Header */
 .header {
-    background: rgba(56, 56, 56, 0.65);
+    background: #1C483B;
     backdrop-filter: blur(8px);
     width: 100%;
     height: 100px;
@@ -26,47 +25,60 @@ body {
 
 .header-left {
     display: flex;
-    flex: 1
+    align-items: center;
+    gap: 12px;
+    flex: 1;
 }
-
+.header-left h1 {
+    font-family: 'Montez', cursive;
+    font-size: 34px;
+    color: white;
+    margin: 0;
+}
 .header-left img {
-    width: 93px;
-    height: 93px;
-    margin: 0 20px;
+    width: 42px;
+    height: 42px;
 }
 
 .header-center {
+    flex: 2;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px;
-    flex: 1;
-    color: white;
-    margin-left: 0;
+    justify-content: flex-end; 
+    margin-right: 8px;        
+}
+.header-center input {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
 }
 
 .header-center h1 {
     margin: 0;
     padding: 10px;
     font-family: 'Montez';
-    font-size: 60px
+    font-size: 60px;
 }
+
 
 .header-center h2 {
     margin-top: -25px;
-    font-family: 'Inria Serif';
+    font-family: 'Montez';
     font-weight: 100;
     font-size: 36px
 }
 
 .header-right {
     display: flex;
-    flex: 1;
+    flex: 0.8;                
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-right: 30px;
-    gap: 10px;
+    gap: 6px;                  
 }
+
 
 .header-right input {
     color: white;
@@ -82,8 +94,8 @@ body {
 
 .header-right i {
     color: white;
-    font-size: 20px;
-    margin-right: 5px;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 /* Sticky Header */
@@ -91,29 +103,49 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #b4b4b499;
-    display: flex;
-    justify-content: center;
-    gap: 70px;
-    align-items: center;
-    width: 100%;
-    height: 60px;
-    font-family: 'Inria Serif';
-    backdrop-filter: blur(5px);
+    background-color: #1C483B;
+    font-family: 'Inria Serif', serif;
+    height: 45px;
 }
+.sticky-header ul {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
 
-.sticky-header ul li {
-    display: inline-block;
+    width: 100%;
+    max-width: 1000px;  
+    margin: 0 auto;  
+
+    padding: 0;
     list-style: none;
-    margin: 10px 20px;
-    font-size: 25px;
+}
+.sticky-header ul li {
+    list-style: none;
 }
 
 .sticky-header ul li a {
-    color: white;
+    position: relative; 
+    font-family: 'Inria Serif', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #e8f4f0;
     text-decoration: none;
+    padding: 6px 0; 
 }
 
+.sticky-header ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #e8f4f0;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+.sticky-header ul li a:hover::after {
+    width: 100%;
+}
 .img {
     width: 100%;
     position: relative;
@@ -134,7 +166,7 @@ body {
 }
 
 .img span {
-    font-family: 'Italianno';
+    font-family: 'Inter';
     font-size: 110px
 }
 
@@ -150,38 +182,32 @@ body {
 }
 
 .booking2 {
-    height: 349px;
     width: 100%;
-    font-family: 'Inknut Antiqua';
-    background-color: #333333;
-    color: white;
-    margin-top: -4px;
+    padding: 50px 20px;
+    font-family: 'Inter';
+    background-color: #d4ecd4;
+    color: #004953;
 }
 
+/* Tiêu đề PHÒNG */
 .booking2 .gtr {
-    font-size: 36px;
+    font-size: 44px;
     text-align: center;
-    padding: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
 }
 
+/* Nội dung */
 .booking2 p {
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
-    margin: 0 10px 0 10px;
+    margin: 0 auto;
+    max-width: 900px;   
+    line-height: 1.9;
 }
-
-.filter {
-    max-width: 110%;
-    background-color: #333333;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    overflow: hidden
-}
-
 
 .booking3 {
-    height: 400px;
     max-width: 99%;
     display: flex;
 }
@@ -196,76 +222,71 @@ body {
 }
 
 .hot {
-    font-family: 'Italianno';
-    color: #ffffff;
+    font-family: 'Inter';
+    color: #004953;
     font-size: 50px;
     text-align: center;
-    background-color: #343333;
+    background-color: #F7EFE7;
 }
 
 .booking3 {
     display: flex;
     justify-content: center;
     gap: 20px;
-    background-color: #333333;
+    background-color: #F7EFE7;
     padding: 20px;
 }
 
 .booking4 {
-    height: 400px;
     width: 100%;
     display: flex;
+    
 }
 
 .ROOM {
-    font-family: 'Italianno';
-    color: #ffffff;
+    font-family: 'Inter';
+    color: #004953;
     font-size: 50px;
     text-align: center;
-    background-color: #333333;
+    background-color: #F7EFE7;
 }
 
 .booking4 {
     display: flex;
     justify-content: center;
     gap: 20px;
-    background-color: #333333;
+    background-color: #F7EFE7;
     padding: 20px;
-    width: 1481px
+
 }
 
 .booking5 {
-    height: 400px;
     width: 100%;
     display: flex;
-    width: 1481px
 }
 
 .booking5 {
     display: flex;
     justify-content: center;
     gap: 20px;
-    background-color: #333333;
+    background-color: #F7EFE7;
     padding: 20px;
 }
 
 .booking6 {
-    height: 400px;
     width: 100%;
     display: flex;
-    width: 1481px
 }
 
 .booking6 {
     display: flex;
     justify-content: center;
     gap: 20px;
-    background-color: #333333;
+    background-color: #F7EFE7;
     padding: 20px;
 }
 
 .booking7 {
-    height: 400px;
     width: 100%;
     display: flex;
 }
@@ -274,13 +295,11 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    background-color: #333333;
+    background-color: #F7EFE7;
     padding: 20px;
-    width: 1481px
 }
 
 .booking8 {
-    height: 400px;
     width: 100%;
     display: flex;
 }
@@ -289,20 +308,25 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    background-color: #333333;
+    background-color: #F7EFE7;
     padding: 20px;
-    width: 1481px
 }
+
 
 .card {
     position: relative;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 400px;
     background-color: #333;
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: all 0.35s ease;
 }
+.card.hidden {
+    display: none !important;
+}
+
 
 .card::after {
     content: "";
@@ -429,77 +453,165 @@ body {
     transform: translateY(0);
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
 }
+/* ================= FILTER ================= */
+.filter {
+    width: 100%;
+    background: #1C483B;
+    padding: 25px 15px;
+    display: flex;
+    justify-content: center;
+}
 
 .filter-container {
-    width: fit-content;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .filter-box {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
-
+    gap: 18px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px 25px;
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 /* Label */
 .filter-box label {
     color: #ffffff;
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
-/* Select hiệu ứng đẹp */
+/* Select */
 .filter-box select {
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: 1px solid #555;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
     background: #ffffff;
     font-size: 14px;
-    transition: all 0.25s ease;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: 0.3s ease;
 }
-
-/* Hover vào select */
-.filter-box select:hover {
-    border-color: #00aaff;
-    box-shadow: 0 0 8px rgba(0, 170, 255, 0.6);
-}
-
 
 .filter-box select:focus {
-    border-color: #0088ff;
-    box-shadow: 0 0 10px rgba(0, 136, 255, 0.8);
-    transform: scale(1.03);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.6);
 }
 
 /* Button */
 .filter-box button {
-    padding: 8px 20px;
-    border-radius: 8px;
+    padding: 10px 26px;
+    border-radius: 12px;
     border: none;
-    background: linear-gradient(135deg, #ffffff, #ffffff);
+    background: linear-gradient(135deg, #ffdd55, #ffb703);
+    color: #1C483B;
     font-size: 15px;
-    cursor: pointer;
-    color: #333;
     font-weight: bold;
-    transition: all 0.25s ease;
-    box-shadow: 0 3px 8px rgba(255, 170, 0, 0.5);
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-/* Hover nút lọc */
 .filter-box button:hover {
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 6px 12px rgba(255, 170, 0, 0.7);
-    background: linear-gradient(135deg, #ffee55, #ffbb33);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(255, 183, 3, 0.6);
 }
 
-/* Khi nhấn giữ */
 .filter-box button:active {
     transform: scale(0.95);
 }
 
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+
+    /* ===== FILTER BOX ===== */
+    .filter-box {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .filter-box select,
+    .filter-box button {
+        width: 100%;
+        height: 44px;
+        font-size: 16px;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+        height: auto;
+        padding: 12px 16px;
+        flex-wrap: wrap;
+        row-gap: 12px;
+    }
+
+    /* LOGO */
+    .header-left {
+        flex: 1;
+    }
+
+    .header-left h1 {
+        font-size: 26px;
+    }
+
+    /* SEARCH XUỐNG DÒNG */
+    .header-center {
+        order: 3;
+        flex: 100%;
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .header-center input {
+        width: 100%;
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+    /* LỊCH ĐẶT – CHỈ ICON */
+    .header-right {
+        flex: 1;
+        justify-content: flex-end;
+        margin-right: 0;
+    }
+
+    .header-right a span {
+        display: none;
+    }
+
+    .header-right i {
+        font-size: 26px;
+    }
+
+    /* ===== STICKY MENU ===== */
+    .sticky-header {
+        height: auto;
+        padding: 8px 0;
+    }
+
+    .sticky-header ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .sticky-header ul li a {
+        font-size: 18px;
+    }
+}
+
+
 /* footer */
 .footer {
-    background: #333333;
+    background: #1C483B;
     color: white;
     margin-top: auto;
 }
@@ -507,11 +619,11 @@ body {
 .footer1 {
     display: flex;
     justify-content: space-between;
-    font-family: 'Inknut Antiqua';
+    font-family: 'Inter';
 }
 
 .f1_1 {
-    font-family: 'Inika';
+    font-family: 'Inter';
     margin-left: 5%;
     flex: 1;
     margin-top: 1%;
@@ -537,12 +649,12 @@ body {
 }
 
 .f1_4 p {
-    font-family: 'Inika';
+    font-family: 'Inter';
     font-size: 120%;
 }
 
 .footer2 {
-    background: #EFE6DD;
+    background: #FFF8E7;
     color: black;
     display: flex;
     justify-content: center;
@@ -571,7 +683,7 @@ body {
     color: black;
     font-weight: bold;
     font-size: 120%;
-    font-family: 'Inria Serif';
+    font-family: 'Inter';
     margin-top: 4%;
 }
 
@@ -579,5 +691,5 @@ body {
     flex: 1;
     font-weight: bold;
     font-size: 120%;
-    font-family: 'Inria Serif';
+    font-family: 'Inter';
 }

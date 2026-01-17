@@ -1,74 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>booking</title>
-<link
-href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap"
-rel="stylesheet"
-/>
-<link
-href="https://fonts.googleapis.com/css2?family=Montez&display=swap"
-rel="stylesheet"
-/>
-<link
-href="https://fonts.googleapis.com/css2?family=Jeju+Myeongjo&display=swap"
-rel="stylesheet"
-/>
-<link
-href="https://fonts.googleapis.com/css2?family=Italianno&display=swap"
-rel="stylesheet"
-/>
-<link
-href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap"
-rel="stylesheet"
-/>
-<link
-href="https://fonts.googleapis.com/css2?family=Judson:wght@400;700&display=swap"
-rel="stylesheet"
-/>
-<link
-href="https://fonts.googleapis.com/css2?family=Inika&display=swap"
-rel="stylesheet"
-/>
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<link rel="stylesheet" href="css/room_price.css" />
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePhoenix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/room_price.css" />
 </head>
 
+
 <body>
-<!-- Header -->
-<div class="header">
-<div class="header-left">
-<img src="img/fluent-emoji-high-contrast_phoenix-bird.png" alt="The Phoenix" />
-</div>
-<!-- ////////////// -->
-<div class="header-center">
-<h1>The Phoenix</h1>
-<h2><i>I T A L Y</i></h2>
-</div>
-<!-- ///////////////////// -->
-<div class="header-right">
-<i class="fa-solid fa-magnifying-glass"></i><a href="">Search</a>
-<i class="fa-regular fa-calendar-days"></i><a href="">My Booking</a>
-</div>
-<!-- //////////////////////// -->
-</div>
-<!-- Sticky Header -->
-<div class="sticky-header">
-<ul>
-<li><a href="index.html">Trang chủ</a></li>
-<li><a href="experiences.html">Dịch vụ</a></li>
-<li><a href="room_price.html">Phòng nghỉ</a></li>
-<li><a href="Eat&Drink.html">Ăn uống</a></li>
-<li><a href="contact.html">Liên hệ</a></li>
-</ul>
-</div>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-left">
+            <img src="img/fluent-emoji-high-contrast_phoenix-bird.png" alt="The Phoenix">
+            <h1>The Phoenix</h1>
+        </div>
+        <div class="header-center">
+            <input type="search" id="searchPicker" placeholder="Tìm Kiếm">
+        </div>
+        <!-- ///////////////////// -->
+        <div class="header-right" id="openBooking">
+            <i class="fa-regular fa-calendar-days"></i><a href="">Lịch Đặt</a>
+        </div>
+        <!-- //////////////////////// -->
+    </div>
+        <!-- Sticky Header -->
+    <div class="sticky-header">
+            <ul>
+                <li><a href="index.html" class="active">Trang Chủ</a></li>
+                <li><a href="experiences.html">Dịch Vụ</a></li>
+                <li><a href="room_price.html">Phòng Nghỉ</a></li>
+                <li><a href="Eat&amp;Drink.html">Ăn Uống</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+            </ul>
+    </div>
 <!-- Body -->
 <div class="booking">
 <div class="booking1">
@@ -86,71 +59,88 @@ Và khi làn gió thì thầm bên ngoài cửa sổ, bạn sẽ biết mình đ
 <div class="hot">HOT
 </div>
 <div class="booking3">
-  <div class="ph1 card">
-    <img src="https://i.pinimg.com/1200x/47/60/89/47608981c799a396cd13841e55dcad0c.jpg" alt="Phòng 1" />
-    <div class="info">
-      <p class="room-name">Phòng đôi tiêu chuẩn</p>
-      <p class="price">150.6 EUR</p>
-      <p class="stars">★★★★★</p>
-      <button class="reserve-btn">Reservar</button>
-    </div>
+  <div class="ph1 card"
+     data-type="standard"
+     data-people="2"
+     data-star="5">
+  <img src="https://i.pinimg.com/1200x/47/60/89/47608981c799a396cd13841e55dcad0c.jpg">
+  <div class="info">
+    <p class="room-name">Phòng tiêu chuẩn</p>
+    <p class="price">2.500.000 VNĐ</p>
+    <p class="stars">★★★★★</p>
+    <button class="reserve-btn">Reservar</button>
   </div>
+</div>
 
-  <div class="ph2 card">
-    <img src="https://i.pinimg.com/1200x/3a/c8/da/3ac8da1a41f9c2284bbf6126f67abd31.jpg" alt="Phòng 2" />
-    <div class="info">
-      <p class="room-name">Phòng đôi sang trọng</p>
-      <p class="price">49.05 EUR</p>
-      <p class="stars">★★★★☆</p>
-      <button class="reserve-btn">Reservar</button>
-    </div>
+
+<div class="ph2 card"
+     data-type="luxury"
+     data-people="2"
+     data-star="4">
+  <img src="https://i.pinimg.com/1200x/3a/c8/da/3ac8da1a41f9c2284bbf6126f67abd31.jpg" alt="Phòng 2" />
+  <div class="info">
+    <p class="room-name">Phòng đôi sang trọng</p>
+    <p class="price">49.05 EUR</p>
+    <p class="stars">★★★★☆</p>
+    <button class="reserve-btn">Reservar</button>
   </div>
-  <div class="ph3 card">
-    <img src="https://i.pinimg.com/1200x/a3/99/58/a39958dfb98f7ea9c763e9c3684b4a76.jpg" alt="Phòng 3" />
-    <div class="info">
-      <p class="room-name">Phòng đôi sang trọng</p>
-      <p class="price">60.75 EUR</p>
-      <p class="stars">★★★★☆</p>
-      <button class="reserve-btn">Reservar</button>
-    </div>
+</div>
+
+<div class="ph3 card"
+     data-type="luxury"
+     data-people="2"
+     data-star="4">
+  <img src="https://i.pinimg.com/1200x/a3/99/58/a39958dfb98f7ea9c763e9c3684b4a76.jpg" alt="Phòng 3" />
+  <div class="info">
+    <p class="room-name">Phòng đôi sang trọng</p>
+    <p class="price">60.75 EUR</p>
+    <p class="stars">★★★★☆</p>
+    <button class="reserve-btn">Reservar</button>
   </div>
+</div>
 </div>
 <div class="filter">
   <div class="filter-container">
     <div class="filter-box">
-        <label>Loại phòng:</label>
-        <select id="typeFilter">
-            <option value="">Tất cả</option>
-            <option value="standard">Tiêu</option>
-            <option value="family">Gia đình</option>
-            <option value="luxury">Cao cấp</option>
-        </select>
+      <label>Loại phòng:</label>
+      <select id="typeFilter">
+        <option value="">Tất cả</option>
+        <option value="standard">Tiêu chuẩn</option>
+        <option value="family">Gia đình</option>
+        <option value="luxury">Cao cấp</option>
+      </select>
 
-        <label>Số người:</label>
-        <select id="peopleFilter">
-            <option value="">Tất cả</option>
-            <option value="2">2 người</option>
-            <option value="4">4 người</option>
-            <option value="6">6 người</option>
-        </select>
+      <label>Số người:</label>
+      <select id="peopleFilter">
+        <option value="">Tất cả</option>
+        <option value="2">2 người</option>
+        <option value="4">4 người</option>
+        <option value="6">6 người</option>
+      </select>
 
-        <label>Số sao:</label>
-        <select id="starFilter">
-            <option value="">Tất cả</option>
-            <option value="5">★★★★★</option>
-            <option value="4">★★★★☆</option>
-            <option value="3">★★★☆☆</option>
-        </select>
+      <label>Số sao:</label>
+      <select id="starFilter">
+        <option value="">Tất cả</option>
+        <option value="5">★★★★★</option>
+        <option value="4">★★★★☆</option>
+        <option value="3">★★★☆☆</option>
+      </select>
 
-        <button onclick="applyFilter()">Lọc</button>
+      <button onclick="applyFilter()">Lọc</button>
     </div>
   </div>
 </div>
 
+
+
 </div>
 <div class="ROOM">ROOM</div>
 <div class="booking4 bookingc">
-  <div class="ph1 card">
+
+  <div class="ph1 card"
+       data-type="standard"
+       data-people="2"
+       data-star="5">
     <img src="https://i.pinimg.com/736x/31/93/03/3193032410050366903c4f6e70bf5add.jpg" alt="Phòng 1" />
     <div class="info">
       <p class="room-name">Phòng tiêu chuẩn</p>
@@ -160,27 +150,40 @@ Và khi làn gió thì thầm bên ngoài cửa sổ, bạn sẽ biết mình đ
     </div>
   </div>
 
-  <div class="ph2 card">
+  <div class="ph2 card"
+       data-type="luxury"
+       data-people="2"
+       data-star="4">
     <img src="https://i.pinimg.com/736x/a5/67/b3/a567b34c0a248c6bed49711bfdf56686.jpg" alt="Phòng 2" />
     <div class="info">
       <p class="room-name">Phòng sang trọng</p>
-      <p class="price"> 4.200.000 VNĐ</p>
+      <p class="price">4.200.000 VNĐ</p>
       <p class="stars">★★★★☆</p>
       <button class="reserve-btn">Reservar</button>
     </div>
   </div> 
-  <div class="ph3 card">
-    <img src="https://i.pinimg.com/1200x/61/00/e7/6100e74ad5d1ec09a039a3c9b959c5bd.jpg" alt="Phòng 2" />
+
+  <div class="ph3 card"
+       data-type="luxury"
+       data-people="2"
+       data-star="4">
+    <img src="https://i.pinimg.com/1200x/61/00/e7/6100e74ad5d1ec09a039a3c9b959c5bd.jpg" alt="Phòng 3" />
     <div class="info">
       <p class="room-name">Phòng sang trọng</p>
-      <p class="price"> 4.200.000 VNĐ</p>
+      <p class="price">4.200.000 VNĐ</p>
       <p class="stars">★★★★☆</p>
       <button class="reserve-btn">Reservar</button>
     </div>
   </div>  
+
 </div>
+
 <div class="booking5 bookingc">
-  <div class="ph4 card">
+
+  <div class="ph4 card"
+       data-type="standard"
+       data-people="2"
+       data-star="5">
     <img src="https://i.pinimg.com/736x/de/be/14/debe14b6138d840046c27d5c3051fa1c.jpg" alt="Phòng 4" />
     <div class="info">
       <p class="room-name">Phòng tiêu chuẩn</p>
@@ -190,27 +193,40 @@ Và khi làn gió thì thầm bên ngoài cửa sổ, bạn sẽ biết mình đ
     </div>
   </div>
 
-  <div class="ph5 card">
+  <div class="ph5 card"
+       data-type="luxury"
+       data-people="2"
+       data-star="4">
     <img src="https://i.pinimg.com/736x/b4/e7/81/b4e7810c6be9c954d7ea25460135b285.jpg" alt="Phòng 5" />
     <div class="info">
       <p class="room-name">Phòng sang trọng</p>
-      <p class="price"> 4.200.000 VNĐ</p>
+      <p class="price">4.200.000 VNĐ</p>
       <p class="stars">★★★★☆</p>
       <button class="reserve-btn">Reservar</button>
     </div>
   </div> 
-  <div class="ph6 card">
+
+  <div class="ph6 card"
+       data-type="luxury"
+       data-people="2"
+       data-star="4">
     <img src="https://i.pinimg.com/736x/58/65/13/586513847d3e0a4efbfe06af842a6a8d.jpg" alt="Phòng 6" />
     <div class="info">
       <p class="room-name">Phòng sang trọng</p>
-      <p class="price"> 4.200.000 VNĐ</p>
+      <p class="price">4.200.000 VNĐ</p>
       <p class="stars">★★★★☆</p>
       <button class="reserve-btn">Reservar</button>
     </div>
   </div>  
+
 </div>
+
 <div class="booking6 bookingc">
-  <div class="ph7 card">
+
+  <div class="ph7 card"
+       data-type="luxury"
+       data-people="2"
+       data-star="5">
     <img src="https://i.pinimg.com/1200x/87/a0/5b/87a05b03cf0aa5a7a258994d05158b6c.jpg" alt="Phòng 7" />
     <div class="info">
       <p class="room-name">Phòng cao cấp</p>
@@ -220,37 +236,53 @@ Và khi làn gió thì thầm bên ngoài cửa sổ, bạn sẽ biết mình đ
     </div>
   </div>
 
-  <div class="ph8 card">
+  <div class="ph8 card"
+       data-type="family"
+       data-people="4"
+       data-star="4">
     <img src="https://i.pinimg.com/1200x/48/03/85/48038575684187710c4c35dbe1780671.jpg" alt="Phòng 8" />
     <div class="info">
       <p class="room-name">Phòng gia đình</p>
-      <p class="price">1 500.000 VNĐ</p>
+      <p class="price">1.500.000 VNĐ</p>
       <p class="stars">★★★★☆</p>
       <button class="reserve-btn">Reservar</button>
     </div>
   </div> 
-  <div class="ph9 card">
+
+  <div class="ph9 card"
+       data-type="family"
+       data-people="4"
+       data-star="4">
     <img src="https://i.pinimg.com/736x/2f/06/cb/2f06cbef7f4852509e4a1d86b9d5c7a9.jpg" alt="Phòng 9" />
     <div class="info">
       <p class="room-name">Phòng gia đình</p>
-      <p class="price">1 500.000 VNĐ</p>
+      <p class="price">1.500.000 VNĐ</p>
       <p class="stars">★★★★☆</p>
       <button class="reserve-btn">Reservar</button>
     </div>
   </div>  
+
 </div>
+
 <div class="booking7 bookingc">
-  <div class="ph10 card">
+
+  <div class="ph10 card"
+       data-type="luxury"
+       data-people="2"
+       data-star="5">
     <img src="https://i.pinimg.com/736x/96/e9/8f/96e98f0672c8991d1faada1519d3e449.jpg" alt="Phòng 10" />
     <div class="info">
-      <p class="room-name">Phòng cao cáp</p>
+      <p class="room-name">Phòng cao cấp</p>
       <p class="price">3.200.000 VNĐ</p>
       <p class="stars">★★★★★</p>
       <button class="reserve-btn">Reservar</button>
     </div>
   </div>
 
-  <div class="ph11 card">
+  <div class="ph11 card"
+       data-type="standard"
+       data-people="2"
+       data-star="4">
     <img src="https://i.pinimg.com/1200x/4c/18/f0/4c18f06653ac259725fcb064b2cff331.jpg" alt="Phòng 11" />
     <div class="info">
       <p class="room-name">Phòng tiêu chuẩn</p>
@@ -259,28 +291,41 @@ Và khi làn gió thì thầm bên ngoài cửa sổ, bạn sẽ biết mình đ
       <button class="reserve-btn">Reservar</button>
     </div>
   </div> 
-  <div class="ph12 card">
+
+  <div class="ph12 card"
+       data-type="family"
+       data-people="4"
+       data-star="4">
     <img src="https://i.pinimg.com/736x/9d/cb/86/9dcb86dbb056fbef269131e8a0c2dc33.jpg" alt="Phòng 12" />
     <div class="info">
       <p class="room-name">Phòng gia đình</p>
-      <p class="price">1 500.000 VNĐ</p>
+      <p class="price">1.500.000 VNĐ</p>
       <p class="stars">★★★★☆</p>
       <button class="reserve-btn">Reservar</button>
     </div>
   </div>  
+
 </div>
+
 <div class="booking8 bookingc">
-  <div class="ph13 card">
+
+  <div class="ph13 card"
+       data-type="luxury"
+       data-people="2"
+       data-star="3">
     <img src="https://i.pinimg.com/736x/66/da/4a/66da4a5a6bbfe5800fdf6e03a66e2c07.jpg" alt="Phòng 13" />
     <div class="info">
-      <p class="room-name">Phòng cao cấp/p>
+      <p class="room-name">Phòng cao cấp</p>
       <p class="price">3.200.000 VNĐ</p>
       <p class="stars">★★★</p>
       <button class="reserve-btn">Reservar</button>
     </div>
   </div>
 
-  <div class="ph14 card">
+  <div class="ph14 card"
+       data-type="luxury"
+       data-people="2"
+       data-star="3">
     <img src="https://i.pinimg.com/1200x/98/4d/3e/984d3ef60c3a9bc9e5f6510ba0454257.jpg" alt="Phòng 14" />
     <div class="info">
       <p class="room-name">Phòng cao cấp</p>
@@ -289,7 +334,11 @@ Và khi làn gió thì thầm bên ngoài cửa sổ, bạn sẽ biết mình đ
       <button class="reserve-btn">Reservar</button>
     </div>
   </div> 
-  <div class="ph15 card">
+
+  <div class="ph15 card"
+       data-type="luxury"
+       data-people="2"
+       data-star="3">
     <img src="https://i.pinimg.com/1200x/7d/93/77/7d9377c4589828a90e5d5d4eecd12c68.jpg" alt="Phòng 15" />
     <div class="info">
       <p class="room-name">Phòng cao cấp</p>
@@ -298,84 +347,75 @@ Và khi làn gió thì thầm bên ngoài cửa sổ, bạn sẽ biết mình đ
       <button class="reserve-btn">Reservar</button>
     </div>
   </div>
-    
+
 </div>
 
 <!-- //////////////////////// -->
-<div class="footer">
-<div class="footer1">
-<div class="f1_1">
-<h3>Contact</h3>
-</div>
-<div class="f1_2">
-<h2>The Phoenix</h2>
-<p style="font-family: 'Inika'; font-size: 60%; margin-top: -10%">
-    By Waterfront Hotel Co., Ltd. (Branch 00001)
-</p>
-<p>Ca' Farsetti, San Marco</p>
-<p>30100 Venise (VE)</p>
-<p>Italia</p>
-</div>
-<div class="f1_3">
-<h2>Telephone</h2>
-<p style="font-family: 'Judson'; font-size: 170%">+006612369</p>
-</div>
-<div class="f1_4">
-<h2>Email</h2>
-<p>Events & Celebrations:</p>
-<p style="margin-top: -7%"><u>events.venice@phoenixhotel.com</u></p>
-<p>Meetings:</p>
-<p style="margin-top: -7%"><u>mice.venice@phoenixhotel.com</u></p>
-</div>
-</div>
+<!-- Footer -->
+    <div class="footer">
+        <div class="footer1">
+            <div class="f1_1">
+                <h3>Liên hệ</h3>
+            </div>
+            <div class="f1_2">
+                <h2>The Phoenix</h2>
+                <p style="font-family: 'Inika'; font-size: 60%; margin-top: -10%">
+                    By Waterfront Hotel Co., Ltd. (Branch 00001)
+                </p>
+                <p>123 Trần Hưng Đạo</p>
+                <p>TP Hồ Chí Minh</p>
+                <p>Việt Nam</p>
+            </div>
+            <div class="f1_3">
+                <h2>Di động</h2>
+                <p style="font-size: 170%">+006612369</p>
+            </div>
+            <div class="f1_4">
+                <h2>Email</h2>
+                <p>Đặt bàn và Tổ chức tiệc:</p>
+                <p style="margin-top: -7%"><u>events.vn@phoenixhotel.com</u></p>
+                <p>Phòng họp:</p>
+                <p style="margin-top: -7%"><u>meeting.vn@phoenixhotel.com</u></p>
+            </div>
+        </div>
 
-<div class="footer2">
-<div class="f2_1">
-<img src="img/leadinghtl.png" />
-</div>
-<div class="f2_2">
-<a href="">Privacy Policy</a>
-<a href="">Booking Terms & Conditions</a>
-<a href="contact.html">Contact</a>
-<a href="">About us</a>
-</div>
-<div class="f2_3">
-<p>Social Media</p>
-<p>
-    <img
-    src="img/Facebook_Logo_(2019).png"
-    style="
-        width: 5%;
-        height: 5%;
-        margin-right: 2%;
-        margin-bottom: -1%;
-    "
-    /><span>ThePhoenix.facebook.com</span>
-</p>
-<p>
-    <img
-    src="img/ins.png"
-    style="
-        width: 5%;
-        height: 5%;
-        margin-right: 2%;
-        margin-bottom: -1%;
-    "
-    /><span>ThePhoenix.ins.com</span>
-</p>
-<p>
-    <img
-    src="img/X.jpg"
-    style="
-        width: 5%;
-        height: 5%;
-        margin-right: 2%;
-        margin-bottom: -1%;
-    "
-    /><span>ThePhoenix.tw.com</span>
-</p>
-</div>
-</div>
-</div>
+        <div class="footer2">
+            <div class="f2_1">
+                <img src="img/leadinghtl.png">
+            </div>
+            <div class="f2_2">
+                <a href="">Chính sách bảo mật</a>
+                <a href="">Điều khoản đặt phòng</a>
+                <a href="contact.html">Liên hệ</a>
+                <a href="">Giới thiệu</a>
+            </div>
+            <div class="f2_3">
+                <p>Social Media</p>
+                <p><img src="img/Facebook_Logo_(2019).png" style="width: 5%;height: 5%;margin-right: 2%;margin-bottom: -1%;"><span>ThePhoenix.facebook.com</span>
+                </p>
+                <p><img src="img/ins.png" style="width: 5%;height: 5%;margin-right: 2%;margin-bottom: -1%;"><span>ThePhoenix.ins.com</span>
+                </p>
+                <p><img src="img/X.jpg" style="width: 5%;height: 5%;margin-right: 2%;margin-bottom: -1%;"><span>ThePhoenix.tw.com</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+function applyFilter() {
+    const type = document.getElementById("typeFilter").value;
+    const people = document.getElementById("peopleFilter").value;
+    const star = document.getElementById("starFilter").value;
+
+    document.querySelectorAll(".card").forEach(card => {
+        let visible = true;
+
+        if (type && card.dataset.type !== type) visible = false;
+        if (people && card.dataset.people !== people) visible = false;
+        if (star && card.dataset.star !== star) visible = false;
+
+        card.classList.toggle("hidden", !visible);
+    });
+}
+</script>
 </body>
 </html>
