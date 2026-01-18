@@ -183,6 +183,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+//ACTIVE CHO MENU
+const page = location.pathname.split("/").pop() || "home.html";
+  document.querySelectorAll(".sticky-header a").forEach(a => {
+    if (a.getAttribute("href") === page) {
+      a.classList.add("active");
+    }
+  });
+
 // ĐONG MỞ FORM ĐẶT PHÒNG
 const openBtn = document.getElementById("openBooking");
 const closeBtn = document.getElementById("closeBooking");
@@ -192,30 +201,19 @@ openBtn.onclick = () => bookingBox.style.display = "flex";
 closeBtn.onclick = () => bookingBox.style.display = "none";
 
 // SPINNER
-document.querySelectorAll('.spinner').forEach(spinner => {
-    const count = spinner.querySelector('.count');
-    const up = spinner.querySelector('.up');
-    const down = spinner.querySelector('.down');
-
-    up.onclick = () => {
-        count.textContent = Number(count.textContent) + 1;
-    };
-
-    down.onclick = () => {
-        if (Number(count.textContent) > 0) {
-            count.textContent = Number(count.textContent) - 1;
-        }
-    };
-});
 const form = document.getElementById("bookingForm");
-
-form.onsubmit = function(e) {
-    e.preventDefault(); 
-
-    alert("Đã gửi thông tin đặt phòng!");
-
-    bookingBox.style.display = "none";
-};
+if (form) {
+    form.onsubmit = function(e) {
+        e.preventDefault(); 
+        Swal.fire({
+            title: 'Thành công!',
+            text: 'Đã gửi thông tin đặt phòng!',
+            icon: 'success',
+            confirmButtonColor: '#1c483b'
+        });
+        bookingBox.style.display = "none";
+    };
+}
 
 // LỌC
 const filterBtn = document.querySelector('.filter-toggle');
@@ -256,8 +254,57 @@ burger.addEventListener('click', (e) => {
 booking.addEventListener('click', () => {
     console.log("Mở phần lịch đặt thôi");
 });
+// NÚT ĐẶT BÀN
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector("#datBanBtn");
+  
+  if (btn) {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      Swal.fire({
+        title: 'Thông báo',
+        text: 'Đặt bàn thành công!',
+        icon: 'success',
+        confirmButtonText: 'Đóng',
+        confirmButtonColor: '#1c483b',
+        customClass: {
+          popup: 'my-mobile-popup'
+        }
+      });
+    });
+  }
+});
+//GIỚI THIỆU
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll('.gthieu');
+    const nextBtn = document.querySelector('.gth-next');
+    const prevBtn = document.querySelector('.gth-prev');
+    let currentIndex = 0;
+    if (slides.length > 0) {
+        slides[0].classList.add('active');
+    }
 
+    function changeSlide(direction) {
+        slides[currentIndex].classList.remove('active');
 
+        if (direction === 'next') {
+            currentIndex = (currentIndex + 1) % slides.length;
+        } else {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        }
 
+        slides[currentIndex].classList.add('active');
+    }
 
+    if (nextBtn && prevBtn) {
+        nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            changeSlide('next');
+        });
 
+        prevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            changeSlide('prev');
+        });
+    }
+});

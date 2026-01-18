@@ -6,6 +6,13 @@ body {
 }
 
 /*........................................... Header............................... */
+.top-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+}
 .header {
     background-color: #1c483b;
     width: 100%;
@@ -265,10 +272,10 @@ color: #1c483b;
 margin: 0;
 text-align: left;
 margin-left: 50px;
+white-space: nowrap;
 }
 .thanh ul{
 display:flex;
-margin-left: 200px;
 }
 .thanh ul li {
 display: inline-block;
@@ -318,6 +325,22 @@ color:#1c483b;
 .thanh ul li i {
   color: #1c483b;
 }
+#datBanBtn {
+  padding: 15px 20px;
+  border: none;
+  background-color: #1c483b;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.thanh ul li.datban {
+  border-radius: 0; 
+  background: transparent;
+  border: none; 
+  padding: 0;
+}
 /*...........................ảnh giới thiệu...........................*/
 .gth {
 width: 100%;
@@ -357,6 +380,9 @@ object-fit: cover;
 transform: scale(1.05);
 transition: all 0.3s ease;
 
+}
+.gth-prev,.gth-next {
+  display: none;
 }
 /*...........................phần trắng bên dưới ảnh...........................*/
 
@@ -910,60 +936,73 @@ margin-top: -5px;
 body {
     overflow-x: hidden; 
     position: relative; 
+    padding-top: 105px;
 }
-
-  header {
-    width: 100%;
-    height: 66px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
-    position: sticky;
-    top: 0;
-  }
-  .header-left,
-  .header-center,
-  .header-right  {
-    display: flex;
-    align-items: center;
-    width: auto;
-    margin-top: -30px;
-    margin-left: -30px;
-  }
-  .header-left img{
-    width: 33px;
-    height: 33px;
-    position: static;
-
-  }
-  .header-left h1 {
-    font-size: 26px;
+.top-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+}
+ .header {
+    height: 70px;
+    padding: 0 15px;
     margin: 0;
-    line-height: 1;  
-    position: static;
-    margin-left: -40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
   }
+
+  .header-left {
+    margin: 0;
+    align-items: center;
+    flex: none
+  }
+  
+  .header-left img {
+    width: 35px;
+    height: 35px;
+    margin: 0 8px 0 0;
+  }
+
+  .header-left h1 {
+    font-size: 22px;
+    margin: 0;
+    width: auto;
+    line-height: 1
+  }
+  .header-center {
+    margin: 0;
+    justify-content: center;
+    padding: 0 10px;
+    flex: 1
+  }
+
   .header-center input {
-    width: 120px;
-    height: 20px;
-    font-size: 12px;
-    margin-left: -370px;
-    margin-top: -1px;
-    
+    width: 100%;
+    max-width: 120px;
+    height: 32px;
+    font-size: 13px;
+    margin: 0;
+    padding: 0 10px ;
   }
   .header-right {
-    display: flex;
-    align-items: center;
-    margin-top: -30px;
-    width: auto;
-    margin-left: -60px;
-    gap: 2px;
-    }
-  .header-right i{
-    font-size: 17px;
-    margin-left: -70px;
+    margin: 0 20px 0 0 ;
+    gap: 12px;
+    flex: none ;
+    align-items: center
   }
+  .header-right i {
+    font-size: 20px;
+    margin: 0 ;
+    color: #f7efe7 ;
+  }
+ 
   .header-right a{
     display: none;
   }
@@ -1005,6 +1044,7 @@ body {
         opacity: 0.9;
         backdrop-filter: blur(5px);
         font-size: 12px; 
+        margin-top: -20px
     }
   .burger {
         display: block;
@@ -1030,14 +1070,11 @@ body {
 
   }
   .thanh p {
-    font-size: 20px;
-    margin-left: 15px;
-    width: auto;
-    align-items: center;
+    display: none
   }
   .thanh ul {
     margin-left: -20px;
-    gap: 4px;
+    gap: 10px;
     display: flex;
   }
   .thanh ul li {
@@ -1048,6 +1085,8 @@ body {
     font-size: 14px;
     padding: 1px 4px;
     margin-left: -2px;
+    line-height: 1; 
+    height: 18px;
   }
   .thanh ul li input[type="time"],
   .thanh ul li input[type="number"]{
@@ -1056,36 +1095,80 @@ body {
   
   .thanh ul li input {
     font-size: 10px;
-    padding: 3px 5px;
+    padding: 0;
   }
-  /*.............................ảnh giới thiệu.................*/
-  .gth {
+  #datBanBtn {
     display: flex;
-    height: auto;
-    padding: 20px 30px;
-    overflow: hidden;
-    width: 100%; 
-    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    height: 28px;  
+    min-width: 44px; 
+    padding: 0 8px;
+    font-size: 12px; 
+    line-height: 1; 
+    border-radius: 0;
   }
-  .gthieu {
-    flex: 0 0 100%;
-    width: 100%;
-    height: auto;
+ 
+  /*.............................ảnh giới thiệu.................*/
+ .gth {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 40px 15px;
+        position: relative;
+        background-color: #DEE7DE;
+    }
+
+    .gthieu {
+        display: none;
+        width: 100% ;
+        max-width: 320px;
+        height: auto;
+        border: 1px solid #1c483b;
+    }
+    .gthieu.active {
+        display: flex;
+        flex-direction: column ;
+    }
+
+    .gth1 {
+        height: 220px ;
+    }
+
+    .td {
+        height: auto ;
+        padding: 15px 10px ;
+    }
+
+    .td h2 { 
+      font-size: 22px t; 
+    }
+    .feature p { 
+      font-size: 11px; 
+      white-space: nowrap;
+    }
+  .gth-prev, .gth-next {
+    display: flex;
+    position: absolute;
+    top: 40%;
+    z-index: 10;
+    background: rgba(28, 72, 59, 0.8);
+    color: #fff;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
   }
-  .gth1 {
-    width: 100%;
-    height: 250px;
-    margin: 0 auto;
+
+  .gth-prev { 
+    left: 20px; 
   }
-  .gth1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-  }
-  .td {
-    display: none;
+  .gth-next { 
+    right: 20px; 
   }
   /*.............................đồ ăn.................*/
   .hien {
@@ -1099,7 +1182,7 @@ body {
     height: auto; 
     min-height: 0; 
     max-height: 270px;
-    top: 20px;
+    top: 100px;
     margin-top: 10px;
     padding: 0 10px;
   }
@@ -1214,7 +1297,7 @@ body {
   .container .chon {
     width: 30%;
     height: auto;
-    margin-top: -140px;
+    margin-top: -1120px;
   }
   .c ul {
     gap: 5px;
