@@ -925,6 +925,9 @@ body {
     font-size: 120%;
     font-family: 'Open Sans';
 }
+#mobile {
+    display: none;
+}
 
 @media (max-width:789px) {
     .f2_3 {
