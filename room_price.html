@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&amp;display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="css/room_price.css" />
 </head>
 
@@ -442,7 +443,7 @@
           card.classList.toggle("hidden", !visible);
         });
       }
-      // ĐONG MỞ FORM ĐẶT PHÒNG
+     // ĐONG MỞ FORM ĐẶT PHÒNG
       const openBtn = document.getElementById("openBooking");
       const closeBtn = document.getElementById("closeBooking");
       const bookingBox = document.getElementById("bookingBox");
@@ -451,30 +452,19 @@
       closeBtn.onclick = () => bookingBox.style.display = "none";
 
       // SPINNER
-      document.querySelectorAll('.spinner').forEach(spinner => {
-        const count = spinner.querySelector('.count');
-        const up = spinner.querySelector('.up');
-        const down = spinner.querySelector('.down');
-
-        up.onclick = () => {
-          count.textContent = Number(count.textContent) + 1;
-        };
-
-        down.onclick = () => {
-          if (Number(count.textContent) > 0) {
-            count.textContent = Number(count.textContent) - 1;
-          }
-        };
-      });
       const form = document.getElementById("bookingForm");
-
-      form.onsubmit = function (e) {
-        e.preventDefault();
-
-        alert("Đã gửi thông tin đặt phòng!");
-
-        bookingBox.style.display = "none";
-      };
+      if (form) {
+          form.onsubmit = function(e) {
+              e.preventDefault(); 
+              Swal.fire({
+                  title: 'Thành công!',
+                  text: 'Đã gửi thông tin đặt phòng!',
+                  icon: 'success',
+                  confirmButtonColor: '#1c483b'
+              });
+              bookingBox.style.display = "none";
+          };
+      }
       //  MENU MOBILE
       const burger = document.querySelector('.burger');
       const menu = document.querySelector('.sticky-header');

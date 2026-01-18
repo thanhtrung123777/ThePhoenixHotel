@@ -41,6 +41,28 @@ burger.addEventListener('click', () => {
         menu.classList.add('active'); // mở
     }
 });
+// ĐONG MỞ FORM ĐẶT PHÒNG
+const openBtn = document.getElementById("openBooking");
+const closeBtn = document.getElementById("closeBooking");
+const bookingBox = document.getElementById("bookingBox");
+
+openBtn.onclick = () => bookingBox.style.display = "flex";
+closeBtn.onclick = () => bookingBox.style.display = "none";
+
+// SPINNER
+const form = document.getElementById("bookingForm");
+if (form) {
+    form.onsubmit = function(e) {
+        e.preventDefault(); 
+        Swal.fire({
+            title: 'Thành công!',
+            text: 'Đã gửi thông tin đặt phòng!',
+            icon: 'success',
+            confirmButtonColor: '#1c483b'
+        });
+        bookingBox.style.display = "none";
+    };
+}
 
 
 

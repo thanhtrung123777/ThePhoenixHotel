@@ -48,30 +48,20 @@ const bookingBox = document.getElementById("bookingBox");
 
 openBtn.onclick = () => bookingBox.style.display = "flex";
 closeBtn.onclick = () => bookingBox.style.display = "none";
-document.querySelectorAll('.spinner').forEach(spinner => {
-    const count = spinner.querySelector('.count');
-    const up = spinner.querySelector('.up');
-    const down = spinner.querySelector('.down');
-
-    up.onclick = () => {
-        count.textContent = Number(count.textContent) + 1;
-    };
-
-    down.onclick = () => {
-        if (Number(count.textContent) > 0) {
-            count.textContent = Number(count.textContent) - 1;
-        }
-    };
-});
+// SPINNER
 const form = document.getElementById("bookingForm");
-
-form.onsubmit = function(e) {
-    e.preventDefault(); 
-
-    alert("Đã gửi thông tin đặt phòng!");
-
-    bookingBox.style.display = "none";
-};
+if (form) {
+    form.onsubmit = function(e) {
+        e.preventDefault(); 
+        Swal.fire({
+            title: 'Thành công!',
+            text: 'Đã gửi thông tin đặt phòng!',
+            icon: 'success',
+            confirmButtonColor: '#1c483b'
+        });
+        bookingBox.style.display = "none";
+    };
+}
 
 //  MENU MOBILE
 const burger = document.querySelector('.burger');
