@@ -200,7 +200,6 @@ const bookingBox = document.getElementById("bookingBox");
 openBtn.onclick = () => bookingBox.style.display = "flex";
 closeBtn.onclick = () => bookingBox.style.display = "none";
 
-// SPINNER
 const form = document.getElementById("bookingForm");
 if (form) {
     form.onsubmit = function(e) {
@@ -214,7 +213,22 @@ if (form) {
         bookingBox.style.display = "none";
     };
 }
+// SPINNER
+document.querySelectorAll('.spinner').forEach(spinner => {
+    const count = spinner.querySelector('.count');
+    const up = spinner.querySelector('.up');
+    const down = spinner.querySelector('.down');
 
+    up.onclick = () => {
+        count.textContent = Number(count.textContent) + 1;
+    };
+
+    down.onclick = () => {
+        if (Number(count.textContent) > 0) {
+            count.textContent = Number(count.textContent) - 1;
+        }
+    };
+});
 // LỌC
 const filterBtn = document.querySelector('.filter-toggle');
 const filterBox = document.querySelector('.chon');
