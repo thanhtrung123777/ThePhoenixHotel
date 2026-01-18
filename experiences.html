@@ -21,45 +21,39 @@
     <link rel="stylesheet" href="css/style_experiences.css" />
     <link rel="stylesheet" href="https://img.icons8.com/ios/50/search--v1.png">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js/experiences.js" defer></script>
+    
 
 </head>
 
 <body>
-    <!-- Header -->
-    <div class="header">
-        <div class="header-left">
-            <img src="img/fluent-emoji-high-contrast_phoenix-bird.png" alt="The Phoenix" />
-            <h1>The Phoenix</h1>
-        </div>
-        <div class="header-center" id="desktop">
-            <input type="search" id="searchPicker" placeholder="Tìm Kiếm">
-        </div>
-        <div class="header-center" id="mobile">
-            <input type="search" id="searchPicker">
-            <img src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1" />
-
-        </div>
-        <!-- ///////////////////// -->
-        <div class="header-right" id="desktop">
-            <i class="fa-regular fa-calendar-days"></i><a href="">Lịch Đặt</a>
-        </div>
-        <div class="header-right" id="mobile">
-            <a href=""><i class="fa-regular fa-calendar-days"></i></a>
-            <button class="burger">☰</button>
-        </div>
-        <!-- //////////////////////// -->
-    </div>
-    <!-- Sticky Header -->
-    <div class="sticky-header">
-        <ul>
-            <li><a href="index.html">Trang Chủ</a></li>
-            <li><a href="experiences.html"><u>Dịch Vụ</u></a></li>
-            <li><a href="room_price.html">Phòng Nghỉ</a></li>
-            <li><a href="Eat&Drink.html">Ăn Uống</a></li>
-            <li><a href="contact.html">Liên Hệ</a></li>
-        </ul>
-    </div>
+        <!-- Header -->
+    <div class="top-navigation">
+      <div class="header">
+          <div class="header-left">
+              <img src="fluent-emoji-high-contrast_phoenix-bird.png" alt="The Phoenix" />
+              <h1>The Phoenix</h1>
+          </div>
+          <div class="header-center">
+              <input type="search" id="searchPicker"  placeholder="Tìm Kiếm">
+          </div>
+          <!-- ///////////////////// -->
+          <div class="header-right" id="openBooking">
+              <i class="fa-regular fa-calendar-days"></i><a href="">Lịch Đặt</a>
+              <button class="burger">☰</button>
+          </div>
+          <!-- //////////////////////// -->
+      </div>
+          <!-- Sticky Header -->
+      <div class="sticky-header">
+              <ul>
+                  <li><a href="home.html">Trang Chủ</a></li>
+                  <li><a href="experiences.html" class = "ok">Dịch Vụ</a></li>
+                  <li><a href="room_price.html">Phòng Nghỉ</a></li>
+                  <li><a href="index.html">Ăn Uống</a></li>
+                  <li><a href="contact.html">Liên Hệ</a></li>
+              </ul>
+      </div>
+   </div>
 
     <!----------------------------------------------------------- Body ---------------------------------------------------->
     <!-- Video -->
@@ -269,6 +263,60 @@
             </div>
         </div>
     </div>
+    <!-- Bảng đặt phòng -->
+<div class="booking-overlay" id="bookingBox">
+    <div class="booking">
+        <h3>Đặt phòng</h3>
+
+        <div class="booking-row">
+            <label>Ngày vào</label>
+            <input type="date">
+        </div>
+
+        <div class="booking-row">
+            <label>Ngày ra</label>
+            <input type="date">
+        </div>
+
+        <div class="booking-row">
+            <label>Giờ</label>
+            <input type="time">
+        </div>
+
+        <!-- Người lớn -->
+        <div class="booking-row counter">
+            <label>Người lớn</label>
+            <div class="spinner">
+                <span class="count">1</span>
+                <div class="arrows">
+                    <i class="up">▲</i>
+                    <i class="down">▼</i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trẻ em -->
+        <div class="booking-row counter">
+            <label>Trẻ em</label>
+            <div class="spinner">
+                <span class="count">0</span>
+                <div class="arrows">
+                    <i class="up">▲</i>
+                    <i class="down">▼</i>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking-actions">
+            <form id="bookingForm">
+                <button class="submit">Xác nhận</button>
+            </form>
+            <button class="close" id="closeBooking">Đóng</button>
+        </div>
+    </div>
+</div>
+
+    <script src="js/experiences.js"></script>
 </body>
 
 </html>

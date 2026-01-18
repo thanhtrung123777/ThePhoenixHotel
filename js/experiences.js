@@ -31,17 +31,39 @@ left.addEventListener('click', function () {
     }
 })
 
-
+//  MENU MOBILE
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.sticky-header');
-burger.addEventListener('click', () => {
-    if (menu.classList.contains('active')) {
-        menu.classList.remove('active'); // đóng
-    } else {
-        menu.classList.add('active'); // mở
-    }
+const booking = document.getElementById('openBooking');
+burger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.toggle('active'); 
+});
+booking.addEventListener('click', () => {
+    console.log("Mở phần lịch đặt thôi");
 });
 
+// ĐONG MỞ FORM ĐẶT PHÒNG
+const openBtn = document.getElementById("openBooking");
+const closeBtn = document.getElementById("closeBooking");
+const bookingBox = document.getElementById("bookingBox");
 
+openBtn.onclick = () => bookingBox.style.display = "flex";
+closeBtn.onclick = () => bookingBox.style.display = "none";
+
+// SPINNER
+const form = document.getElementById("bookingForm");
+if (form) {
+    form.onsubmit = function(e) {
+        e.preventDefault(); 
+        Swal.fire({
+            title: 'Thành công!',
+            text: 'Đã gửi thông tin đặt phòng!',
+            icon: 'success',
+            confirmButtonColor: '#1c483b'
+        });
+        bookingBox.style.display = "none";
+    };
+}
 
 
