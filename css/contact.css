@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1c483b
-}
+}   
 
 /*........................................... Header............................... */
 
@@ -54,7 +54,7 @@ body {
     flex: 1;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 75px;
+    margin-right: 33px;
     gap: 5px;
     margin-top: 30px;
 }
@@ -64,7 +64,6 @@ body {
 }
 .header-right p {
     text-decoration: none;
-    margin-right: 5px;
     font-family:'Alegreya';
     color: #f7efe7;
     font-size: 24px;
@@ -307,6 +306,7 @@ body {
   .burger {
         display: block;
         position: relative;
+        z-index: 9999;
         background: none;
         border: none;
         font-size: 24px;
