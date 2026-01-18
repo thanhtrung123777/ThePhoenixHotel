@@ -809,3 +809,10 @@ body {
   display: flex;
   width: 80%;
 }
+@media (max-width: 1000px) {
+    body {
+    max-width: 100%;
+    overflow-x: hidden; 
+    position: relative;
+}
+}
