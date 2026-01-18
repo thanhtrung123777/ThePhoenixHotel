@@ -222,6 +222,9 @@ body {
 .sticky-header ul li a.ok:hover::after { 
   transform: scaleX(1); 
 }
+.burger {
+    display: none;
+}
 @media (max-width: 789px) {
 .sticky-header {
     display: none;
@@ -355,9 +358,7 @@ body {
 .close {
     background: #ccc;
 }
-.burger {
-    display: none;
-}
+
 @media (max-width: 789px){
 .booking {
     width: 80%;
